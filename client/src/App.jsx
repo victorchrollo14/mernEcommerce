@@ -1,11 +1,8 @@
 import { useState } from "react";
+import { Routes } from "./routes";
 
 function App() {
-  return (
-    <>
-      <h1>Ecommerce Site In Mern</h1>
-    </>
-  );
+  return <Routes />;
 }
 
 export default App;
@@ -18,9 +15,8 @@ export default App;
     🌟 set up Routing.
     🌟 create header and footer and mobile navigation components.
     🌟 create homepage.
-    🌟 create product context.
+    🌟 create shopping page.
     🌟 create product page.
-    🌟 create items page.
  
 
 */
