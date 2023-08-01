@@ -9,3 +9,18 @@ function App() {
 }
 
 export default App;
+
+/* 
+    DONE 🍥
+    ✅ 
+    
+    Tasks ⛳
+    🌟 set up Routing.
+    🌟 create header and footer and mobile navigation components.
+    🌟 create homepage.
+    🌟 create product context.
+    🌟 create product page.
+    🌟 create items page.
+ 
+
+*/
