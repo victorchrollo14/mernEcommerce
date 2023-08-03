@@ -1,7 +1,12 @@
-import React from "react";
+import NavBar from "../../components/NavBar";
 
 const ProductPage = () => {
-  return <h1>Product Page </h1>;
+  return (
+    <>
+      <NavBar />
+      <h1>Product Page </h1>
+    </>
+  );
 };
 
 export default ProductPage;

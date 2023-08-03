@@ -1,8 +1,13 @@
-import React from "react";
+import NavBar from "../../components/NavBar";
 
 
 const CheckoutPage = () => {
-  return <h1>checkout Page</h1>;
+  return (
+    <>
+      <NavBar />
+      <h1>checkout Page</h1>
+    </>
+  );
 };
 
 export default CheckoutPage
