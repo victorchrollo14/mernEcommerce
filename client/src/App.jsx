@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Routes } from "./routes";
+import './Styles.css'
 
 function App() {
   return <Routes />;

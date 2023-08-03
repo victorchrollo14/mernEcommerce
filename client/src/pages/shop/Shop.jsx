@@ -1,7 +1,12 @@
-import React from "react";
+import NavBar from "../../components/NavBar";
 
 const ShopPage = () => {
-  return <h1>Shop Page</h1>;
+  return (
+    <>
+      <NavBar />
+      <h1>Shop Page</h1>
+    </>
+  );
 };
 
 export default ShopPage;
