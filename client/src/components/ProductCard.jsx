@@ -19,7 +19,7 @@ function ProductCard() {
             </div>
             <div className="product-card-info flex mt-4 justify-between">
                 <div>
-                    <p className="product-card-title text-xl font-medi3m  my-1 text-[#686868]">{data.title}</p>
+                    <p className="product-card-title text- font-medi3m  my-1 text-[#686868]">{data.title}</p>
                     <p className="product-card-price text-3xl my-1 font-semibold">${data.price}</p>
                     </div>
                     <div className="product-addtocart-btn h-16 w-24 flex justify-center items-center bg-[#1E1E1E] text-white rounded-3xl text-4xl relative top-1/4 ml-3"><HiOutlineShoppingCart /></div>
