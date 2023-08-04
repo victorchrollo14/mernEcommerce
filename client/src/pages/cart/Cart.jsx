@@ -4,7 +4,7 @@ const Cart = () => {
   return (
     <>
     <NavBar />
-    <h1>Cart Page</h1>
+    <h1 className="text-center pt-[15%] text-3xl font-semibold">Cart Page</h1>
     </>
   );
 };
