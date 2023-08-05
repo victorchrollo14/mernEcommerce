@@ -1,5 +1,5 @@
 import { HiOutlineShoppingCart } from 'react-icons/hi'
-function ProductCard(props) {
+function HomeProductCard(props) {
 	const data = {
 		"id": 1,
 		"title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -28,4 +28,4 @@ function ProductCard(props) {
 	);
 }
 
-export default ProductCard
+export default HomeProductCard
