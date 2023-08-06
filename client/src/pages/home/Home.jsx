@@ -17,11 +17,11 @@ const Home = () => {
 		{ image: img6 },
 	];
 	return (
-		<div className=" overflow-x-hidden">
+		<div className=" overflow-x-hidden w-full bg-[#DFDFDF]">
 			<NavBar />
 			<h1 className="text-center text-3xl font-semibold">Home page</h1>
-			<div className="home flex w-screen ">
-				<div className="home-product-cards w-4/5 mx-auto flex flex-wrap">
+			<div className="home flex w-screen justify-center">
+				<div className="home-product-cards w-[95%] flex flex-wrap">
 					{elements.map((element, index) => (
 						<ProductCard key={index} image={element.image} />
 					))}
