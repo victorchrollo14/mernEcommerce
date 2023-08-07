@@ -6,6 +6,7 @@ import img3 from '../../assets/bottom.webp'
 import img4 from '../../assets/sweater.webp'
 import img5 from '../../assets/accesories.webp'
 import img6 from '../../assets/footwear.webp'
+import Footer from "../../components/Footer";
 
 const Home = () => {
 	const elements = [
@@ -17,7 +18,7 @@ const Home = () => {
 		{ image: img6 },
 	];
 	return (
-		<div className=" overflow-x-hidden w-full bg-[#DFDFDF]">
+		<div className="overflow-x-hidden w-full bg-[#DFDFDF]">
 			<NavBar />
 			<h1 className="text-center text-3xl font-semibold">Home page</h1>
 			<div className="home flex w-screen justify-center">
@@ -27,6 +28,7 @@ const Home = () => {
 					))}
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };
