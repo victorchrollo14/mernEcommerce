@@ -21,7 +21,7 @@ const Home = () => {
 			<NavBar />
 			<h1 className="text-center text-3xl font-semibold">Home page</h1>
 			<div className="home flex w-screen justify-center">
-				<div className="home-product-cards w-[95%] flex flex-wrap">
+				<div className="home-product-cards sm:w-[90%] flex flex-wrap justify-center flex-row">
 					{elements.map((element, index) => (
 						<ProductCard key={index} image={element.image} />
 					))}

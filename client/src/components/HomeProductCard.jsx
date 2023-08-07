@@ -2,7 +2,7 @@ import { HiOutlineShoppingCart } from 'react-icons/hi'
 function HomeProductCard(props) {
 	const data = {
 		"id": 1,
-		"title": "Fjallraven - Foldsack No. 1 Backpack Fits 15 Laptops",
+		"title": "The Pruce Shirts",
 		"price": 109.95,
 		"description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		"category": "men's clothing",
@@ -24,10 +24,8 @@ function HomeProductCard(props) {
 	const maxLength = 40;
 	const truncatedTitle = truncateText(data.title, maxLength);
 	return (
-		<div className="product-card w-[26rem] h-[25rem] md:h-[37rem] md:w-[32rem] rounded-lg m-6 flex flex-col">
-			<div className="product-card-image-div w-full h-[30rem] flex bg-white rounded-xl">
-				<img className="product-card-image m-auto rounded-xl" src={props.image} alt="" />
-			</div>
+		<div className="product-card w-full min-h-[26rem] sm:w-1/2 lg:w-1/3 rounded-lg p-6 flex flex-col">
+			<img className="product-card-image w-full  rounded-xl" src={props.image} alt="" />
 			<div className="product-card-info flex mt-4 justify-between">
 				<div className='w-4/5'>
 					<p className="product-card-title text-lg md:text-xl my-1 text-[#494949]">{truncatedTitle}</p>
