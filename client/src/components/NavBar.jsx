@@ -12,17 +12,17 @@ const NavBar = () => {
 	const [search, setSearch] = useState(false);
 
 	return (
-		<div className="mx-5 my-4 p-2 bg-white rounded-[10px] border border-black flex justify-between xs:h-[50px] sm:h-[60px] md:h-[70px] xl:h-[89px] ">
-			<div className="flex items-center xl:w-2/4 justify-around md:w-3/4 md:justify-evenly sm:w-full">
+		<div className="mx-5 my-4 p-2 bg-white rounded-[10px] border border-black flex justify-between xs:h-[50px] sm:h-[60px] md:h-[70px] xl:h-[89px]">
+			<div className="flex items-center xl:w-2/4  md:w-4/6  sm:w-full">
 				<div
-					className="font-Volkhov py-3 text-zinc-700 place-items-center cursor-pointer md:text-3xl pt-5 -ml-20 xl:text-5xl pl-10 sm:-ml-10 sm:text-xl pr-2 sm:-mb-0.5 xs:-ml-4 xs:text-xl xs:pt-3"
+					className="font-Volkhov py-3 text-zinc-700 place-items-center cursor-pointer lg:text-3xl pt-5 -ml-20 xl:text-4xl pl-5 sm:pl-12 md:pl-14 sm:-ml-10 sm:text-2xl pr-2 sm:-mb-0.5 xs:-ml-4 xs:text-xl xs:pt-3"
 					onClick={() => {
 						navigate("/");
 					}}
 				>
 					Black Market
 				</div>
-				<div className="justify-center mb-2 xs:hidden sm:flex sm:pr-24 sm:pb-2 md:pl-2 md:pr-0 gap-4 md:pb-0 lg:mb-2 xl:gap-7 pt-3 xl:pr-0 xl:mb-2">
+				<div className="justify-center items-center ml-9  hidden md:flex   md:pr-0 gap-4 md:pb-0  xl:gap-7 xl:pr-0 ">
 					<Link
 						to="/"
 						className="font-Poppins text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
@@ -44,7 +44,7 @@ const NavBar = () => {
 				</div>
 			</div>
 			<div className="left justify-around items-center pr-8 xl:gap-6 flex md:gap-3 md:flex md:pr-4 sm:hidden xxs:hidden xs:hidden">
-				<div className="inputBox relative flex rounded-lg border border-neutral-400 xl:w-60 h-11 md:w-36 md:h-9">
+				<div className="inputBox relative flex rounded-lg border border-neutral-400 lg:w-60 h-11 md:w-36 md:h-9">
 					<div className="relative flex my-auto">
 						<BiSearch className="text-3xl mx-2 text-neutral-400" />
 						<input
@@ -64,17 +64,18 @@ const NavBar = () => {
 			</div>
 
 			{/* Mobile view */}
-			<div className="flex justify-center items-center md:hidden lg:hidden xl:hidden">
+			<div className="flex  items-center gap-2 sm:gap-4 md:hidden lg:hidden xl:hidden">
 				<BiSearch
-					className="text-3xl mx-2 text-neutral-400"
+					className="text-3xl  text-neutral-400"
 					onClick={() => {
 						setSearch(!search);
 						setToggle(false);
 					}}
 				/>
+				<FaUserCircle className="text-[28px] place-items-center cursor-pointer" />
 				{!toggle ? (
 					<HiOutlineMenuAlt2
-						className="text-3xl mx-2 text-black"
+						className="text-3xl  text-black"
 						onClick={() => {
 							setToggle(true);
 							setSearch(false);
@@ -82,7 +83,7 @@ const NavBar = () => {
 					/>
 				) : (
 					<HiOutlineX
-						className="text-3xl mx-2 text-black float-right"
+						className="text-3xl  text-black float-right"
 						onClick={() => setToggle(false)}
 					/>
 				)}
