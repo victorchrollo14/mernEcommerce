@@ -7,8 +7,8 @@ import { GrPrevious } from 'react-icons/gr'
 const Reviews = () => {
 	const [reviewCount, setReviewCount] = useState(0);
 
-	const handleReview = (event) => {
-		if (event.target.getAttribute("value") === 'Next') {
+	const handleReview = (direction) => {
+		if (direction === 'Next') {
 			if (reviewCount < 3) {
 				setReviewCount((prev) => prev + 1)
 			}
@@ -16,7 +16,7 @@ const Reviews = () => {
 				setReviewCount(0)
 			}
 		}
-		if (event.target.getAttribute("value") === 'Prev') {
+		if (direction === 'Prev') {
 			if (reviewCount > 0) {
 				setReviewCount((prev) => prev - 1)
 			}
@@ -66,12 +66,12 @@ const Reviews = () => {
 			<div className="review w-screen flex justify-center items-center flex-col bg-white">
 				<div className="mt-8 text-2xl md:text-6xl md:w-full md:mt-28 w-52 text-center text-[#484848] font-Volkhov">This Is What Our Customers Say</div>
 				<div className="text-center text-lg md:text-xl md:mt-8 text-[#8A8A8A] mx-3 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, harum.</div>
-				<div className="w-72 border-[1px] border-black rounded-xl p-6 flex flex-col md:flex-row md:w-[800px] text-[#484848] mt-14">
-					<div className="img md:w-1/2 flex h-64 overflow-hidden">
+				<div className="w-72 border-[1px] border-black rounded-xl p-6 flex flex-col md:flex-row md:w-[700px] text-[#484848] mt-14">
+					<div className="img md:w-1/2 flex h-[20rem] overflow-hidden">
 						<img className="m-auto w-full" src={reviews[reviewCount].image} alt="person" />
 					</div>
 					<div className="info flex justify-center items-center md:items-start md:ml-8 md:text-xl flex-col">
-						<p className="text-center md:text-left md:w-60  my-2">"{reviews[reviewCount].review}"</p>
+						<p className="text-center md:text-left md:w-64  my-2">"{reviews[reviewCount].review}"</p>
 						<div className='flex my-3 text-lg'>{filledStars}</div>
 						<hr className='w-2/3 mb-6 divide-black' />
 						<p className='text-2xl md:text-3xl font-semibold'>{reviews[reviewCount].name}</p>
@@ -79,9 +79,14 @@ const Reviews = () => {
 					</div>
 				</div>
 				<div className='flex my-10 text-2xl'>
-					<GrPrevious className='mx-5' value="Prev" onClick={() => handleReview(event)} />
-					<GrNext className='mx-5' value="Next" onClick={() => handleReview(event)} />
+					<div className='rounded-full text-2xl p-2 bg-white mx-4 drop-shadow-xl cursor-pointer' onClick={(event) => handleReview('Prev')}>
+						<GrPrevious />
+					</div>
+					<div className='rounded-full text-2xl p-2 bg-white mx-4 drop-shadow-xl cursor-pointer' onClick={(event) => handleReview('Next')}>
+						<GrNext />
+					</div>
 				</div>
+
 			</div>
 		</>
 	)
