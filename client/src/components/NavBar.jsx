@@ -7,128 +7,131 @@ import { BiSearch } from "react-icons/bi";
 import { HiOutlineMenuAlt2, HiOutlineX } from "react-icons/hi";
 
 const NavBar = () => {
-	const navigate = useNavigate();
-	const [toggle, setToggle] = useState(false);
-	const [search, setSearch] = useState(false);
+  const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false);
+  const [search, setSearch] = useState(false);
 
-	return (
-		<div className="mx-5 my-4 p-2 bg-white rounded-[10px] border border-black flex justify-between xs:h-[50px] sm:h-[60px] md:h-[70px] xl:h-[89px]">
-			<div className="flex items-center xl:w-2/4  md:w-4/6  sm:w-full">
-				<div
-					className="font-Volkhov py-3 text-zinc-700 place-items-center cursor-pointer lg:text-3xl pt-5 -ml-20 xl:text-4xl pl-5 sm:pl-12 md:pl-14 sm:-ml-10 sm:text-2xl pr-2 sm:-mb-0.5 xs:-ml-4 xs:text-xl xs:pt-3"
-					onClick={() => {
-						navigate("/");
-					}}
-				>
-					Black Market
-				</div>
-				<div className="justify-center items-center ml-9  hidden md:flex   md:pr-0 gap-4 md:pb-0  xl:gap-7 xl:pr-0 ">
-					<Link
-						to="/"
-						className="font-Poppins text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Home
-					</Link>
-					<Link
-						to="/shop"
-						className="font-Poppins text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Shop
-					</Link>
-					<Link
-						to="/contact"
-						className="font-Poppins text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Contact
-					</Link>
-				</div>
-			</div>
-			<div className="left justify-around items-center pr-8 xl:gap-6 flex md:gap-3 md:flex md:pr-4 sm:hidden xxs:hidden xs:hidden">
-				<div className="inputBox relative flex rounded-lg border border-neutral-400 lg:w-60 h-11 md:w-36 md:h-9">
-					<div className="relative flex my-auto">
-						<BiSearch className="text-3xl mx-2 text-neutral-400" />
-						<input
-							type="text"
-							placeholder="Search"
-							className="md:w-full h-full pt-1 pr-2 outline-none bg-transparent font-Poppins"
-						/>
-					</div>
-				</div>
-				<HiShoppingCart
-					className="text-3xl place-items-end cursor-pointer"
-					onClick={() => {
-						navigate("/cart");
-					}}
-				/>
-				<FaUserCircle className="text-[35px] place-items-center cursor-pointer" />
-			</div>
+  return (
+    // <div className="sm:h-[60px] md:h-[70px] xl:h-[89px]">
+    <div className="flex justify-between h-[50px] border border-black rounded-[10px] bg-white mx-4 my-4 p-2 md:h-[70px] xl:h-[80px]">
+      <div className="flex items-center xl:w-2/4  md:w-4/6">
+        <div
+          className="font-Volkhov text-xl text-zinc-700 cursor-pointer ml-2 md:text-2xl lg:text-3xl mt-1 xl:text-4xl"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Black Market
+        </div>
+        <div className="hidden justify-center gap-3 mt-1 items-center ml-9 md:flex xl:mt-2 xl:pl-5 xl:gap-6">
+          <Link
+            to="/"
+            className="font-Poppins text-zinc-700 font-medium md:text-lg xl:text-xl"
+          >
+            Home
+          </Link>
+          <Link
+            to="/shop"
+            className="font-Poppins text-zinc-700 font-medium md:text-lg xl:text-xl"
+          >
+            Shop
+          </Link>
+          <Link
+            to="/contact"
+            className="font-Poppins text-zinc-700 font-medium md:text-lg xl:text-xl"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
+      <div className="left justify-around items-center mr-3 hidden md:flex md:gap-3 xl:gap-4 xl:mr-4">
+        <div className="inputBox relative flex rounded-lg border border-neutral-400 md:w-36 md:h-9 xl:w-56 h-10">
+          <div className="relative flex my-auto">
+            <BiSearch className="text-3xl mx-2 text-neutral-400" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full h-full font-Poppins pt-1 pr-2 outline-none bg-transparent"
+            />
+          </div>
+        </div>
+        <HiShoppingCart
+          className="text-2xl place-items-end cursor-pointer xl:text-3xl"
+          onClick={() => {
+            navigate("/cart");
+          }}
+        />
+        <FaUserCircle
+          className="text-[25px] place-items-center cursor-pointer xl:text-[35px]"
+        />
+      </div>
 
-			{/* Mobile view */}
-			<div className="flex  items-center gap-2 sm:gap-4 md:hidden lg:hidden xl:hidden">
-				<BiSearch
-					className="text-3xl  text-neutral-400"
-					onClick={() => {
-						setSearch(!search);
-						setToggle(false);
-					}}
-				/>
-				<FaUserCircle className="text-[28px] place-items-center cursor-pointer" />
-				{!toggle ? (
-					<HiOutlineMenuAlt2
-						className="text-3xl  text-black"
-						onClick={() => {
-							setToggle(true);
-							setSearch(false);
-						}}
-					/>
-				) : (
-					<HiOutlineX
-						className="text-3xl  text-black float-right"
-						onClick={() => setToggle(false)}
-					/>
-				)}
-			</div>
+      {/* Mobile view */}
+      <div className="flex items-center gap-2 md:hidden">
+        <BiSearch
+          className="text-2xl  text-neutral-400"
+          onClick={() => {
+            setSearch(!search);
+            setToggle(false);
+          }}
+        />
+        <FaUserCircle className="text-[25px] place-items-center cursor-pointer relative"/>
+        {!toggle ? (
+          <HiOutlineMenuAlt2
+            className="text-2xl  text-black"
+            onClick={() => {
+              setToggle(true);
+              setSearch(false);
+            }}
+          />
+        ) : (
+          <HiOutlineX
+            className="text-2xl text-black float-right"
+            onClick={() => setToggle(false)}
+          />
+        )}
+      </div>
 
-			{toggle && (
-				<div className="flex flex-col absolute top-16 right-12 bg-gray-200 py-2 rounded-sm">
-					<Link
-						to="/"
-						className="font-Poppins py-1 px-4 border-b-2 border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Account
-					</Link>
-					<Link
-						to="/"
-						className="font-Poppins py-1 px-4 border-b-2 border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Home
-					</Link>
-					<Link
-						to="/shop"
-						className="font-Poppins py-1 px-4 border-b-2 border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Shop
-					</Link>
-					<Link
-						to="/contact"
-						className="font-Poppins py-1 px-4 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-					>
-						Contact
-					</Link>
-				</div>
-			)}
-			{search && (
-				<div className="flex absolute top-20 border-2 px-3 py-2 w-[88vw] rounded-md bg-gray-200 md:hidden lg:hidden xl:hidden">
-					<BiSearch className="text-3xl mx-2 text-black" />
-					<input
-						type="text"
-						placeholder="Search"
-						className="w-full h-full pt-1 pr-2 outline-none bg-transparent font-Poppins placeholder:text-black"
-					/>
-				</div>
-			)}
-		</div>
-	);
+      {toggle && (
+        <div className="flex flex-col absolute top-14 right-10 bg-gray-200 py-2 rounded-sm px-2">
+          <Link
+            to="/"
+            className="font-Poppins py-1 px-3 border-b border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
+          >
+            Account
+          </Link>
+          <Link
+            to="/"
+            className="font-Poppins py-1 px-3 border-b border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
+          >
+            Home
+          </Link>
+          <Link
+            to="/shop"
+            className="font-Poppins py-1 px-3 border-b border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
+          >
+            Shop
+          </Link>
+          <Link
+            to="/contact"
+            className="font-Poppins py-1 px-3 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
+          >
+            Contact
+          </Link>
+        </div>
+      )}
+      {search && (
+        <div className="flex absolute top-20 border-2 px-3 py-2 w-[90vw] rounded-md border-black border-opacity-70 bg-gray-200 md:hidden lg:hidden xl:hidden">
+          <BiSearch className="text-3xl text-black" />
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-full h-full pt-1 pr-2 ml-2 outline-none bg-transparent font-Poppins placeholder:text-black placeholder:opacity-60"
+          />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default NavBar;
