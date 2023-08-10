@@ -26,11 +26,11 @@ const Banner = () => {
       {/* Desktopview */}
       <div className="hidden md:flex h-[600px] mx-9 mt-6 mb-5 relative">
         <img
-          className="md:bg-red-500 h-full w-full object-cover rounded-2xl"
+          className="h-full w-full object-cover rounded-2xl"
           src={desktopBanner}
           alt="HeroImage"
         />
-        <div className="absolute w-full h-full top-0 rounded-[10px] bg-black bg-opacity-40"></div>
+        <div className="absolute w-full h-full top-0 rounded-2xl bg-black bg-opacity-40"></div>
       </div>
     </>
   );
