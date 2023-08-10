@@ -1,13 +1,17 @@
 import NavBar from "../../components/NavBar";
 import ProductCard from "../../components/HomeProductCard";
+import Footer from "../../components/Footer";
+import Reviews from "../../components/Reviews";
 import img1 from '../../assets/shirts.jpg'
 import img2 from '../../assets/outwear.jpg'
 import img3 from '../../assets/bottom.webp'
 import img4 from '../../assets/sweater.webp'
 import img5 from '../../assets/accesories.webp'
 import img6 from '../../assets/footwear.webp'
+
 import Footer from "../../components/Footer";
 import Banner from "../../components/Banner";
+
 
 const Home = () => {
 	const elements = [
@@ -29,6 +33,7 @@ const Home = () => {
 					))}
 				</div>
 			</div>
+			<Reviews />
 			<Footer />
 		</div>
 	);
