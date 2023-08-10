@@ -99,12 +99,6 @@ const NavBar = () => {
           >
             Home
           </Link>
-          {/* <Link
-            to="/shop"
-            className="font-Poppins py-1 px-3 border-b border-gray-500 text-zinc-700 font-medium xl:text-xl md:text-lg sm:text-base"
-          >
-            Shop
-          </Link> */}
           <div
             className="flex flex-col relative"
             onClick={() => setShop(!shop)}
@@ -137,7 +131,7 @@ const NavBar = () => {
         </div>
       )}
       {search && (
-        <div className="flex absolute top-20 border-2 px-3 py-2 w-[90vw] rounded-md border-black border-opacity-70 bg-gray-200 md:hidden lg:hidden xl:hidden">
+        <div className="flex absolute z-50 top-20 border-2 px-3 py-2 w-[90vw] rounded-md border-black border-opacity-70 bg-gray-200 md:hidden lg:hidden xl:hidden">
           <BiSearch className="text-3xl text-black" />
           <input
             type="text"
