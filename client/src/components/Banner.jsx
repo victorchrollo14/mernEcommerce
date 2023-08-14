@@ -24,7 +24,7 @@ const Banner = () => {
         </div>
       </div>
       {/* Desktopview */}
-      <div className="hidden md:flex h-[600px] mx-9 mt-6 mb-5 relative">
+      <div className="hidden md:flex h-[600px] mx-9 mt-6 mb-5 relative xl:h-[800px]">
         <img
           className="h-full w-full object-cover rounded-2xl"
           src={desktopBanner}

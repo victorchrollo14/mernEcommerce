@@ -19,10 +19,10 @@ const Home = () => {
 		{ image: img6 },
 	];
 	return (
-		<div className="overflow-x-hidden w-full bg-[#DFDFDF]">
+		<div className="overflow-x-hidden w-full">
 			<NavBar />
 			<Banner/>
-			<div className="home flex w-screen justify-center">
+			<div className="home flex w-screen justify-center pt-4 mt-10 bg-[#DFDFDF]">
 				<div className="home-product-cards sm:w-[90%] flex flex-wrap justify-center flex-row">
 					{elements.map((element, index) => (
 						<ProductCard key={index} image={element.image} />
