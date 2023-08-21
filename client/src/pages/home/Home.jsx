@@ -8,10 +8,7 @@ import img3 from '../../assets/bottom.webp'
 import img4 from '../../assets/sweater.webp'
 import img5 from '../../assets/accesories.webp'
 import img6 from '../../assets/footwear.webp'
-<<<<<<< HEAD
-import Footer from "../../components/Footer";
 import Banner from "../../components/Banner";
-=======
 
 >>>>>>> 59e8e4210b040516e23dcdec171187fec6e12d0d
 
