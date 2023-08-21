@@ -10,8 +10,6 @@ import img5 from '../../assets/accesories.webp'
 import img6 from '../../assets/footwear.webp'
 import Banner from "../../components/Banner";
 
->>>>>>> 59e8e4210b040516e23dcdec171187fec6e12d0d
-
 const Home = () => {
 	const elements = [
 		{ image: img1 },
