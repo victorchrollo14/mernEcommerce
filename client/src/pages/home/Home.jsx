@@ -8,12 +8,8 @@ import img3 from '../../assets/bottom.webp'
 import img4 from '../../assets/sweater.webp'
 import img5 from '../../assets/accesories.webp'
 import img6 from '../../assets/footwear.webp'
-<<<<<<< HEAD
-import Footer from "../../components/Footer";
 import Banner from "../../components/Banner";
-=======
-
->>>>>>> 59e8e4210b040516e23dcdec171187fec6e12d0d
+import Brands from "../../components/Brands";
 
 const Home = () => {
 	const elements = [
@@ -28,6 +24,7 @@ const Home = () => {
 		<div className="overflow-x-hidden w-full">
 			<NavBar />
 			<Banner/>
+			<Brands/>
 			<div className="home flex w-screen justify-center pt-4 mt-10 bg-[#DFDFDF]">
 				<div className="home-product-cards sm:w-[90%] flex flex-wrap justify-center flex-row">
 					{elements.map((element, index) => (
