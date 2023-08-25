@@ -1,14 +1,16 @@
 import NavBar from "../../components/NavBar";
-import ProductCard from "../../components/HomeProductCard";
+import { useProductContext } from "../../contexts/productContext";
 
 const ShopPage = () => {
-	return (
-		<div className="bg-[#DFDFDF]">
-			<NavBar />
-			<h1>Shop Page</h1>
+  const { products } = useProductContext();
+  console.log(products.shirts)
 
-		</div>
-	);
+  return (
+    <div className="bg-[#DFDFDF]">
+      <NavBar />
+      <h1>Shop Page</h1>
+    </div>
+  );
 };
 
 export default ShopPage;

@@ -1,9 +1,13 @@
-import { useState } from "react";
 import { Routes } from "./routes";
-import './Styles.css'
+import { ProductContextProvider } from "./contexts/productContext";
+import "./Styles.css";
 
 function App() {
-  return <Routes />;
+  return (
+    <ProductContextProvider>
+      <Routes />;
+    </ProductContextProvider>
+  );
 }
 
 export default App;
