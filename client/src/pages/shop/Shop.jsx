@@ -11,7 +11,7 @@ const ShopPage = () => {
 
   useEffect(() => {
     if (products) {
-      setCategory(products.bottoms);
+      setCategory(products.shirts);
     }
   }, [products]);
 
@@ -19,7 +19,11 @@ const ShopPage = () => {
     <div className="bg-[#EDF0F8] min-h-screen overflow-x-hidden ">
       <NavBar />
       <section className="products-section flex flex-row px-5 ">
-        <ShopNavigation />
+        <ShopNavigation
+          products={products}
+          category={category}
+          setCategory={setCategory}
+        />
         {category ? (
           <ul className="products-list   md:pl-5 ml-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 lg:grid-cols-3 pt-2 md:w-4/5 justify-end">
             {category.map((item) => (
