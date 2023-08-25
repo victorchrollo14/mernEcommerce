@@ -530,428 +530,424 @@
                 "price": "$125"
             }
         ],
-        "knits": {
-            "headerImageLink": "ProductAssets/banner/mens_instock_Q219_heavy_bag_mustard_006_2048x2048.progressive.jpg",
-            "headerProduct": "Men's Knits",
-            "itemList": [
-                {
-                    "id": 1,
-                    "src": "ProductAssets/knits/instock_m_q122_heavybag_henley_heathergrey_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q122_heavybag_henley_heathergrey_002_530x.progressive.jpg",
-                    "title": "The Jacquard Polo",
-                    "subtitle": "in Ash Heather",
-                    "price": "$78"
-                },
-                {
-                    "id": 2,
-                    "src": "ProductAssets/knits/instock_m_q122_heavybagtee_black_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q122_heavybagtee_black_002_530x.progressive.jpg",
-                    "title": "The Jacquard Polo",
-                    "subtitle": "in Storm",
-                    "price": "$78"
-                },
-                {
-                    "id": 3,
-                    "src": "ProductAssets/knits/instock_m_q123_CottonHemp_DriedAcorn_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_DriedAcorn_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Ringer Tee",
-                    "subtitle": "in Slate & Seed",
-                    "price": "$55"
-                },
-                {
-                    "id": 4,
-                    "src": "ProductAssets/knits/instock_m_q123_CottonHemp_NavyStripe_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_NavyStripe_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Ringer Tee",
-                    "subtitle": "in Natural & Navy",
-                    "price": "$55"
-                },
-                {
-                    "id": 5,
-                    "src": "ProductAssets/knits/instock_m_q123_CottonHemp_SagebrushStripe_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_SagebrushStripe_002_530x.progressive.jpg",
-                    "title": "The Short Sleeve Heavy Bag Henley",
-                    "subtitle": "in Slate",
-                    "price": "$58"
-                },
-                {
-                    "id": 6,
-                    "src": "ProductAssets/knits/instock_m_q123_CottonHemp_Sagebrush_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_Sagebrush_002_530x.progressive.jpg",
-                    "title": "The Short Sleeve Heavy Bag Henley",
-                    "subtitle": "in Fog",
-                    "price": "$58"
-                },
-                {
-                    "id": 7,
-                    "src": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Coal_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Coal_002_530x.progressive.jpg",
-                    "title": "The Short Sleeve Heavy Bag Henley",
-                    "subtitle": "in Storm",
-                    "price": "$58"
-                },
-                {
-                    "id": 8,
-                    "src": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Cypress_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Cypress_002_530x.progressive.jpg",
-                    "title": "The Morgan Crewneck",
-                    "subtitle": "in Ash Stripe",
-                    "price": "$98"
-                },
-                {
-                    "id": 9,
-                    "src": "ProductAssets/knits/instock_m_q123_HBTee_Slate_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_HBTee_Slate_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Natural & Sagebrush Stripe",
-                    "price": "$42"
-                },
-                {
-                    "id": 10,
-                    "src": "ProductAssets/knits/instock_m_q123_HBTee_Storm_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_HBTee_Storm_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Storm & Navy Stripe",
-                    "price": "$42"
-                },
-                {
-                    "id": 11,
-                    "src": "ProductAssets/knits/instock_m_q123_HB_LongSleeve_PartyWave_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_HB_LongSleeve_PartyWave_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Sagebrush",
-                    "price": "$38"
-                },
-                {
-                    "id": 12,
-                    "src": "ProductAssets/knits/instock_m_q123_HB_Tee_DawnPatrol_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_HB_Tee_DawnPatrol_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Dried Acorn",
-                    "price": "$38"
-                },
-                {
-                    "id": 13,
-                    "src": "ProductAssets/knits/instock_m_q123_HB_Tee_SeaLettuce_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_HB_Tee_SeaLettuce_002_530x.progressive.jpg",
-                    "title": "The Organic Cotton Tee",
-                    "subtitle": "in Seafoam Stripe",
-                    "price": "$58"
-                },
-                {
-                    "id": 14,
-                    "src": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Navy_And_Natural_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Navy_And_Natural_003_530x.progressive.jpg",
-                    "title": "The Organic Cotton Tee",
-                    "subtitle": "in Daybreak Stripe",
-                    "price": "$58"
-                },
-                {
-                    "id": 15,
-                    "src": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Slate_and_Seed_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Slate_and_Seed_003_530x.progressive.jpg",
-                    "title": "The Nomad Hoodie",
-                    "subtitle": "in Navy Sherpa",
-                    "price": "$168"
-                },
-                {
-                    "id": 16,
-                    "src": "ProductAssets/knits/instock_m_q123_Horizon_Pullover_Oat_Heather_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Horizon_Pullover_Oat_Heather_003_530x.progressive.jpg",
-                    "title": "The Horizon Pullover",
-                    "subtitle": "in Oat Heather",
-                    "price": "$128"
-                },
-                {
-                    "id": 17,
-                    "src": "ProductAssets/knits/instock_m_q123_JacquardPolo_AshHeather_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_JacquardPolo_AshHeather_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Sea Lettuce",
-                    "price": "$50"
-                },
-                {
-                    "id": 18,
-                    "src": "ProductAssets/knits/instock_m_q123_JacquardPolo_Storm_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_JacquardPolo_Storm_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Long Sleeve",
-                    "subtitle": "in Party Wave",
-                    "price": "$70"
-                },
-                {
-                    "id": 19,
-                    "src": "ProductAssets/knits/instock_m_q123_Morgan_Crewneck_Ash_Stripe_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Morgan_Crewneck_Ash_Stripe_003_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Dawn Patrol",
-                    "price": "$50"
-                },
-                {
-                    "id": 20,
-                    "src": "ProductAssets/knits/instock_m_q123_NomadHoodie_NavySherpa_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_NomadHoodie_NavySherpa_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Storm",
-                    "price": "$48"
-                },
-                {
-                    "id": 21,
-                    "src": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Daybreak_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Daybreak_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Smoke",
-                    "price": "$48"
-                },
-                {
-                    "id": 22,
-                    "src": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Seafoam_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Seafoam_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Slate",
-                    "price": "$48"
-                },
-                {
-                    "id": 23,
-                    "src": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Mahogony_and_Natural_Colorblock_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Mahogony_and_Natural_Colorblock_003_530x.progressive.jpg",
-                    "title": "The Fall Line Pullover",
-                    "subtitle": "in Coal Heather",
-                    "price": "$148"
-                },
-                {
-                    "id": 24,
-                    "src": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Storm_Stripe_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Storm_Stripe_003_530x.progressive.jpg",
-                    "title": "The Fall Line Pullover",
-                    "subtitle": "in Cypress Heather",
-                    "price": "$148"
-                },
-                {
-                    "id": 25,
-                    "src": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Fog_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Fog_003_530x.progressive.jpg",
-                    "title": "The Rugby Shirt",
-                    "subtitle": "in Storm Stripe",
-                    "price": "$128"
-                },
-                {
-                    "id": 26,
-                    "src": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Slate_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Slate_003_530x.progressive.jpg",
-                    "title": "The Rugby Shirt",
-                    "subtitle": "in Mahogany & Natural Color Block",
-                    "price": "$128"
-                },
-                {
-                    "id": 27,
-                    "src": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Storm_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Storm_003_530x.progressive.jpg",
-                    "title": "The Fillmore Crewneck",
-                    "subtitle": "in Cypress Terry",
-                    "price": "$118"
-                },
-                {
-                    "id": 28,
-                    "src": "ProductAssets/knits/instock_m_q222_heavybagtee_apricot_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_apricot_002_530x.progressive.jpg",
-                    "title": "The Fillmore Crewneck",
-                    "subtitle": "in Copper Terry",
-                    "price": "$118"
-                },
-                {
-                    "id": 29,
-                    "src": "ProductAssets/knits/instock_m_q222_heavybagtee_canyonstripe_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_canyonstripe_002_530x.progressive.jpg",
-                    "title": "The Fillmore Hoodie",
-                    "subtitle": "in Cypress Terry",
-                    "price": "$138"
-                },
-                {
-                    "id": 30,
-                    "src": "ProductAssets/knits/instock_m_q222_heavybagtee_gold_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_gold_002_530x.progressive.jpg",
-                    "title": "The Fillmore Hoodie",
-                    "subtitle": "in Copper Terry",
-                    "price": "$138"
-                },
-                {
-                    "id": 31,
-                    "src": "ProductAssets/knits/instock_m_q222_heavybagtee_walnut_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_walnut_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Heather Grey",
-                    "price": "$38"
-                },
-                {
-                    "id": 32,
-                    "src": "ProductAssets/knits/instock_m_q321_hb_aluminum_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q321_hb_aluminum_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Long Sleeve Tee",
-                    "subtitle": "in Heather Grey",
-                    "price": "$58"
-                },
-                {
-                    "id": 33,
-                    "src": "ProductAssets/knits/instock_m_q322_CottonHempTee-Mustard_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q322_CottonHempTee-Mustard_003_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Long Sleeve Tee",
-                    "subtitle": "in Engine",
-                    "price": "$58"
-                },
-                {
-                    "id": 34,
-                    "src": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_CopperTerry_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_CopperTerry_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Natural",
-                    "price": "$35"
-                },
-                {
-                    "id": 35,
-                    "src": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_Cypress_Terry_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_Cypress_Terry_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Engine",
-                    "price": "$38"
-                },
-                {
-                    "id": 36,
-                    "src": "ProductAssets/knits/instock_m_q322_fillmore_crew_copper_terry_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q322_fillmore_crew_copper_terry_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Khaki",
-                    "price": "$35"
-                },
-                {
-                    "id": 37,
-                    "src": "ProductAssets/knits/instock_m_q322_fillmore_crew_cypress_terry_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q322_fillmore_crew_cypress_terry_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Navy",
-                    "price": "$35"
-                },
-                {
-                    "id": 38,
-                    "src": "ProductAssets/knits/instock_m_q422_CottonHempTee_Engine_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_CottonHempTee_Engine_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Charcoal",
-                    "price": "$35"
-                },
-                {
-                    "id": 39,
-                    "src": "ProductAssets/knits/instock_m_q422_CottonHempTee_Oatmeal_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_CottonHempTee_Oatmeal_002_530x.progressive.jpg",
-                    "title": "The Cotton Hemp Tee",
-                    "subtitle": "in Mustard",
-                    "price": "$38"
-                },
-                {
-                    "id": 40,
-                    "src": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_Engine_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_Engine_002_530x.progressive.jpg",
-                    "title": "The Merino Tee",
-                    "subtitle": "in Heather Grey",
-                    "price": "$68"
-                },
-                {
-                    "id": 41,
-                    "src": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_heathergrey_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_heathergrey_002_530x.progressive.jpg",
-                    "title": "The Merino Tee",
-                    "subtitle": "in Heather Navy",
-                    "price": "$68"
-                },
-                {
-                    "id": 42,
-                    "src": "ProductAssets/knits/instock_m_q422_HB_Henley_Burgundy_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_HB_Henley_Burgundy_002_530x.progressive.jpg",
-                    "title": "The Merino Tee",
-                    "subtitle": "in Heather Black",
-                    "price": "$68"
-                },
-                {
-                    "id": 43,
-                    "src": "ProductAssets/knits/instock_m_q422_HB_Tee_Burgundy_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_HB_Tee_Burgundy_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Natural",
-                    "price": "$45"
-                },
-                {
-                    "id": 44,
-                    "src": "ProductAssets/knits/instock_m_q422_HB_Tee_Honey_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_HB_Tee_Honey_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Black",
-                    "price": "$45"
-                },
-                {
-                    "id": 45,
-                    "src": "ProductAssets/knits/instock_m_q422_HB_Tee_Oatmeal_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_m_q422_HB_Tee_Oatmeal_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Henley",
-                    "subtitle": "in Natural",
-                    "price": "$68"
-                },
-                {
-                    "id": 46,
-                    "src": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_black_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_black_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Waffle Henley",
-                    "subtitle": "in Burgundy",
-                    "price": "$78"
-                },
-                {
-                    "id": 47,
-                    "src": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_grey_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_grey_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Honey",
-                    "price": "$48"
-                },
-                {
-                    "id": 48,
-                    "src": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_navy_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_navy_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Apricot",
-                    "price": "$45"
-                },
-                {
-                    "id": 49,
-                    "src": "ProductAssets/knits/instock_mens_q320_std_iss_tee_charcoal_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_mens_q320_std_iss_tee_charcoal_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Walnut",
-                    "price": "$45"
-                },
-                {
-                    "id": 50,
-                    "src": "ProductAssets/knits/instock_mens_q320_std_iss_tee_natural_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_mens_q320_std_iss_tee_natural_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Burgundy",
-                    "price": "$48"
-                },
-                {
-                    "id": 51,
-                    "src": "ProductAssets/knits/instock_mens_q320_std_iss_tee_navy_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/instock_mens_q320_std_iss_tee_navy_002_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Gold",
-                    "price": "$45"
-                },
-                {
-                    "id": 52,
-                    "src": "ProductAssets/knits/workshop_m_q322_WeekendHoodie-CharcoakDK_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/knits/workshop_m_q322_WeekendHoodie-CharcoakDK_003_530x.progressive.jpg",
-                    "title": "The Heavy Bag Tee",
-                    "subtitle": "in Aluminum",
-                    "price": "$45"
-                }
-            ]
-        },
+        "knits": [
+            {
+                "id": 1,
+                "src": "ProductAssets/knits/instock_m_q122_heavybag_henley_heathergrey_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q122_heavybag_henley_heathergrey_002_530x.progressive.jpg",
+                "title": "The Jacquard Polo",
+                "subtitle": "in Ash Heather",
+                "price": "$78"
+            },
+            {
+                "id": 2,
+                "src": "ProductAssets/knits/instock_m_q122_heavybagtee_black_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q122_heavybagtee_black_002_530x.progressive.jpg",
+                "title": "The Jacquard Polo",
+                "subtitle": "in Storm",
+                "price": "$78"
+            },
+            {
+                "id": 3,
+                "src": "ProductAssets/knits/instock_m_q123_CottonHemp_DriedAcorn_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_DriedAcorn_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Ringer Tee",
+                "subtitle": "in Slate & Seed",
+                "price": "$55"
+            },
+            {
+                "id": 4,
+                "src": "ProductAssets/knits/instock_m_q123_CottonHemp_NavyStripe_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_NavyStripe_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Ringer Tee",
+                "subtitle": "in Natural & Navy",
+                "price": "$55"
+            },
+            {
+                "id": 5,
+                "src": "ProductAssets/knits/instock_m_q123_CottonHemp_SagebrushStripe_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_SagebrushStripe_002_530x.progressive.jpg",
+                "title": "The Short Sleeve Heavy Bag Henley",
+                "subtitle": "in Slate",
+                "price": "$58"
+            },
+            {
+                "id": 6,
+                "src": "ProductAssets/knits/instock_m_q123_CottonHemp_Sagebrush_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_CottonHemp_Sagebrush_002_530x.progressive.jpg",
+                "title": "The Short Sleeve Heavy Bag Henley",
+                "subtitle": "in Fog",
+                "price": "$58"
+            },
+            {
+                "id": 7,
+                "src": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Coal_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Coal_002_530x.progressive.jpg",
+                "title": "The Short Sleeve Heavy Bag Henley",
+                "subtitle": "in Storm",
+                "price": "$58"
+            },
+            {
+                "id": 8,
+                "src": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Cypress_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Fall_Line_Pullover_Cypress_002_530x.progressive.jpg",
+                "title": "The Morgan Crewneck",
+                "subtitle": "in Ash Stripe",
+                "price": "$98"
+            },
+            {
+                "id": 9,
+                "src": "ProductAssets/knits/instock_m_q123_HBTee_Slate_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_HBTee_Slate_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Natural & Sagebrush Stripe",
+                "price": "$42"
+            },
+            {
+                "id": 10,
+                "src": "ProductAssets/knits/instock_m_q123_HBTee_Storm_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_HBTee_Storm_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Storm & Navy Stripe",
+                "price": "$42"
+            },
+            {
+                "id": 11,
+                "src": "ProductAssets/knits/instock_m_q123_HB_LongSleeve_PartyWave_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_HB_LongSleeve_PartyWave_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Sagebrush",
+                "price": "$38"
+            },
+            {
+                "id": 12,
+                "src": "ProductAssets/knits/instock_m_q123_HB_Tee_DawnPatrol_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_HB_Tee_DawnPatrol_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Dried Acorn",
+                "price": "$38"
+            },
+            {
+                "id": 13,
+                "src": "ProductAssets/knits/instock_m_q123_HB_Tee_SeaLettuce_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_HB_Tee_SeaLettuce_002_530x.progressive.jpg",
+                "title": "The Organic Cotton Tee",
+                "subtitle": "in Seafoam Stripe",
+                "price": "$58"
+            },
+            {
+                "id": 14,
+                "src": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Navy_And_Natural_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Navy_And_Natural_003_530x.progressive.jpg",
+                "title": "The Organic Cotton Tee",
+                "subtitle": "in Daybreak Stripe",
+                "price": "$58"
+            },
+            {
+                "id": 15,
+                "src": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Slate_and_Seed_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Heavy_Bag_Ringer_Tee_Slate_and_Seed_003_530x.progressive.jpg",
+                "title": "The Nomad Hoodie",
+                "subtitle": "in Navy Sherpa",
+                "price": "$168"
+            },
+            {
+                "id": 16,
+                "src": "ProductAssets/knits/instock_m_q123_Horizon_Pullover_Oat_Heather_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Horizon_Pullover_Oat_Heather_003_530x.progressive.jpg",
+                "title": "The Horizon Pullover",
+                "subtitle": "in Oat Heather",
+                "price": "$128"
+            },
+            {
+                "id": 17,
+                "src": "ProductAssets/knits/instock_m_q123_JacquardPolo_AshHeather_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_JacquardPolo_AshHeather_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Sea Lettuce",
+                "price": "$50"
+            },
+            {
+                "id": 18,
+                "src": "ProductAssets/knits/instock_m_q123_JacquardPolo_Storm_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_JacquardPolo_Storm_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Long Sleeve",
+                "subtitle": "in Party Wave",
+                "price": "$70"
+            },
+            {
+                "id": 19,
+                "src": "ProductAssets/knits/instock_m_q123_Morgan_Crewneck_Ash_Stripe_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Morgan_Crewneck_Ash_Stripe_003_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Dawn Patrol",
+                "price": "$50"
+            },
+            {
+                "id": 20,
+                "src": "ProductAssets/knits/instock_m_q123_NomadHoodie_NavySherpa_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_NomadHoodie_NavySherpa_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Storm",
+                "price": "$48"
+            },
+            {
+                "id": 21,
+                "src": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Daybreak_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Daybreak_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Smoke",
+                "price": "$48"
+            },
+            {
+                "id": 22,
+                "src": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Seafoam_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Organic_Cotton_Tee_Seafoam_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Slate",
+                "price": "$48"
+            },
+            {
+                "id": 23,
+                "src": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Mahogony_and_Natural_Colorblock_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Mahogony_and_Natural_Colorblock_003_530x.progressive.jpg",
+                "title": "The Fall Line Pullover",
+                "subtitle": "in Coal Heather",
+                "price": "$148"
+            },
+            {
+                "id": 24,
+                "src": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Storm_Stripe_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Rugby_Shirt_Storm_Stripe_003_530x.progressive.jpg",
+                "title": "The Fall Line Pullover",
+                "subtitle": "in Cypress Heather",
+                "price": "$148"
+            },
+            {
+                "id": 25,
+                "src": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Fog_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Fog_003_530x.progressive.jpg",
+                "title": "The Rugby Shirt",
+                "subtitle": "in Storm Stripe",
+                "price": "$128"
+            },
+            {
+                "id": 26,
+                "src": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Slate_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Slate_003_530x.progressive.jpg",
+                "title": "The Rugby Shirt",
+                "subtitle": "in Mahogany & Natural Color Block",
+                "price": "$128"
+            },
+            {
+                "id": 27,
+                "src": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Storm_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q123_Short_Sleeve_Heavy_Bag_Henley_Storm_003_530x.progressive.jpg",
+                "title": "The Fillmore Crewneck",
+                "subtitle": "in Cypress Terry",
+                "price": "$118"
+            },
+            {
+                "id": 28,
+                "src": "ProductAssets/knits/instock_m_q222_heavybagtee_apricot_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_apricot_002_530x.progressive.jpg",
+                "title": "The Fillmore Crewneck",
+                "subtitle": "in Copper Terry",
+                "price": "$118"
+            },
+            {
+                "id": 29,
+                "src": "ProductAssets/knits/instock_m_q222_heavybagtee_canyonstripe_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_canyonstripe_002_530x.progressive.jpg",
+                "title": "The Fillmore Hoodie",
+                "subtitle": "in Cypress Terry",
+                "price": "$138"
+            },
+            {
+                "id": 30,
+                "src": "ProductAssets/knits/instock_m_q222_heavybagtee_gold_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_gold_002_530x.progressive.jpg",
+                "title": "The Fillmore Hoodie",
+                "subtitle": "in Copper Terry",
+                "price": "$138"
+            },
+            {
+                "id": 31,
+                "src": "ProductAssets/knits/instock_m_q222_heavybagtee_walnut_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q222_heavybagtee_walnut_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Heather Grey",
+                "price": "$38"
+            },
+            {
+                "id": 32,
+                "src": "ProductAssets/knits/instock_m_q321_hb_aluminum_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q321_hb_aluminum_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Long Sleeve Tee",
+                "subtitle": "in Heather Grey",
+                "price": "$58"
+            },
+            {
+                "id": 33,
+                "src": "ProductAssets/knits/instock_m_q322_CottonHempTee-Mustard_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q322_CottonHempTee-Mustard_003_530x.progressive.jpg",
+                "title": "The Cotton Hemp Long Sleeve Tee",
+                "subtitle": "in Engine",
+                "price": "$58"
+            },
+            {
+                "id": 34,
+                "src": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_CopperTerry_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_CopperTerry_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Natural",
+                "price": "$35"
+            },
+            {
+                "id": 35,
+                "src": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_Cypress_Terry_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q322_FillmoreHoodie_Cypress_Terry_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Engine",
+                "price": "$38"
+            },
+            {
+                "id": 36,
+                "src": "ProductAssets/knits/instock_m_q322_fillmore_crew_copper_terry_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q322_fillmore_crew_copper_terry_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Khaki",
+                "price": "$35"
+            },
+            {
+                "id": 37,
+                "src": "ProductAssets/knits/instock_m_q322_fillmore_crew_cypress_terry_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q322_fillmore_crew_cypress_terry_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Navy",
+                "price": "$35"
+            },
+            {
+                "id": 38,
+                "src": "ProductAssets/knits/instock_m_q422_CottonHempTee_Engine_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_CottonHempTee_Engine_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Charcoal",
+                "price": "$35"
+            },
+            {
+                "id": 39,
+                "src": "ProductAssets/knits/instock_m_q422_CottonHempTee_Oatmeal_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_CottonHempTee_Oatmeal_002_530x.progressive.jpg",
+                "title": "The Cotton Hemp Tee",
+                "subtitle": "in Mustard",
+                "price": "$38"
+            },
+            {
+                "id": 40,
+                "src": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_Engine_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_Engine_002_530x.progressive.jpg",
+                "title": "The Merino Tee",
+                "subtitle": "in Heather Grey",
+                "price": "$68"
+            },
+            {
+                "id": 41,
+                "src": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_heathergrey_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_CottonHemp_LS_heathergrey_002_530x.progressive.jpg",
+                "title": "The Merino Tee",
+                "subtitle": "in Heather Navy",
+                "price": "$68"
+            },
+            {
+                "id": 42,
+                "src": "ProductAssets/knits/instock_m_q422_HB_Henley_Burgundy_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_HB_Henley_Burgundy_002_530x.progressive.jpg",
+                "title": "The Merino Tee",
+                "subtitle": "in Heather Black",
+                "price": "$68"
+            },
+            {
+                "id": 43,
+                "src": "ProductAssets/knits/instock_m_q422_HB_Tee_Burgundy_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_HB_Tee_Burgundy_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Natural",
+                "price": "$45"
+            },
+            {
+                "id": 44,
+                "src": "ProductAssets/knits/instock_m_q422_HB_Tee_Honey_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_HB_Tee_Honey_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Black",
+                "price": "$45"
+            },
+            {
+                "id": 45,
+                "src": "ProductAssets/knits/instock_m_q422_HB_Tee_Oatmeal_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_m_q422_HB_Tee_Oatmeal_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Henley",
+                "subtitle": "in Natural",
+                "price": "$68"
+            },
+            {
+                "id": 46,
+                "src": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_black_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_black_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Waffle Henley",
+                "subtitle": "in Burgundy",
+                "price": "$78"
+            },
+            {
+                "id": 47,
+                "src": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_grey_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_grey_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Honey",
+                "price": "$48"
+            },
+            {
+                "id": 48,
+                "src": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_navy_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_mens_q320_merino_tee_heather_navy_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Apricot",
+                "price": "$45"
+            },
+            {
+                "id": 49,
+                "src": "ProductAssets/knits/instock_mens_q320_std_iss_tee_charcoal_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_mens_q320_std_iss_tee_charcoal_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Walnut",
+                "price": "$45"
+            },
+            {
+                "id": 50,
+                "src": "ProductAssets/knits/instock_mens_q320_std_iss_tee_natural_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_mens_q320_std_iss_tee_natural_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Burgundy",
+                "price": "$48"
+            },
+            {
+                "id": 51,
+                "src": "ProductAssets/knits/instock_mens_q320_std_iss_tee_navy_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/instock_mens_q320_std_iss_tee_navy_002_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Gold",
+                "price": "$45"
+            },
+            {
+                "id": 52,
+                "src": "ProductAssets/knits/workshop_m_q322_WeekendHoodie-CharcoakDK_001_530x.progressive.jpg",
+                "src2": "ProductAssets/knits/workshop_m_q322_WeekendHoodie-CharcoakDK_003_530x.progressive.jpg",
+                "title": "The Heavy Bag Tee",
+                "subtitle": "in Aluminum",
+                "price": "$45"
+            }
+        ],
         "bottoms": [
             {
                 "id": 1,
@@ -1466,220 +1462,216 @@
                 "price": "$168"
             }
         ],
-        "denim": {
-            "headerImageLink": "ProductAssets/banner/dept_catigory_Q419_denim_01_2048x2048.progressive.jpg",
-            "headerProduct": "Men's denim",
-            "itemList": [
-                {
-                    "id": 1,
-                    "src": "ProductAssets/denim/instock_m_q122_demojean_rinsedorganic_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q122_demojean_rinsedorganic_002_530x.progressive.jpg",
-                    "title": "The Workhorse Jacket",
-                    "subtitle": "in Fletcher Wash Organic Selvage",
-                    "price": "$248"
-                },
-                {
-                    "id": 2,
-                    "src": "ProductAssets/denim/instock_m_q122_longhauljacket_sawyerwash_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q122_longhauljacket_sawyerwash_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Fletcher Wash Organic Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 3,
-                    "src": "ProductAssets/denim/instock_m_q122_ojai_sawyerwash_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q122_ojai_sawyerwash_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Wallace Wash Organic Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 4,
-                    "src": "ProductAssets/denim/instock_m_q122_slimjean_rinsed_organic_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q122_slimjean_rinsed_organic_002_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Fletcher Wash Organic Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 5,
-                    "src": "ProductAssets/denim/instock_m_q122_workhorse_marlow_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q122_workhorse_marlow_002_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Wallace Wash Organic Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 6,
-                    "src": "ProductAssets/denim/instock_m_q123_DemoJean_Fletcher_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_DemoJean_Fletcher_002_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Natural Organic Selvage",
-                    "price": "$148"
-                },
-                {
-                    "id": 7,
-                    "src": "ProductAssets/denim/instock_m_q123_DemoJean_Wallace_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_DemoJean_Wallace_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Natural Organic Selvage",
-                    "price": "$148"
-                },
-                {
-                    "id": 8,
-                    "src": "ProductAssets/denim/instock_m_q123_Democratic_Jean_Natural_Organic_Selvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_Democratic_Jean_Natural_Organic_Selvage_003_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Cone Mills Cordura Denim",
-                    "price": "$198"
-                },
-                {
-                    "id": 9,
-                    "src": "ProductAssets/denim/instock_m_q123_SlimJean_Fletcher_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_SlimJean_Fletcher_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Cone Mills Cordura Denim",
-                    "price": "$198"
-                },
-                {
-                    "id": 10,
-                    "src": "ProductAssets/denim/instock_m_q123_SlimJean_Wallace_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_SlimJean_Wallace_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Sawyer Wash Organic Selvage",
-                    "price": "$188"
-                },
-                {
-                    "id": 11,
-                    "src": "ProductAssets/denim/instock_m_q123_Slim_Jean_Natural_Organic_Selvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_Slim_Jean_Natural_Organic_Selvage_003_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Sawyer Wash Organic Selvage",
-                    "price": "$188"
-                },
-                {
-                    "id": 12,
-                    "src": "ProductAssets/denim/instock_m_q123_WorkhorseJacket_Fletcher_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q123_WorkhorseJacket_Fletcher_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Black 3-Month Wash Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 13,
-                    "src": "ProductAssets/denim/instock_m_q222_RFW_Western_Shirt_Washed_Selvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q222_RFW_Western_Shirt_Washed_Selvage_002_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Black 3-Month Wash Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 14,
-                    "src": "ProductAssets/denim/instock_m_q321_ledge_sun_bleached_chambray_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q321_ledge_sun_bleached_chambray_002_530x.progressive.jpg",
-                    "title": "The Democratic Jean",
-                    "subtitle": "in Rinsed Organic Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 15,
-                    "src": "ProductAssets/denim/instock_m_q322_UtilityShirt-RinshedSevlageChambray_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q322_UtilityShirt-RinshedSevlageChambray_003_530x.progressive.jpg",
-                    "title": "The Slim Jean",
-                    "subtitle": "in Rinsed Organic Selvage",
-                    "price": "$168"
-                },
-                {
-                    "id": 16,
-                    "src": "ProductAssets/denim/instock_m_q421_ballcap_denim_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q421_ballcap_denim_002_530x.progressive.jpg",
-                    "title": "The Slim All Day Pant",
-                    "subtitle": "in Washed Tobacco Selvage",
-                    "price": "$148"
-                },
-                {
-                    "id": 17,
-                    "src": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedTobaccoSelvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedTobaccoSelvage_004_530x.progressive.jpg",
-                    "title": "The Democratic All Day Pant",
-                    "subtitle": "in Washed Tobacco Selvage",
-                    "price": "$148"
-                },
-                {
-                    "id": 18,
-                    "src": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedWalnutSelvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedWalnutSelvage_004_530x.progressive.jpg",
-                    "title": "The Long Haul Jacket",
-                    "subtitle": "in Black 3-Month Wash Selvage",
-                    "price": "$228"
-                },
-                {
-                    "id": 19,
-                    "src": "ProductAssets/denim/instock_m_q422_Demo_Jean_Black_3-Month_Wash_Selvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_Demo_Jean_Black_3-Month_Wash_Selvage_004_530x.progressive.jpg",
-                    "title": "The Workhorse Jacket",
-                    "subtitle": "in Marlowe Wash Denim",
-                    "price": "$248"
-                },
-                {
-                    "id": 20,
-                    "src": "ProductAssets/denim/instock_m_q422_Long_Haul_Jacket_Black_3-Month_Wash_Selvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_Long_Haul_Jacket_Black_3-Month_Wash_Selvage_004_530x.progressive.jpg",
-                    "title": "The Long Haul Jacket",
-                    "subtitle": "in Sawyer Wash Organic Selvage",
-                    "price": "$238"
-                },
-                {
-                    "id": 21,
-                    "src": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedTobaccoSelvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedTobaccoSelvage_004_530x.progressive.jpg",
-                    "title": "The Ojai Jacket",
-                    "subtitle": "in Sawyer Wash Selvage",
-                    "price": "$218"
-                },
-                {
-                    "id": 22,
-                    "src": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedWalnutSelvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedWalnutSelvage_004_530x.progressive.jpg",
-                    "title": "The Western Shirt",
-                    "subtitle": "in Wheat Selvage Denim",
-                    "price": "$148"
-                },
-                {
-                    "id": 23,
-                    "src": "ProductAssets/denim/instock_m_q422_Slim_Jean_Black_3-Month_Wash_Selvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/instock_m_q422_Slim_Jean_Black_3-Month_Wash_Selvage_004_530x.progressive.jpg",
-                    "title": "The Western Shirt",
-                    "subtitle": "in Washed Denim",
-                    "price": "$125"
-                },
-                {
-                    "id": 24,
-                    "src": "ProductAssets/denim/workshop_m_q322_Western_WheatSelvage_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/workshop_m_q322_Western_WheatSelvage_002_530x.progressive.jpg",
-                    "title": "The Ledge Shirt",
-                    "subtitle": "in Sun Bleached Chambray",
-                    "price": "$128"
-                },
-                {
-                    "id": 25,
-                    "src": "ProductAssets/denim/workshop_m_q422_DemoJean_ConeMillsCordura_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/workshop_m_q422_DemoJean_ConeMillsCordura_002_530x.progressive.jpg",
-                    "title": "The Utility Shirt",
-                    "subtitle": "in Rinsed Selvage Chambray",
-                    "price": "$135"
-                },
-                {
-                    "id": 26,
-                    "src": "ProductAssets/denim/workshop_m_q422_SlimJean_ConeMillsCordura_001_530x.progressive.jpg",
-                    "src2": "ProductAssets/denim/workshop_m_q422_SlimJean_ConeMillsCordura_002_530x.progressive.jpg",
-                    "title": "The Embroidered Western Shirt",
-                    "subtitle": "in Washed Selvage",
-                    "price": "$158"
-                }
-            ]
-        },
+        "denim": [
+            {
+                "id": 1,
+                "src": "ProductAssets/denim/instock_m_q122_demojean_rinsedorganic_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q122_demojean_rinsedorganic_002_530x.progressive.jpg",
+                "title": "The Workhorse Jacket",
+                "subtitle": "in Fletcher Wash Organic Selvage",
+                "price": "$248"
+            },
+            {
+                "id": 2,
+                "src": "ProductAssets/denim/instock_m_q122_longhauljacket_sawyerwash_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q122_longhauljacket_sawyerwash_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Fletcher Wash Organic Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 3,
+                "src": "ProductAssets/denim/instock_m_q122_ojai_sawyerwash_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q122_ojai_sawyerwash_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Wallace Wash Organic Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 4,
+                "src": "ProductAssets/denim/instock_m_q122_slimjean_rinsed_organic_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q122_slimjean_rinsed_organic_002_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Fletcher Wash Organic Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 5,
+                "src": "ProductAssets/denim/instock_m_q122_workhorse_marlow_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q122_workhorse_marlow_002_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Wallace Wash Organic Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 6,
+                "src": "ProductAssets/denim/instock_m_q123_DemoJean_Fletcher_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_DemoJean_Fletcher_002_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Natural Organic Selvage",
+                "price": "$148"
+            },
+            {
+                "id": 7,
+                "src": "ProductAssets/denim/instock_m_q123_DemoJean_Wallace_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_DemoJean_Wallace_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Natural Organic Selvage",
+                "price": "$148"
+            },
+            {
+                "id": 8,
+                "src": "ProductAssets/denim/instock_m_q123_Democratic_Jean_Natural_Organic_Selvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_Democratic_Jean_Natural_Organic_Selvage_003_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Cone Mills Cordura Denim",
+                "price": "$198"
+            },
+            {
+                "id": 9,
+                "src": "ProductAssets/denim/instock_m_q123_SlimJean_Fletcher_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_SlimJean_Fletcher_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Cone Mills Cordura Denim",
+                "price": "$198"
+            },
+            {
+                "id": 10,
+                "src": "ProductAssets/denim/instock_m_q123_SlimJean_Wallace_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_SlimJean_Wallace_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Sawyer Wash Organic Selvage",
+                "price": "$188"
+            },
+            {
+                "id": 11,
+                "src": "ProductAssets/denim/instock_m_q123_Slim_Jean_Natural_Organic_Selvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_Slim_Jean_Natural_Organic_Selvage_003_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Sawyer Wash Organic Selvage",
+                "price": "$188"
+            },
+            {
+                "id": 12,
+                "src": "ProductAssets/denim/instock_m_q123_WorkhorseJacket_Fletcher_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q123_WorkhorseJacket_Fletcher_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Black 3-Month Wash Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 13,
+                "src": "ProductAssets/denim/instock_m_q222_RFW_Western_Shirt_Washed_Selvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q222_RFW_Western_Shirt_Washed_Selvage_002_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Black 3-Month Wash Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 14,
+                "src": "ProductAssets/denim/instock_m_q321_ledge_sun_bleached_chambray_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q321_ledge_sun_bleached_chambray_002_530x.progressive.jpg",
+                "title": "The Democratic Jean",
+                "subtitle": "in Rinsed Organic Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 15,
+                "src": "ProductAssets/denim/instock_m_q322_UtilityShirt-RinshedSevlageChambray_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q322_UtilityShirt-RinshedSevlageChambray_003_530x.progressive.jpg",
+                "title": "The Slim Jean",
+                "subtitle": "in Rinsed Organic Selvage",
+                "price": "$168"
+            },
+            {
+                "id": 16,
+                "src": "ProductAssets/denim/instock_m_q421_ballcap_denim_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q421_ballcap_denim_002_530x.progressive.jpg",
+                "title": "The Slim All Day Pant",
+                "subtitle": "in Washed Tobacco Selvage",
+                "price": "$148"
+            },
+            {
+                "id": 17,
+                "src": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedTobaccoSelvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedTobaccoSelvage_004_530x.progressive.jpg",
+                "title": "The Democratic All Day Pant",
+                "subtitle": "in Washed Tobacco Selvage",
+                "price": "$148"
+            },
+            {
+                "id": 18,
+                "src": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedWalnutSelvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_DEMOAllDayPant-WashedWalnutSelvage_004_530x.progressive.jpg",
+                "title": "The Long Haul Jacket",
+                "subtitle": "in Black 3-Month Wash Selvage",
+                "price": "$228"
+            },
+            {
+                "id": 19,
+                "src": "ProductAssets/denim/instock_m_q422_Demo_Jean_Black_3-Month_Wash_Selvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_Demo_Jean_Black_3-Month_Wash_Selvage_004_530x.progressive.jpg",
+                "title": "The Workhorse Jacket",
+                "subtitle": "in Marlowe Wash Denim",
+                "price": "$248"
+            },
+            {
+                "id": 20,
+                "src": "ProductAssets/denim/instock_m_q422_Long_Haul_Jacket_Black_3-Month_Wash_Selvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_Long_Haul_Jacket_Black_3-Month_Wash_Selvage_004_530x.progressive.jpg",
+                "title": "The Long Haul Jacket",
+                "subtitle": "in Sawyer Wash Organic Selvage",
+                "price": "$238"
+            },
+            {
+                "id": 21,
+                "src": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedTobaccoSelvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedTobaccoSelvage_004_530x.progressive.jpg",
+                "title": "The Ojai Jacket",
+                "subtitle": "in Sawyer Wash Selvage",
+                "price": "$218"
+            },
+            {
+                "id": 22,
+                "src": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedWalnutSelvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_SlimAllDayPant-WashedWalnutSelvage_004_530x.progressive.jpg",
+                "title": "The Western Shirt",
+                "subtitle": "in Wheat Selvage Denim",
+                "price": "$148"
+            },
+            {
+                "id": 23,
+                "src": "ProductAssets/denim/instock_m_q422_Slim_Jean_Black_3-Month_Wash_Selvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/instock_m_q422_Slim_Jean_Black_3-Month_Wash_Selvage_004_530x.progressive.jpg",
+                "title": "The Western Shirt",
+                "subtitle": "in Washed Denim",
+                "price": "$125"
+            },
+            {
+                "id": 24,
+                "src": "ProductAssets/denim/workshop_m_q322_Western_WheatSelvage_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/workshop_m_q322_Western_WheatSelvage_002_530x.progressive.jpg",
+                "title": "The Ledge Shirt",
+                "subtitle": "in Sun Bleached Chambray",
+                "price": "$128"
+            },
+            {
+                "id": 25,
+                "src": "ProductAssets/denim/workshop_m_q422_DemoJean_ConeMillsCordura_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/workshop_m_q422_DemoJean_ConeMillsCordura_002_530x.progressive.jpg",
+                "title": "The Utility Shirt",
+                "subtitle": "in Rinsed Selvage Chambray",
+                "price": "$135"
+            },
+            {
+                "id": 26,
+                "src": "ProductAssets/denim/workshop_m_q422_SlimJean_ConeMillsCordura_001_530x.progressive.jpg",
+                "src2": "ProductAssets/denim/workshop_m_q422_SlimJean_ConeMillsCordura_002_530x.progressive.jpg",
+                "title": "The Embroidered Western Shirt",
+                "subtitle": "in Washed Selvage",
+                "price": "$158"
+            }
+        ],
         "outwear": [
             {
                 "id": 1,
