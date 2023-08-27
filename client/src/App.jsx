@@ -5,7 +5,7 @@ import "./Styles.css";
 function App() {
   return (
     <ProductContextProvider>
-      <Routes />;
+      <Routes />
     </ProductContextProvider>
   );
 }
