@@ -80,7 +80,7 @@ const Cart = () => {
             </span>
           </div>
           <button className="mt-3 px-5 py-3 border border-indigo-900 bg-indigo-900 text-xl text-white font-semibold md:mx-1">
-            Continue to Shopping
+            Continue to Shipping
           </button>
         </div>
       </div>
