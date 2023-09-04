@@ -63,7 +63,7 @@ const NavBar = () => {
 					}}
 				/>
 				<FaUserCircle className="text-[25px] place-items-center cursor-pointer xl:text-[35px]" onClick={() => {
-					navigate("/login");
+					navigate("/register");
 				}} />
 			</div>
 
