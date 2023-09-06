@@ -1,0 +1,158 @@
+{
+    "User": {
+        "id": "ObjectId",
+        "fullname": "Sting",
+        "email": "String",
+        "password": "String",
+        "roles": "admin",
+        "createdAt": "Date",
+        "updatedAt": "Date",
+        "profile": {
+            "avatar": "String",
+            "shipping address": {
+                "street": "String",
+                "city": "String",
+                "state": "String",
+                "zipcode": "String",
+                "country": "String"
+            }
+        }
+    },
+    "Product": {
+        "_id": "ObjectId",
+        "Title": "String",
+        "Subtitle": "String",
+        "Description": "String",
+        "price": "Number",
+        "category": "String",
+        "sizeOptions": [
+            "small",
+            "medium",
+            "large",
+            "extralarge",
+            "xxl"
+        ],
+        "InventoryCount": "Number",
+        "Images": [
+            "url1",
+            "url2"
+        ],
+        "ratings": [
+            {
+                "userId": "ObjectId",
+                "rating": "Number",
+                "description": "String"
+            }
+        ]
+    },
+    "cart": {
+        "_id": "ObjectId",
+        "userId": "ObjectId",
+        "items": [
+            {
+                "productId": "ObjectId",
+                "category": "String",
+                "quantity": "Number"
+            },
+            {
+                "productId": "ObjectId",
+                "category": "String",
+                "quantity": "Number"
+            }
+        ],
+        "createdAt": "Date",
+        "updatedAt": "Date"
+    },
+    "favourites": {
+        "_id": "ObjectId",
+        "userId": "ObjectId",
+        "items": [
+            {
+                "productId": "ObjectId",
+                "category": "String"
+            },
+            {
+                "productId2": "ObjectId",
+                "category": "String"
+            }
+        ]
+    },
+    "order": {
+        "_id": "ObjectId",
+        "userId": "ObjectId",
+        "orderNumber": "String",
+        "orderDate": "Date",
+        "items": [
+            {
+                "productId": "ObjectId",
+                "quantity": "Number",
+                "price": "Number"
+            },
+            {
+                "productId": "ObjectId",
+                "quantity": "Number",
+                "price": "Number"
+            }
+        ],
+        "totalAmount": "Number",
+        "status": "String",
+        "paymentDetails": {
+            "paymentMethod": "UPI",
+            "upiId": "String",
+            "transactionId": "String",
+            "payerName": "String",
+            "paymentStatus": "String",
+            "paymentDate": "Date"
+        },
+        "createdAt": "Date",
+        "updatedAt": "Date"
+    },
+    "orderHistory": {
+        "_id": "ObjectId",
+        "userId": "ObjectId",
+        "orders": [
+            {
+                "_id": "ObjectId",
+                "orderNumber": "String",
+                "orderDate": "Date",
+                "items": [
+                    {
+                        "productId": "ObjectId",
+                        "quantity": "Number",
+                        "price": "Number"
+                    }
+                ],
+                "totalAmount": "Number",
+                "status": "String",
+                "paymentDetails": {
+                    "paymentMethod": "Razorpay",
+                    "paymentId": "pay_1234567890",
+                    "orderId": "order_ABCDEFGH",
+                    "paymentStatus": "Captured",
+                    "paymentDate": "2023-08-19T14:15:00Z"
+                }
+            }
+        ]
+    },
+    "UPI": {
+        "paymentMethod": "UPI",
+        "upiId": "String",
+        "transactionId": "String",
+        "payerName": "String",
+        "paymentStatus": "String",
+        "paymentDate": "Date"
+    },
+    "Razorpay": {
+        "paymentMethod": "Razorpay",
+        "paymentId": "String",
+        "orderId": "String",
+        "paymentStatus": "String",
+        "paymentDate": "Date"
+    },
+    "Stripe": {
+        "paymentMethod": "Stripe",
+        "chargeId": "String",
+        "paymentStatus": "String",
+        "paymentDate": "Date"
+    }
+}
