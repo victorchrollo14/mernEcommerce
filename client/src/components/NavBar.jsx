@@ -32,7 +32,7 @@ const NavBar = () => {
             Home
           </Link>
           <Link
-            to="/shop"
+            to="/shop/shirts"
             className="font-Poppins text-zinc-700 font-medium md:text-lg xl:text-xl"
           >
             Shop

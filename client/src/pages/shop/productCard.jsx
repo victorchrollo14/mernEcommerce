@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const ProductCard = ({ item }) => {
+  const location = useLocation();
   const { id, src, src2, title, subtitle, price } = item;
   const images = import.meta.glob("../ProductAssets/*/*");
   const gallery = [];
@@ -16,7 +17,10 @@ export const ProductCard = ({ item }) => {
   return (
     <li className="w-auto max-w-64 mb-5 h-fit" key={id}>
       <figure>
-        <Link to={"/shop"} className="rounded-xl image-wrapper">
+        <Link
+          to={`${location.pathname}/${title}`}
+          className="rounded-xl image-wrapper"
+        >
           <img
             src={firstImage}
             alt=""

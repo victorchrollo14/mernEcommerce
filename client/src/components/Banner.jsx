@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Banner = () => {
   const navigate = useNavigate();
   const navigateToShop = () => {
-    navigate('/shop')
+    navigate('/shop/shirts')
   }
   return (
     <>

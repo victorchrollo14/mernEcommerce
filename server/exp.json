@@ -10,6 +10,7 @@
         "profile": {
             "avatar": "String",
             "shipping address": {
+                "address": "String",
                 "street": "String",
                 "city": "String",
                 "state": "String",
@@ -39,9 +40,8 @@
         ],
         "ratings": [
             {
-                "userId": "ObjectId",
-                "rating": "Number",
-                "description": "String"
+                "stars": "Number",
+                "reviewCount": "Number"
             }
         ]
     },
