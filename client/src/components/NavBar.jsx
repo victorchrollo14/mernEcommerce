@@ -5,13 +5,13 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaUserCircle } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import { HiOutlineMenuAlt2, HiOutlineX } from "react-icons/hi";
-import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from "react-icons/io";
-import { GrClose } from "react-icons/gr";
+
+import { MobNavigation } from "./MobNavigation";
+
 const NavBar = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState(false);
-  const [shop, setShop] = useState(false);
 
   return (
     <div className="flex justify-between h-[50px] border border-black rounded-[10px] bg-white mx-4 my-4 p-2 md:h-[70px] xl:h-[80px]">
@@ -83,56 +83,8 @@ const NavBar = () => {
           }}
         />
       </div>
+      {toggle && <MobNavigation setToggle={setToggle} />}
 
-      {toggle && (
-        <>
-          <div
-            className="z-50 text-xl bg-white right-10 px-1 py-1 rounded-full fixed"
-            onClick={() => setToggle(false)}
-          >
-            <GrClose />
-          </div>
-          <div className="flex flex-col fixed bg-black top-0 overscroll-none overflow-hidden left-0 w-full h-full py-44 px-7 z-40 md:px-20">
-            <Link
-              to="/"
-              className="font-Poppins text-xl text-white py-2 pl-4 border-b border-white border-opacity-40 font-medium xl:text-3xl md:text-2xl"
-            >
-              Home
-            </Link>
-            <div
-              className="flex flex-col relative"
-              onClick={() => setShop(!shop)}
-            >
-              <div className="flex items-center justify-between pl-4 py-2 ">
-                <div className="text-xl text-white py-2 font-Poppins">Shop</div>
-                {shop ? (
-                  <IoMdArrowDropupCircle className="text-white text-xl mr-4" />
-                ) : (
-                  <IoMdArrowDropdownCircle className="text-white text-xl mr-4" />
-                )}
-              </div>
-              {shop && (
-                <div className="relative pl-5 text-lg list-none  text-white border-t border-white border-opacity-40 py-2 font-Poppins">
-                  <Link to="/shop">
-                    <li className="py-1">Shirts</li>
-                    <li className="py-1">Outwear</li>
-                    <li className="py-1">Sweaters</li>
-                    <li className="py-1">Footwear</li>
-                    <li className="py-1">Bottoms</li>
-                    <li className="py-1">Accesories</li>
-                  </Link>
-                </div>
-              )}
-            </div>
-            <Link
-              to="/contact"
-              className="font-Poppins text-xl text-white py-2 pl-4 border-t border-white border-opacity-40  xl:text-xl md:text-lg"
-            >
-              Contact
-            </Link>
-          </div>
-        </>
-      )}
       {search && (
         <div className="flex absolute z-50 top-20 border-2 px-3 py-2 w-[90vw] rounded-md border-black border-opacity-70 bg-gray-200 md:hidden lg:hidden xl:hidden">
           <BiSearch className="text-3xl text-black" />
