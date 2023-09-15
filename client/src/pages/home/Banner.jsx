@@ -1,6 +1,6 @@
 import React from "react";
 import mobileBanner from "./../../assets/HeroMobile.jpg";
-import desktopBanner from "./../../assets/HeroMobile.jpg";
+import desktopBanner from "./../../assets/HeroImage.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
