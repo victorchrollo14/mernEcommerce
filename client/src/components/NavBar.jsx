@@ -5,7 +5,9 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaUserCircle } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import { HiOutlineMenuAlt2, HiOutlineX } from "react-icons/hi";
-import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from "react-icons/io";
+
+import { MobNavigation } from "./MobNavigation";
+
 const NavBar = () => {
 	const navigate = useNavigate();
 	const [toggle, setToggle] = useState(false);
@@ -144,6 +146,7 @@ const NavBar = () => {
 			)}
 		</div>
 	);
+
 };
 
 export default NavBar;

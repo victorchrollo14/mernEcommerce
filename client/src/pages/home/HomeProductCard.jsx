@@ -1,4 +1,5 @@
 import { HiOutlineShoppingCart } from 'react-icons/hi'
+
 function HomeProductCard(props) {
 	const data = {
 		"id": 1,

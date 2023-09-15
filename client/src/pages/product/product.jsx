@@ -1,7 +1,9 @@
 import NavBar from "../../components/NavBar";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import {
   FaRegHeart,
+  FaHeart,
   FaRegStar,
   FaRegCommentDots,
   FaMinus,
@@ -13,6 +15,8 @@ import sub2 from "../product/sub2.jpeg";
 import Footer from "../../components/Footer";
 
 const ProductPage = () => {
+  const [qty, setQty] = useState(1);
+  const [wishlist, setWishlist] = useState(false);
   const { id } = useParams();
   const data = {
     id: 1,
@@ -30,7 +34,7 @@ const ProductPage = () => {
   return (
     <>
       <NavBar />
-      <div className="product_detail flex flex-col mx-4 mt-6 mb-10 font-Poppins md:flex-row xl:mx-32 xl:mt-8">
+      <div className="product_detail flex flex-col mx-4 mt-4 mb-10 font-Poppins md:flex-row xl:mx-32 xl:mt-8">
         <div className="left_section flex flex-col mt-2 xl:w-1/2">
           <div className="heading flex justify-between items-center ml-2 mt-2">
             <div className="left_heading flex flex-col md:ml-2 xl:ml-4">
@@ -41,8 +45,15 @@ const ProductPage = () => {
                 {data.category}
               </span>
             </div>
-            <div className="icons flex mr-3 gap-2">
-              <FaRegHeart className="text-sky-800 bg-sky-100 rounded-lg w-9 h-9 p-2" />
+            <div
+              className="icons flex mr-3 gap-2"
+              onClick={() => setWishlist(!wishlist)}
+            >
+              {wishlist ? (
+                <FaHeart className="text-sky-800 bg-sky-100 rounded-lg w-9 h-9 p-2" />
+              ) : (
+                <FaRegHeart className="text-sky-800 bg-sky-100 rounded-lg w-9 h-9 p-2" />
+              )}
               <BsShare className="text-sky-800 font-semibold bg-sky-100 rounded-lg w-9 h-9 p-2" />
             </div>
           </div>
@@ -135,9 +146,15 @@ const ProductPage = () => {
           </div>
           <div className="add_cart my-2 flex flex-row mx-2 lg:mt-4">
             <div className="qty_counter flex justify-around w-28 px-3 py-3 bg-gray-200 items-center rounded-3xl gap-2 md:ml-2 lg:w-32">
-              <FaMinus className="text-indigo-900 text-md" />
-              <span className="qty font-Poppins font-semibold">5</span>
-              <FaPlus className="text-indigo-900 text-md" />
+              <FaMinus
+                className="text-indigo-900 text-md"
+                onClick={() => qty > 1 && setQty(qty - 1)}
+              />
+              <span className="qty font-Poppins font-semibold">{qty}</span>
+              <FaPlus
+                className="text-indigo-900 text-md"
+                onClick={() => setQty(qty + 1)}
+              />
             </div>
             <button className="cartButton flex px-6 py-2 ml-6 items-center justify-between font-semibold gap-3 bg-indigo-900 text-white rounded-3xl lg:px-16">
               <BsHandbag />

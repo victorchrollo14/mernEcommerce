@@ -1,22 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const ProductCard = ({ item }) => {
-  const { id, src, src2, title, subtitle, price } = item;
-  const images = import.meta.glob("../ProductAssets/*/*");
+  const location = useLocation();
+  const { _id, title, subtitle, price, images } = item;
+  const localImages = import.meta.glob("../ProductAssets/*/*");
   const gallery = [];
 
-  for (const path in images) {
+  for (const path in localImages) {
     const p = new URL(path, import.meta.url).href;
     gallery.push(p);
   }
-  const firstImage = gallery.find((element) => element.includes(src));
-  const secondImage = gallery.find((element) => element.includes(src2));
+  const firstImage = gallery.find((element) => element.includes(images[0]));
+  const secondImage = gallery.find((element) => element.includes(images[1]));
 
   return (
-    <li className="w-auto max-w-64 mb-5 h-fit" key={id}>
+    <li className="w-auto max-w-64 mb-5 h-fit">
       <figure>
-        <Link to={"/shop"} className="rounded-xl image-wrapper">
+        <Link
+          to={`${location.pathname}/${title}`}
+          className="rounded-xl image-wrapper"
+        >
           <img
             src={firstImage}
             alt=""

@@ -1,9 +1,9 @@
 import React from "react";
-import louis from "../assets/brands/louis.png";
-import denim from "../assets/brands/denim.png";
-import calvin from "../assets/brands/calvin.png";
-import chanel from "../assets/brands/chanel.png";
-import prada from "../assets/brands/prada.png";
+import louis from "./../../assets/brands/louis.png";
+import denim from "./../../assets/brands/denim.png";
+import calvin from "./../../assets/brands/calvin.png";
+import chanel from "./../../assets/brands/chanel.png";
+import prada from "./../../assets/brands/prada.png";
 import Slider from "react-slick";
 
 const settings = {
