@@ -1,8 +1,10 @@
 import { useState } from "react";
 import NavBar from "../../components/NavBar";
 import CartProduct from "./CartProduct";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const [total, setTotal] = useState(693);
 
   const totalBill = (price) => {
@@ -79,7 +81,7 @@ const Cart = () => {
               ${total}
             </span>
           </div>
-          <button className="mt-3 px-5 py-3 border border-indigo-900 bg-indigo-900 text-xl text-white font-semibold md:mx-1">
+          <button className="mt-3 px-5 py-3 border border-indigo-900 bg-indigo-900 text-xl text-white font-semibold md:mx-1" onClick={() => navigate("/cart/checkout")}>
             Continue to Shipping
           </button>
         </div>
