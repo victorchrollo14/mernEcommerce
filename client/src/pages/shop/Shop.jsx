@@ -5,6 +5,8 @@ import { ProductCard } from "./productCard";
 import { Loading } from "../../components/Loading";
 import { ShopNavigation } from "./ShopNavigation";
 import { useLocation } from "react-router-dom";
+import Footer from "../../components/Footer";
+import { SortButton } from "./SortButton";
 
 const ShopPage = () => {
   const { category, setCategory, allCategories } = useProductContext();
@@ -43,20 +45,24 @@ const ShopPage = () => {
   return (
     <div className="bg-[#EDF0F8] min-h-screen overflow-x-hidden ">
       <NavBar />
-      <section className="products-section flex flex-row px-5 ">
+      <section className="products-section flex flex-row p-5 mb-8 ">
         <ShopNavigation />
-        {category ? (
-          <ul className="products-list   md:pl-5 ml-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 lg:grid-cols-3 pt-2 md:w-4/5 justify-end">
-            {category.map((item) => (
-              <ProductCard item={item} key={crypto.randomUUID()} />
-            ))}
-          </ul>
-        ) : (
-          <div className="loading-screen w-screen flex justify-center">
-            <Loading />
-          </div>
-        )}
+        <div className="products-container md:w-4/5 flex flex-col gap-2 md:items-end">
+          <SortButton />
+          {category ? (
+            <ul className="products-list md:h-[80vh] md:overflow-y-auto md:pl-5 ml-0  justify-end  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 lg:grid-cols-3 ">
+              {category.map((item) => (
+                <ProductCard item={item} key={item._id} />
+              ))}
+            </ul>
+          ) : (
+            <div className="loading-screen w-screen flex justify-center">
+              <Loading />
+            </div>
+          )}
+        </div>
       </section>
+      <Footer />
     </div>
   );
 };

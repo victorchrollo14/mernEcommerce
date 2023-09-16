@@ -62,10 +62,10 @@ const Brands = () => {
   ];
   return (
     <>
-      <div className="mt-7 py-2 md:mt-10">
+      <div className="mt-7 py-2 ">
         <Slider {...settings} className="">
           {brands.map((b) => (
-            <div className="h-6 flex items-center" key={b.id}>
+            <div className="h-6 flex items-center " key={b.id}>
               <img
                 src={b.src}
                 alt=""

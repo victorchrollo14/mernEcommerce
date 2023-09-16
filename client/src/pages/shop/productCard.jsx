@@ -15,10 +15,10 @@ export const ProductCard = ({ item }) => {
   const secondImage = gallery.find((element) => element.includes(images[1]));
 
   return (
-    <li className="w-auto max-w-64 mb-5 h-fit">
+    <li className="w-auto max-w-64 mb-5 h-fit" key={_id}>
       <figure>
         <Link
-          to={`${location.pathname}/${title}`}
+          to={`${location.pathname}/${_id}`}
           className="rounded-xl image-wrapper"
         >
           <img
@@ -37,7 +37,7 @@ export const ProductCard = ({ item }) => {
             {subtitle}
           </span>
           <span className="font-Volkhov text-xs text-[#3D4F63] sm:text-sm">
-            {price}
+            $ {price}
           </span>
         </figcaption>
       </figure>
