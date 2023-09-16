@@ -37,7 +37,7 @@ export const ProductCard = ({ item }) => {
             {subtitle}
           </span>
           <span className="font-Volkhov text-xs text-[#3D4F63] sm:text-sm">
-            {price}
+            $ {price}
           </span>
         </figcaption>
       </figure>

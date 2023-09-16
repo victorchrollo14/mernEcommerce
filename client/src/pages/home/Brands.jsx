@@ -62,7 +62,7 @@ const Brands = () => {
   ];
   return (
     <>
-      <div className="mt-5 py-2 ">
+      <div className="mt-7 py-2 ">
         <Slider {...settings} className="">
           {brands.map((b) => (
             <div className="h-6 flex items-center " key={b.id}>
