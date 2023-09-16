@@ -3,9 +3,11 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const SortButton = () => {
   const [open, setOpen] = useState();
+  
   const toggle = () => {
     setOpen(!open);
   };
+
   return (
     <>
       <div className="sort-button bg-blue-500 text-white w-fit rounded-[10px] ">

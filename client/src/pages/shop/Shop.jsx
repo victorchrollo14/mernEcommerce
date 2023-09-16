@@ -52,7 +52,7 @@ const ShopPage = () => {
           {category ? (
             <ul className="products-list md:h-[80vh] md:overflow-y-auto md:pl-5 ml-0  justify-end  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 lg:grid-cols-3 ">
               {category.map((item) => (
-                <ProductCard item={item} key={crypto.randomUUID()} />
+                <ProductCard item={item} key={item._id} />
               ))}
             </ul>
           ) : (
