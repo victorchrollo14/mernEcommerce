@@ -25,7 +25,7 @@ const Banner = () => {
         />
         <div className="absolute w-full h-full top-0 rounded-[10px] bg-black bg-opacity-50 md:rounded-2xl">
           {/* Mobileview */}
-          <div className="top-0 pt-60 pl-3 text-3xl font-Poppins text-white font-semibold md:hidden">
+          <div className="top-0 pt-60 pl-3 text-3xl font-Poppins text-white font-semibold sm:hidden">
             Where Comfort <br /> Meets Style , <br />
             Your Everyday <br />
             Fashion Hub. <br />
@@ -37,11 +37,11 @@ const Banner = () => {
             </button>
           </div>
           {/* Desktopview */}
-          <div className="hidden md:flex justify-center items-center flex-col top-0 pt-56 pl-3 font-Poppins text-white font-semibold lg:pt-52 xl:pt-56">
-            <span className="hidden md:flex text-4xl pb-2 lg:text-5xl xl:pb-5 xl:text-6xl">
+          <div className="hidden sm:flex sm:text-center justify-center items-center flex-col top-0 pt-56 pl-3 font-Poppins text-white font-semibold lg:pt-52 xl:pt-56">
+            <span className=" md:flex text-4xl pb-2 lg:text-5xl xl:pb-5 xl:text-6xl">
               Where Comfort Meets{" "}
             </span>
-            <span className="hidden md:flex text-4xl pb-2 lg:text-5xl xl:pb-5 xl:text-6xl">
+            <span className="md:flex text-4xl pb-2 lg:text-5xl xl:pb-5 xl:text-6xl">
               Style Your Everyday Fashion Hub.
             </span>
             <button
