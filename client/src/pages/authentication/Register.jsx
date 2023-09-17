@@ -1,75 +1,88 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import loginimg from "../../assets/login-side-img.png";
+import { ImageSection } from "./ImageSection";
 
 const Register = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="bg-[#DFDFDF] overflow-x-hidden">
       <NavBar />
-      <div className="flex flex-col md:flex-row w-screen items-center justify-between mt-10">
-        <div className="md:ml-10">
-          <img
-            src={loginimg}
-            alt="model-image"
-            className="w-[250px] md:w-[850px] mx-5 md:relative md:top-28"
-          />
-          <div className="text-xl relative bottom-32 left-6 font-medium text-white md:text-7xl md:bottom-72 md:left-9">
-            Where Comfort Meets <br />
-            Style. Your Everyday <br /> Fashion Hub.
-          </div>
-        </div>
-        <div className="form flex items-center flex-col bg-white p-2 md:py-5 rounded-xl md:mr-40 md:w-[550px]">
-          <h2 className="text-center font-medium text-2xl my-8 md:text-4xl">
+      <div className="flex flex-row justify-center my-5 sm:m-5 gap-5 md:gap-10">
+        <ImageSection />
+        <form
+          onSubmit={handleSubmit}
+          className="form flex items-center flex-col w-5/6 max-w-md py-10 bg-white  md:py-10 rounded-xl h-fit "
+        >
+          <h2 className="text-center font-medium text-2xl  sm:text-3xl">
             Register
           </h2>
-          <div className="md:text-2xl my-5">
-            Already Registered yet?{" "}
-            <span className="text-red-600 cursor-pointer">Login</span>
+          <div className="md:text-xl my-5">
+            Already Have an Account?{" "}
+            <span className="text-red-600">
+              <Link to={"/login"}>Login</Link>
+            </span>
           </div>
-          <button className="flex my-4 text-2xl md:pl-14 text-white bg-[#24292F] outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] py-4  rounded-xl">
-            <FaGithub className="relative top-1 mx-2" />
-            Register with Github
+          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-[#24292F] outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] h-16 rounded-xl">
+            <FaGithub className="" />
+            <span>Register with Github</span>
           </button>
-          <button className="flex text-2xl text-[#6e6868] border-2 outline-none border-[#A7A7A7] px-2 py-4 md:w-[400px] md:pl-14 rounded-xl">
-            <FcGoogle className="relative top-1 mx-2" />
-            Register with Google
+          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] h-16 rounded-xl">
+            <FcGoogle className="" />
+            <span>Register with Google</span>
           </button>
           <div className="text-center text-2xl font-semibold my-6 flex">
             {" "}
-            <hr className="bg-black w-28 h-[3px]  md:w-44 relative top-3 right-1" />{" "}
+            <hr className="bg-black w-[28vw] max-w-[135px] h-[2px]   relative top-3 right-1" />{" "}
             OR{" "}
-            <hr className="bg-black w-28 h-[3px] md:w-44  relative top-3 left-1" />
+            <hr className="bg-black w-[28vw] max-w-[135px] h-[2px]   relative top-3 left-1" />
           </div>
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="border-2 p-4 w-60 text-[#A7A7A7] my-2 border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-          />
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="border-2 p-4 w-60 my-2 text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="border-2 p-4 w-60 my-2 text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            className="border-2 p-4 w-60 my-2 text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-          />
-          <button className="bg-[#1E1E1E] md:px-36 text-white px-20 my-4 py-4 text-2xl hover:bg-[#B5AA8F] transition">
-            REGISTER
-          </button>
-        </div>
+          <UserInput />
+        </form>
       </div>
       <Footer />
     </div>
+  );
+};
+
+const UserInput = () => {
+  return (
+    <>
+      {" "}
+      <input
+        type="text"
+        placeholder="Email Address"
+        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
+      />
+      <input
+        type="email"
+        placeholder="Email Address"
+        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
+      />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
+      />
+      <button
+        type="submit"
+        className="bg-[#1E1E1E] w-5/6 max-w-xs min-w-[220px]  h-16 text-white px-20 my-4 text-2xl hover:bg-[#B5AA8F] transition"
+      >
+        REGISTER
+      </button>
+    </>
   );
 };
 

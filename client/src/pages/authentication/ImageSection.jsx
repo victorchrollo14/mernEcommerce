@@ -8,9 +8,13 @@ export const ImageSection = () => {
         src={loginimg}
         alt="just a product image"
         srcset=""
-        className="h-[740px] w-auto"
+        className={`${location.pathname === "/login"? "h-[740px]": "h-[872px]"}`}
       />
-      <div className="text-on-image font-Poppins text-6xl font-bold absolute top-[40%] left-8 text-white">in Sun Bleached Chambray</div>
+      <div className="text-on-image font-Poppins text-6xl leading-tight font-bold absolute top-[40%] left-8 text-white">
+        Where Comfort
+        <br /> Meets Style. <br />
+        Your Everyday <br /> Fashion Hub.
+      </div>
     </div>
   );
 };
