@@ -19,7 +19,7 @@ const Shipping = () => {
   return (
     <>
       <div className="name flex flex-col gap-1">
-        <label htmlFor="name">Your Name</label>
+        <label htmlFor="name">Your Address</label>
         <input
           type="text"
           name="name"

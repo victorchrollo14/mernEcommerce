@@ -4,26 +4,27 @@ import { useState } from "react";
 const Card = () => {
   const [card, setCard] = useState({})
 
-  const cardDetails = () => {
+  const cardDetails = (e) => {
     setCard({ ...card, [e.target.name]: e.target.value })
+    console.log(card)
   }
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="streetname flex flex-col gap-1 mt-5">
-        <label htmlFor="streetname">Street Name</label>
+      <div className="cardname flex flex-col gap-1 mt-5">
+        <label htmlFor="cardname">Name</label>
         <input
           type="text"
-          name="street"
+          name="name"
           className="bg-white px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => cardDetails(e)}
         />
       </div>
-      <div className="countryname flex flex-col gap-1">
-        <label htmlFor="countryname">Country</label>
+      <div className="cardnumber flex flex-col gap-1">
+        <label htmlFor="cardnumber">Card Number</label>
         <input
           type="text"
-          name="country"
+          name="number"
           className="bg-white px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => cardDetails(e)}
         />
