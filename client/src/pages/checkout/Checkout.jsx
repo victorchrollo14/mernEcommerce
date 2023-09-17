@@ -1,11 +1,11 @@
 import NavBar from "../../components/NavBar";
-import Shipping from "../../components/Shipping";
-import Payment from "../../components/Payment/Payment";
-import Confirm from "../../components/Payment/Confirm";
+import Shipping from "./Shipping";
+import Payment from "./Payment/Payment";
+import Confirm from "./Payment/Confirm";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 import { AiOutlineLine } from "react-icons/ai";
 import { useState } from "react";
-import ShippingImage from "../../components/shipping.png"
+import ShippingImage from "./shipping.png"
 
 const CheckoutPage = () => {
   const [shipping, setShipping] = useState(true);
@@ -55,11 +55,12 @@ const CheckoutPage = () => {
               </button>
             )}
             {
-              confirmation && <Confirm />
+              confirmation &&  <Confirm />
             }
           </div>
         </div>
-        <div className="right hidden lg:flex pt-3 pr-5 xl:">
+        {/* Image */}
+        <div className="right hidden lg:flex pt-3 pr-5">
           <img src={ShippingImage} alt="" className="w-full object-cover rounded-md px-10" />
         </div>
       </div>
