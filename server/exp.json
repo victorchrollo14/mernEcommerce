@@ -17,7 +17,11 @@
                 "zipcode": "String",
                 "country": "String"
             }
-        }
+        },
+        "favourites": [
+            "productid1",
+            "productId2"
+        ]
     },
     "Product": {
         "_id": "ObjectId",
@@ -51,13 +55,13 @@
         "items": [
             {
                 "productId": "ObjectId",
-                "category": "String",
-                "quantity": "Number"
+                "quantity": "Number",
+                "size": "String"
             },
             {
                 "productId": "ObjectId",
-                "category": "String",
-                "quantity": "Number"
+                "quantity": "Number",
+                "size": "String"
             }
         ],
         "createdAt": "Date",
@@ -67,14 +71,8 @@
         "_id": "ObjectId",
         "userId": "ObjectId",
         "items": [
-            {
-                "productId": "ObjectId",
-                "category": "String"
-            },
-            {
-                "productId2": "ObjectId",
-                "category": "String"
-            }
+            "productId",
+            "productId2"
         ]
     },
     "order": {

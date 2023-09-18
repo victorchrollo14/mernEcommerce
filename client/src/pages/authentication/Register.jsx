@@ -58,7 +58,7 @@ const UserInput = () => {
       {" "}
       <input
         type="text"
-        placeholder="Email Address"
+        placeholder="full Name"
         className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
       />
       <input
