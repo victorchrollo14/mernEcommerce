@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const ProductSchema = Schema({
+const ProductSchema = new Schema({
   title: { type: String, require: true },
   subtitle: { type: String, require: true },
   price: { type: Number, require: true },
