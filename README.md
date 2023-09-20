@@ -4,13 +4,25 @@ Ecommerce App Built with the Mern Stack.
 
 ## Things to Learn While Building
 
-* [ ] MicroServices and Serverless Architecture.
-* [ ] Azure
-* [ ] Integrating External Api's
+* [ ] MicroServices Architecture.
+* [ ] Azure - Deploying backend.
+* [ ] mongoDB Atlas - deploy database
+* [ ] vercel - Deploy frontend.
+* [ ] Integrating External Api's like Strip and razorpay for payments, twilio for notifications.
 * [ ] Testing and Security.
 
-## Basic guidelines to follow.
+## Local Development
 
-* any states that you are using globally, create a context for it and put it in usercontext.
-* put reusable components under components folder eg-> header.
-* put the components used in a specific page in that page itself eg -> hero section which is used only in homepage.
+1. Fork the repository
+2. Clone it on your local machine.
+
+   ```properties
+   git clone [https://github.com/username/mernEcommerce.git](https://github.com/username/mernEcommerce.git)
+   ```
+3. Start frontend
+
+   ```javascript
+   cd mernEcommerce/client
+   npm install
+   npm run dev
+   ```
