@@ -21,12 +21,12 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// static files fetching
-app.use("/product/ProductAssets", express.static("ProductAssets"));
-
 // parse data from client
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// static files fetching
+app.use("/product/ProductAssets", express.static("ProductAssets"));
 
 app.get("/", (req, res) => {
   res.send("ok");
