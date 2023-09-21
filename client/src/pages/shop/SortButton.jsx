@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-const SortButton = () => {
+const SortButton = ({ selectSort }) => {
   const [open, setOpen] = useState();
-  
+
   const toggle = () => {
     setOpen(!open);
   };
@@ -25,13 +25,24 @@ const SortButton = () => {
           className="dropdown bg-white rounded-md cursor-pointer w-fit"
           onClick={toggle}
         >
-          <li className="hover:bg-slate-300 w-32 text-center py-1">
+          <li
+            className="hover:bg-slate-300 w-32 text-center py-1"
+            onClick={() => selectSort("a")}
+          >
             Low to High
           </li>
-          <li className="hover:bg-slate-300 w-32 text-center py-1">
+          <li
+            className="hover:bg-slate-300 w-32 text-center py-1"
+            onClick={() => selectSort("b")}
+          >
             High to Low
           </li>
-          <li className="hover:bg-slate-300 w-32 text-center py-1">Latest</li>
+          <li
+            className="hover:bg-slate-300 w-32 text-center py-1"
+            onClick={() => selectSort("c")}
+          >
+            Latest
+          </li>
         </ul>
       ) : null}
     </>
