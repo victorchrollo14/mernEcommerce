@@ -80,7 +80,12 @@ const NavBar = () => {
             setToggle(false);
           }}
         />
-        <FaUserCircle className="text-[25px] place-items-center cursor-pointer relative" />
+        <FaUserCircle
+          className="text-[25px] place-items-center cursor-pointer relative"
+          onClick={() => {
+            navigate("/register");
+          }}
+        />
         {!toggle ? (
           <HiOutlineMenuAlt2
             className="text-2xl  text-black"

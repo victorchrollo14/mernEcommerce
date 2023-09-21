@@ -1,3 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 import { useContext, createContext, useState, useEffect } from "react";
 
 const productContext = createContext();
@@ -36,15 +39,24 @@ const ProductContextProvider = (props) => {
     setAllCategories(exmpCat);
   };
 
+  const fetchImages = (data) => {
+    data.map((product) => {
+      const { images } = product;
+      images[0] = `http://localhost:3001/product/${images[0]}`;
+      images[1] = `http://localhost:3001/product/${images[1]}`;
+    });
+  };
+
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await fetch("../converted_product.json");
+        const response = await fetch("http://localhost:3001/product/getData");
         const data = await response.json();
+        fetchImages(data);
         filterProducts(data);
 
         setProducts(data);
-        setCategory()
+        setCategory();
       } catch (err) {
         console.log(err);
       }

@@ -7,17 +7,6 @@ export const LeftContent = ({ data }) => {
   const [wishlist, setWishlist] = useState(false);
   const { images, title, subtitle } = data;
 
-  const localImages = import.meta.glob("../ProductAssets/*/*");
-  const gallery = [];
-
-  for (const path in localImages) {
-    const p = new URL(path, import.meta.url).href;
-    gallery.push(p);
-  }
-
-  const firstImage = gallery.find((element) => element.includes(images[0]));
-  const secondImage = gallery.find((element) => element.includes(images[1]));
-
   return (
     <div className="left_section flex flex-col mt-2 xl:w-1/2">
       <div className="heading flex justify-between items-center ml-2 mt-2">
@@ -47,18 +36,18 @@ export const LeftContent = ({ data }) => {
       <div className="main_image rounded-lg border border-slate-100  mx-2 mt-4 xl:mx-5">
         <img
           className="object-cover h-auto w-full rounded-lg"
-          src={firstImage}
+          src={images[0]}
         />
       </div>
       <div className="sub_images rounded-md flex gap-2  items-start my-3 mx-4">
         {}
         <img
-          src={firstImage}
+          src={images[0]}
           alt={title + "image"}
           className="object-cover h-[115px] w-[115px] rounded-md  border border-slate-100 "
         />
         <img
-          src={secondImage}
+          src={images[1]}
           alt={title + "Image"}
           className="object-cover h-[115px] w-[115px] rounded-md  border border-slate-100 "
         />

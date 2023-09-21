@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { FaRegCommentDots, FaRegStar } from "react-icons/fa";
 
@@ -13,13 +14,13 @@ export const PriceSection = ({price, ratings}) => {
             {/* <span className="px-1">S</span> */}
             <FaRegStar className="text-orange-600 text-md" />
             <span className="ratings font-semibold text-orange-600">
-              {ratings[0].stars}
+              {ratings.stars}
             </span>
           </span>
           <span className="review_section flex justify-between items-center px-3 py-2 bg-sky-200 rounded-3xl gap-1">
             <FaRegCommentDots />
             <span className="reviews font-semibold px-1 text-indigo-900">
-              {ratings[0].reviewCount} Reviews
+              {ratings.reviewCount} Reviews
             </span>
           </span>
         </div>
