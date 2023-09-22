@@ -7,6 +7,7 @@ import { ShopNavigation } from "./ShopNavigation";
 import { useLocation } from "react-router-dom";
 import Footer from "../../components/Footer";
 import { SortButton } from "./SortButton";
+import { ascendingPrice, decendingPrice, latest } from "./utils";
 
 const ShopPage = () => {
   const { category, setCategory, allCategories } = useProductContext();
@@ -34,24 +35,6 @@ const ShopPage = () => {
     location.pathname.includes("denim") && setCategory(denim);
     location.pathname.includes("footwear") && setCategory(footwear);
     location.pathname.includes("accessories") && setCategory(accessories);
-  };
-
-  const ascendingPrice = () => {
-    const sortedItems = [...category];
-    sortedItems.sort((a, b) => a.price - b.price);
-    setCategory(sortedItems);
-  };
-
-  const decendingPrice = () => {
-    const sortedItems = [...category];
-    sortedItems.sort((a, b) => b.price - a.price);
-    setCategory(sortedItems);
-  };
-
-  const latest = () => {
-    const sortedItems = [...category];
-    sortedItems.sort((a, b) => new Date(b.Date) - new Date(a.Date));
-    setCategory(sortedItems);
   };
 
   const selectSort = (options) => {
