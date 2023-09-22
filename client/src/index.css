@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  /* temperary it prevents scroll X -*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .image-wrapper {
   display: inline-block;
   overflow: hidden;
@@ -44,4 +50,82 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* responsive-carousel */
+
+.productImages__carousel {
+  width: 100%;
+  --bg: #000;
+  --text: #fff;
+}
+
+.carousel--item {
+  height: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 70%;
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.control-arrow.control-next,
+.control-arrow.control-prev {
+  background: var(--bg) !important;
+  opacity: 0.75 !important;
+  transition: none !important;
+}
+.control-arrow.control-next:hover,
+.control-arrow.control-prev:hover {
+  opacity: 1 !important;
+}
+.carousel {
+  max-width: 100vw !important;
+}
+.carousel-status {
+  /* @include sub-body-size; */
+  /* color: var(--text-primary) !important; */
+  text-shadow: none !important;
+  /* display: none !important; */
+  right: 50% !important;
+  top: 1rem !important;
+  transform: translateX(50%) !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid var(--text) !important;
+}
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid var(--text) !important;
+}
+
+.carousel .control-prev.control-arrow {
+  /* left: 1rem !important; */
+  margin-right: 1rem;
+}
+
+.carousel .control-prev.control-arrow:nth-child(1),
+.carousel .control-next.control-arrow:nth-child(3) {
+  display: none;
+}
+
+ul.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: center;
+}
+ul.thumbs.animated,
+ul.thumbs {
+  transform: none !important;
+}
+li.thumb {
+  display: flex;
+  align-self: center !important;
 }
