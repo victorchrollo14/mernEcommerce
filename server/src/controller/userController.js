@@ -1,6 +1,6 @@
 import User from "../models/userModel.js";
 import validator from "validator";
-import bcrypt from "bcrypt";
+import bcrypt, { compareSync } from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const login = async (req, res) => {
@@ -47,7 +47,7 @@ const register = async (req, res) => {
     if (user) {
       res
         .status(409)
-        .json({ message: `${email} already registered, you can login` });
+        .json({ error: `${email} already registered, you can login` });
       return;
     }
 
