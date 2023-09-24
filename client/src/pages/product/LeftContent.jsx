@@ -9,7 +9,7 @@ export const LeftContent = ({ data }) => {
   const { title, subtitle, images } = data;
 
   return (
-    <div className="left_section flex flex-col mt-2">
+    <div className="left_section flex flex-col mt-2 w-full md:w-[60vw]">
       <div className="heading flex justify-between items-center ml-2 mt-2">
         <div className="left_heading flex flex-col md:ml-2 xl:ml-4 xl:max-w-[50%] mb-5">
           <h1 className="text-2xl font-Poppins font-semibold pr-4 md:text-xl xl:text-2xl ">
@@ -41,17 +41,18 @@ export const LeftContent = ({ data }) => {
           // showIndicators={false}
           // showThumbs={false}
           infiniteLoop={true}
-          className="productImages__carousel lg:flex lg:w-full items-center justify-between"
+          className="productImages__carousel lg:w-[70%] items-center justify-between mx-auto"
         >
           {/* here you can use uuid over i */}
           {images?.map((img, i) => (
-            <figure className="productImages__carousel--item" key={i}>
+            
               <img
+              key={i}
                 src={img}
                 alt="product"
-                className="max-h-[60vh] object-contain"
+                className="max-h-[auto] object-cover productImages__carousel--item"
               />
-            </figure>
+            
           ))}
         </Carousel>
       </div>
