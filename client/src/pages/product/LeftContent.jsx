@@ -10,7 +10,7 @@ export const LeftContent = ({ data }) => {
 
   return (
     <div className="left_section flex flex-col max-w-[600px] mt-2 w-full md:w-[60vw]">
-      <div className="heading flex justify-between items-center ml-2 mt-2">
+      <div className="heading flex justify-between items-start ml-2 mt-2">
         <div className="left_heading flex flex-col md:ml-2 xl:ml-4 xl:max-w-[50%] mb-5">
           <h1 className="text-2xl font-Poppins font-semibold pr-4 md:text-xl xl:text-2xl ">
             {title}
@@ -34,13 +34,13 @@ export const LeftContent = ({ data }) => {
           <FaShare className="text-sky-800 font-semibold bg-sky-100 rounded-lg w-9 h-9 p-2" />
         </div>
       </div>
-      <div className="main_image rounded-lg  mx-2 mt-4 xl:mx-5">
+      <div className="main_image rounded-lg  mt-4 xl:mx-5">
         <Carousel
           autoPlay={true}
           swipeable={false}
           // showIndicators={false}
           // showThumbs={false}
-          infiniteLoop={true}
+          infiniteLoop={false}
           className="productImages__carousel  items-center justify-between "
         >
           {/* here you can use uuid over i */}
