@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa6";
 
 import { FaShare } from "react-icons/fa6";
-
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 export const LeftContent = ({ data }) => {
   const [wishlist, setWishlist] = useState(false);
-  const { images, title, subtitle } = data;
+  const { title, subtitle, images } = data;
 
   return (
-    <div className="left_section flex flex-col mt-2 xl:w-1/2">
-      <div className="heading flex justify-between items-center ml-2 mt-2">
-        <div className="left_heading flex flex-col md:ml-2 xl:ml-4">
-          <h1 className="text-2xl font-Poppins font-semibold pr-4 md:text-xl xl:text-2xl">
+    <div className="left_section flex flex-col max-w-[600px] mt-2 w-full md:w-[60vw]">
+      <div className="heading flex justify-between items-start ml-2 mt-2">
+        <div className="left_heading flex flex-col md:ml-2 xl:ml-4 xl:max-w-[50%] mb-5">
+          <h1 className="text-2xl font-Poppins font-semibold pr-4 md:text-xl xl:text-2xl ">
             {title}
           </h1>
           <span className="text-sm font-Poppins text-black opacity-70">
@@ -33,24 +34,27 @@ export const LeftContent = ({ data }) => {
           <FaShare className="text-sky-800 font-semibold bg-sky-100 rounded-lg w-9 h-9 p-2" />
         </div>
       </div>
-      <div className="main_image rounded-lg border border-slate-100  mx-2 mt-4 xl:mx-5">
-        <img
-          className="object-cover h-auto w-full rounded-lg"
-          src={images[0]}
-        />
-      </div>
-      <div className="sub_images rounded-md flex gap-2  items-start my-3 mx-4">
-        {}
-        <img
-          src={images[0]}
-          alt={title + "image"}
-          className="object-cover h-[115px] w-[115px] rounded-md  border border-slate-100 "
-        />
-        <img
-          src={images[1]}
-          alt={title + "Image"}
-          className="object-cover h-[115px] w-[115px] rounded-md  border border-slate-100 "
-        />
+      <div className="main_image rounded-lg  mt-4 xl:mx-5">
+        <Carousel
+          autoPlay={true}
+          swipeable={false}
+          // showIndicators={false}
+          // showThumbs={false}
+          infiniteLoop={false}
+          className="productImages__carousel  items-center justify-between "
+        >
+          {/* here you can use uuid over i */}
+          {images?.map((img, i) => (
+            
+              <img
+              key={i}
+                src={img}
+                alt="product"
+                className="max-h-[auto] object-cover productImages__carousel--item"
+              />
+            
+          ))}
+        </Carousel>
       </div>
     </div>
   );
