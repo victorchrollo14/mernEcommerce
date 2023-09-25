@@ -9,7 +9,7 @@ export const LeftContent = ({ data }) => {
   const { title, subtitle, images } = data;
 
   return (
-    <div className="left_section flex flex-col mt-2 w-full md:w-[60vw]">
+    <div className="left_section flex flex-col max-w-[600px] mt-2 w-full md:w-[60vw]">
       <div className="heading flex justify-between items-center ml-2 mt-2">
         <div className="left_heading flex flex-col md:ml-2 xl:ml-4 xl:max-w-[50%] mb-5">
           <h1 className="text-2xl font-Poppins font-semibold pr-4 md:text-xl xl:text-2xl ">
@@ -41,7 +41,7 @@ export const LeftContent = ({ data }) => {
           // showIndicators={false}
           // showThumbs={false}
           infiniteLoop={true}
-          className="productImages__carousel lg:w-[70%] items-center justify-between mx-auto"
+          className="productImages__carousel  items-center justify-between "
         >
           {/* here you can use uuid over i */}
           {images?.map((img, i) => (
