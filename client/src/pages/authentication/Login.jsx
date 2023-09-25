@@ -6,6 +6,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { ImageSection } from "./ImageSection";
+import { LoginForm } from "./LoginForm";
 
 const Login = () => {
   return (
@@ -45,40 +46,6 @@ const Login = () => {
   );
 };
 
-const LoginForm = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
-  return (
-    <>
-      <form
-        action=""
-        onSubmit={handleSubmit}
-        className="w-5/6 max-w-xs min-w-[220px]"
-      >
-        <input
-          type="email"
-          placeholder="Email Address"
-          className="border-2 p-4 w-full max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="border-2 p-4 w-full max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-        />
-        <button
-          type="submit"
-          className="bg-[#1E1E1E] w-full max-w-xs min-w-[220px]  h-16 text-white px-20 my-4 text-2xl hover:bg-[#B5AA8F] transition"
-        >
-          LOGIN
-        </button>
-        <span className="text-[#757373] cursor-pointer hover:text-green-600">
-          Forgot password
-        </span>
-      </form>{" "}
-    </>
-  );
-};
 
 export default Login;
