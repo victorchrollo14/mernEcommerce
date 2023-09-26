@@ -11,18 +11,32 @@ const register = async (userData) => {
   }
 };
 
-const login = async (userData) => {
+const login = async (userData, setLoggedIn) => {
   try {
-    console.log(userData)
     const response = await fetch("http://localhost:3001/user/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
     });
-    return response;
+    const data = await response.json();
+    const token = await data.token;
+
+    localStorage.setItem("token", token);
+    setLoggedIn(true);
+
+    return { status: response.status, data: data };
   } catch (error) {
     console.log(error);
   }
 };
 
-export  { register, login };
+const logout = async () => {
+  try {
+    localStorage.clear();
+    return true;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { register, login, logout };

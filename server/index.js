@@ -23,7 +23,7 @@ app.use(express.json());
 // parse data from client
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cookieParser())
+app.use(cookieParser(process.env.JWT_PRIVATE_KEY));
 
 // static files fetching
 app.use("/product/ProductAssets", express.static("ProductAssets"));

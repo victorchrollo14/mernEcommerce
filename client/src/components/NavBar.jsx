@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
 import { FaUserCircle } from "react-icons/fa";
@@ -7,9 +7,11 @@ import { BiSearch } from "react-icons/bi";
 import { HiOutlineMenuAlt2, HiOutlineX } from "react-icons/hi";
 
 import { MobNavigation } from "./MobNavigation";
+import { useUserContext } from "../contexts/userContext";
 
 const NavBar = () => {
   const navigate = useNavigate();
+  const { token } = useUserContext();
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState(false);
 
@@ -66,7 +68,7 @@ const NavBar = () => {
         <FaUserCircle
           className="text-[25px] place-items-center cursor-pointer xl:text-[35px]"
           onClick={() => {
-            navigate("/register");
+            token ? navigate("/profile") : navigate("/register");
           }}
         />
       </div>
@@ -83,7 +85,7 @@ const NavBar = () => {
         <FaUserCircle
           className="text-[25px] place-items-center cursor-pointer relative"
           onClick={() => {
-            navigate("/register");
+            token ? navigate("/profile") : navigate("/register");
           }}
         />
         {!toggle ? (

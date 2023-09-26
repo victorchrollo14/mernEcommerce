@@ -1,6 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
 import { useContext, createContext, useState, useEffect } from "react";
 
 const productContext = createContext();
@@ -77,7 +74,7 @@ const useProductContext = () => {
   const context = useContext(productContext);
   if (context === undefined) {
     throw new Error(
-      "useProductContext must be within a productContextProvider. Make sure the component is wrapped in productContextProvider"
+      "useProductContext must be within a ProductContextProvider. Make sure the component is wrapped in ProductContextProvider"
     );
   }
   return context;

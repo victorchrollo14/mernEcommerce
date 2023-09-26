@@ -23,10 +23,11 @@ const login = async (req, res) => {
       return res.status(400).json({ error: "incorrect password, try again" });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_PRIVATE_KEY);
-    res.cookie("auth-token", token, { httpOnly: true });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_PRIVATE_KEY, {
+      expiresIn: "30d",
+    });
 
-    res.status(200).json({ message: "logged in" });
+    res.status(200).json({ message: "logged in", token: token });
   } catch (err) {
     res.status(501).json({ error: err });
   }

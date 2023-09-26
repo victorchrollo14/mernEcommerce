@@ -1,12 +1,18 @@
 import { Routes } from "./routes";
 import { ProductContextProvider } from "./contexts/productContext";
+import { UserContextProvider } from "./contexts/userContext";
+import { CookiesProvider } from "react-cookie";
 import "./Styles.css";
 
 function App() {
   return (
-    <ProductContextProvider>
-      <Routes />
-    </ProductContextProvider>
+    <CookiesProvider>
+      <ProductContextProvider>
+        <UserContextProvider>
+          <Routes />
+        </UserContextProvider>
+      </ProductContextProvider>
+    </CookiesProvider>
   );
 }
 
