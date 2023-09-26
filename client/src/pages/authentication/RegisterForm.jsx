@@ -13,7 +13,6 @@ export const RegisterForm = ({ setError, setSuccess }) => {
   });
 
   const handleChange = (e) => {
-    console.log(formData);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,

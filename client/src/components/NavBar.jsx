@@ -11,7 +11,7 @@ import { useUserContext } from "../contexts/userContext";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const { token } = useUserContext();
+  const { loggedIn } = useUserContext();
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState(false);
 
@@ -68,7 +68,7 @@ const NavBar = () => {
         <FaUserCircle
           className="text-[25px] place-items-center cursor-pointer xl:text-[35px]"
           onClick={() => {
-            token ? navigate("/profile") : navigate("/register");
+            loggedIn ? navigate("/profile") : navigate("/register");
           }}
         />
       </div>
@@ -85,7 +85,7 @@ const NavBar = () => {
         <FaUserCircle
           className="text-[25px] place-items-center cursor-pointer relative"
           onClick={() => {
-            token ? navigate("/profile") : navigate("/register");
+            loggedIn ? navigate("/profile") : navigate("/register");
           }}
         />
         {!toggle ? (

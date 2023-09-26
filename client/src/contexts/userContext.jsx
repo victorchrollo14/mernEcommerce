@@ -11,7 +11,6 @@ const UserContextProvider = (props) => {
     const token = localStorage.getItem("token");
     return token;
   });
-  console.log(token);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -30,12 +29,13 @@ const UserContextProvider = (props) => {
       }
     };
     if (token) {
+      setLoggedIn(true);
       fetchUser();
     }
-  }, [token]);
+  }, [token, loggedIn, user]);
 
   return (
-    <UserContext.Provider value={{ user, loggedIn, setLoggedIn, token }}>
+    <UserContext.Provider value={{ user, loggedIn, setLoggedIn, token, setToken }}>
       {props.children}
     </UserContext.Provider>
   );

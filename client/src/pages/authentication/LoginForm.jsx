@@ -6,7 +6,7 @@ import { useUserContext } from "../../contexts/userContext";
 import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
-  const { setLoggedIn } = useUserContext();
+  const { setLoggedIn, setToken } = useUserContext();
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await login(formData, setLoggedIn);
+    const response = await login(formData, setLoggedIn, setToken);
     const data = response.data;
 
     if (response.status === 400) {
