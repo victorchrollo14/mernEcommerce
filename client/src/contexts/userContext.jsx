@@ -23,19 +23,22 @@ const UserContextProvider = (props) => {
           },
         });
         const data = await response.json();
+        console.log(data);
         setUser(data);
       } catch (error) {
         console.log(error);
       }
     };
+    console.log(token);
     if (token) {
-      setLoggedIn(true);
       fetchUser();
     }
-  }, [token, loggedIn, user]);
+  }, [token]);
 
   return (
-    <UserContext.Provider value={{ user, loggedIn, setLoggedIn, token, setToken }}>
+    <UserContext.Provider
+      value={{ user, setUser, loggedIn, setLoggedIn, token, setToken }}
+    >
       {props.children}
     </UserContext.Provider>
   );

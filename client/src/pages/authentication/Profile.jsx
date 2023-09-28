@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useUserContext } from "../../contexts/userContext";
 import { ErrorMessage, SuccessMessage } from "../../components/Alert";
 import { useNavigate, Link } from "react-router-dom";
 import { logout } from "../../services/auth";
 
 const Profile = () => {
-  const { user, setLoggedIn } = useUserContext();
+  const { user, setUser, setLoggedIn } = useUserContext();
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
   const navigate = useNavigate();
@@ -16,12 +16,17 @@ const Profile = () => {
       setError("");
       setLoggedIn(false);
       setSuccess("Successfully logged out");
-      setTimeout(() => navigate("/login"), 2000);
+      setTimeout(() => {
+        navigate("/login");
+        setUser(undefined);
+      }, 2000);
+
       return;
     }
     setSuccess("");
     setError("unable to log out some error occured");
   };
+
   return (
     <>
       {" "}
