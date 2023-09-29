@@ -1,26 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { ImageSection } from "./ImageSection";
+import { SuccessMessage, ErrorMessage } from "../../components/Alert";
+import { RegisterForm } from "./RegisterForm";
 
-const Register = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+const RegisterPage = () => {
+  const [error, setError] = useState();
+  const [success, setSuccess] = useState();
 
   return (
     <div className="bg-[#DFDFDF] overflow-x-hidden">
       <NavBar />
       <div className="flex flex-row justify-center my-5 sm:m-5 gap-5 md:gap-10">
         <ImageSection />
-        <form
-          onSubmit={handleSubmit}
-          className="form flex items-center flex-col w-5/6 max-w-md py-10 bg-white  md:py-10 rounded-xl h-fit "
-        >
+        <div className="form flex items-center flex-col w-5/6 max-w-md py-10 bg-white  md:py-10 rounded-xl h-fit ">
           <h2 className="text-center font-medium text-2xl  sm:text-3xl">
             Register
           </h2>
@@ -44,46 +43,16 @@ const Register = () => {
             OR{" "}
             <hr className="bg-black w-[28vw] max-w-[135px] h-[2px]   relative top-3 left-1" />
           </div>
-          <UserInput />
-        </form>
+          <RegisterForm setError={setError} setSuccess={setSuccess} />
+          {error && <ErrorMessage error={error} />}
+          {success && <SuccessMessage success={success} />}
+        </div>
       </div>
       <Footer />
     </div>
   );
 };
 
-const UserInput = () => {
-  return (
-    <>
-      {" "}
-      <input
-        type="text"
-        placeholder="full Name"
-        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-      />
-      <input
-        type="email"
-        placeholder="Email Address"
-        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-      />
-      <input
-        type="password"
-        placeholder="Confirm Password"
-        className="border-2 p-4 w-5/6 max-w-xs min-w-[220px] my-2 placeholder:text-[#A7A7A7] border-[#A7A7A7] text-xl rounded-xl md:w-[400px]"
-      />
-      <button
-        type="submit"
-        className="bg-[#1E1E1E] w-5/6 max-w-xs min-w-[220px]  h-16 text-white px-20 my-4 text-2xl hover:bg-[#B5AA8F] transition"
-      >
-        REGISTER
-      </button>
-    </>
-  );
-};
 
-export default Register;
+
+export default RegisterPage;

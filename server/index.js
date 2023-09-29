@@ -2,9 +2,8 @@ import express from "express";
 import "dotenv/config";
 import cors from "cors";
 import mongoose from "mongoose";
-import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
-import path from "path";
+import cookieParser from "cookie-parser";
 
 import { userRouter } from "./src/routes/userRoute.js";
 import { productRouter } from "./src/routes/productRoute.js";
@@ -21,12 +20,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// static files fetching
-app.use("/product/ProductAssets", express.static("ProductAssets"));
-
 // parse data from client
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser(process.env.JWT_PRIVATE_KEY));
+
+// static files fetching
+app.use("/product/ProductAssets", express.static("ProductAssets"));
 
 app.get("/", (req, res) => {
   res.send("ok");
