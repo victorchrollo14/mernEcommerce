@@ -2,6 +2,7 @@ import { useState } from "react";
 import NavBar from "../../components/NavBar";
 import CartProduct from "./CartProduct";
 import { Navigate, useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -36,10 +37,12 @@ const Cart = () => {
 
       {/* heading */}
       <div className="header flex flex-col items-center my-2 md:items-start md:ml-7">
-        <h1 className="pt-3 text-3xl font-semibold md:pb-1 xl:text-4xl">Your Cart</h1>
+        <h1 className="pt-3 text-3xl font-semibold md:pb-1 xl:text-4xl">
+          Your Cart
+        </h1>
         <h3 className="text-md pt-1 xl:text-lg">
           Not ready to checkout?
-          <span className="pl-0.5 font-semibold text-indigo-900">
+          <span className="pl-0.5 font-semibold text-PrimaryBlue cursor-pointer">
             Continue Shopping
           </span>
         </h3>
@@ -54,8 +57,10 @@ const Cart = () => {
         </div>
 
         {/* order_details */}
-        <div className="order_details flex flex-col my-7 mx-5 bg-[#EDF0F8] rounded-lg shadow-lg py-10 px-5 md:mx-14 md:px-10 lg:mx-5 lg:grow lg:py-20 lg:px-5 xl:w-1/2 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
-          <h1 className="text-2xl font-semibold lg:my-2 xl:text-3xl">Order Summary</h1>
+        <div className="order_details flex flex-col my-7 mx-5 bg-lightestBlue rounded-lg shadow-lg py-10 px-5 md:mx-14 md:px-10 lg:mx-5 lg:grow lg:py-20 lg:px-5 xl:w-1/2 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
+          <h1 className="text-2xl font-semibold lg:my-2 xl:text-3xl">
+            Order Summary
+          </h1>
           <input
             type="text"
             placeholder="Enter coupon code here"
@@ -68,7 +73,7 @@ const Cart = () => {
                   <span className="product_name text-lg ml-2 font-Poppins">
                     {item.title}
                   </span>
-                  <span className="price mr-4 text-lg font-semibold text-indigo-900 font-Poppins">
+                  <span className="price mr-4 text-lg font-semibold text-PrimaryBlue font-Poppins">
                     {item.price}
                   </span>
                 </li>
@@ -81,11 +86,15 @@ const Cart = () => {
               ${total}
             </span>
           </div>
-          <button className="mt-3 px-5 py-3 border border-indigo-900 bg-indigo-900 text-xl text-white font-semibold md:mx-1" onClick={() => navigate("/cart/checkout")}>
+          <button
+            className="mt-3 px-5 py-3 border border-PrimaryBlue bg-PrimaryBlue text-xl text-white font-semibold md:mx-1"
+            onClick={() => navigate("/cart/checkout")}
+          >
             Continue to Shipping
           </button>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer bg-[#1E2833] text-white mb-0  pt-16">
+    <footer className="footer bg-darkBlue text-white mb-0  pt-16">
       <div className="px-5 flex flex-col w-screen md:items-center md:pt-3 md:pb-9">
         <h1 className="text-4xl md:text-6xl font-Volkhov">Black Market</h1>
         <p className="text-[#81868C] text-left md:text-center w-64 my-3 md:text-xl md:w-96">

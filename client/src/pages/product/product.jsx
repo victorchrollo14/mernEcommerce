@@ -30,8 +30,8 @@ const ProductPage = () => {
           <RightContent data={data} />
         </div>
       ) : (
-        <div className="text-5xl h-[50vh] text-center">
-          Product Does not exist
+        <div className="text-5xl h-[50vh] text-center text-red">
+          404 Product Not Found!
         </div>
       )}
 

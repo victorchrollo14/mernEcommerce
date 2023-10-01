@@ -59,7 +59,7 @@ const LoginForm = () => {
         />
 
         <SubmitButton>LOGIN</SubmitButton>
-        <span className="text-[#757373] cursor-pointer hover:text-green-600">
+        <span className="text-[#757373] cursor-pointer hover:text-green">
           Forgot password
         </span>
         {error && <ErrorMessage error={error} />}

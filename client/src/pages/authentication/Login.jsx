@@ -10,7 +10,7 @@ import { LoginForm } from "./LoginForm";
 
 const Login = () => {
   return (
-    <div className="bg-[#DFDFDF] overflow-x-hidden">
+    <div className="bg-lightestSlate overflow-x-hidden">
       <NavBar />
       <div className="flex flex-row justify-center sm:m-5 gap-5 md:gap-10">
         <ImageSection />
@@ -20,15 +20,15 @@ const Login = () => {
           </h2>
           <div className="md:text-xl my-5">
             Not Registered yet?{" "}
-            <span className="text-red-600">
+            <span className="text-red">
               <Link to={"/register"}>Register</Link>
             </span>
           </div>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-[#24292F] outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] h-16 rounded-xl">
+          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-black outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
             <FaGithub className="" />
             <span>Login with Github</span>
           </button>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] h-16 rounded-xl">
+          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
             <FcGoogle className="" />
             <span>Login with Google</span>
           </button>

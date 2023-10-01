@@ -15,7 +15,7 @@ const RegisterPage = () => {
   const [success, setSuccess] = useState();
 
   return (
-    <div className="bg-[#DFDFDF] overflow-x-hidden">
+    <div className="bg-lightestSlate overflow-x-hidden">
       <NavBar />
       <div className="flex flex-row justify-center my-5 sm:m-5 gap-5 md:gap-10">
         <ImageSection />
@@ -25,15 +25,15 @@ const RegisterPage = () => {
           </h2>
           <div className="md:text-xl my-5">
             Already Have an Account?{" "}
-            <span className="text-red-600">
+            <span className="text-red">
               <Link to={"/login"}>Login</Link>
             </span>
           </div>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-[#24292F] outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] h-16 rounded-xl">
+          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-darkBlue outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
             <FaGithub className="" />
             <span>Register with Github</span>
           </button>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-[#A7A7A7] px-2 md:w-[400px] h-16 rounded-xl">
+          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
             <FcGoogle className="" />
             <span>Register with Google</span>
           </button>

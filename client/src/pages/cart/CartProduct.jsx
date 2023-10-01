@@ -12,7 +12,7 @@ const CartProduct = ({item}) => {
       {qty === 0 ? (
         <div></div>
       ) : (
-        <div className="cardContainer bg-[#EDF0F8] p-4 border border-[#EDF0F8] mx-4 rounded-2xl flex flex-col md:flex-row md:justify-between" key={id}>
+        <div className="cardContainer bg-lightestBlue p-4 border border-[#EDF0F8] mx-4 rounded-2xl flex flex-col md:flex-row md:justify-between" key={id}>
           <div className="details flex gap-7 mt-1">
             <div className="image w-32 h-32 rounded-2xl">
               <img
@@ -25,13 +25,13 @@ const CartProduct = ({item}) => {
               <h1 className="text-black text-lg font-semibold font-Poppins">
                 {title}
               </h1>
-              <span className="price text-indigo-900 font-bold text-2xl font-Poppins my-1">
+              <span className="price text-PrimaryBlue font-bold text-2xl font-Poppins my-1">
                 {price}
               </span>
               <select
                 name=""
                 id=""
-                className="size_selection mt-1 bg-white border border-white w-20 rounded-lg py-2 text-indigo-900 font-semibold outline-none"
+                className="size_selection mt-1 bg-white border border-white w-20 rounded-lg py-2 px-3 text-PrimaryBlue font-semibold outline-none"
               >
                 <option value="">Small</option>
                 <option value="">Medium</option>
@@ -47,14 +47,14 @@ const CartProduct = ({item}) => {
               onClick={() => setWishlist(!wishlist)}
             >
               {wishlist ? (
-                <FaHeart className="text-xl text-indigo-900" />
+                <FaHeart className="text-xl text-PrimaryBlue" />
               ) : (
-                <FaRegHeart className="text-xl text-indigo-900" />
+                <FaRegHeart className="text-xl text-PrimaryBlue" />
               )}
             </div>
             <div className="couter flex gap-1 items-center mr-2 justify-around">
               <div
-                className="minus p-2 text-xl bg-white text-indigo-900 rounded-xl"
+                className="minus p-2 text-xl bg-white text-PrimaryBlue rounded-xl"
                 onClick={() => (qty > 1 ? setQty(qty - 1) : setQty(0))}
               >
                 <FaMinus />
@@ -63,7 +63,7 @@ const CartProduct = ({item}) => {
                 {qty}
               </span>
               <div
-                className="plus p-2 text-xl bg-white text-indigo-900 rounded-xl"
+                className="plus p-2 text-xl bg-white text-PrimaryBlue rounded-xl"
                 onClick={() => setQty(qty + 1)}
               >
                 <FaPlus />

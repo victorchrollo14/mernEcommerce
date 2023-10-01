@@ -16,7 +16,7 @@ const Card = () => {
         <input
           type="text"
           name="name"
-          className="bg-white px-2 py-2 rounded-md border border-white outline-none"
+          className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => cardDetails(e)}
         />
       </div>
@@ -25,7 +25,7 @@ const Card = () => {
         <input
           type="text"
           name="number"
-          className="bg-white px-2 py-2 rounded-md border border-white outline-none"
+          className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => cardDetails(e)}
         />
       </div>
@@ -35,7 +35,7 @@ const Card = () => {
           <input
             type="number"
             name="month"
-            className="bg-white w-full px-2 py-2 rounded-md border border-white outline-none"
+            className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => cardDetails(e)}
           />
         </div>
@@ -44,7 +44,7 @@ const Card = () => {
           <input
             type="number"
             name="year"
-            className="bg-white w-full px-2 py-2 rounded-md border border-white outline-none"
+            className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => cardDetails(e)}
           />
         </div>
@@ -53,7 +53,7 @@ const Card = () => {
           <input
             type="number"
             name="cvv"
-            className="bg-white w-full px-2 py-2 rounded-md border border-white outline-none"
+            className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => cardDetails(e)}
           />
         </div>

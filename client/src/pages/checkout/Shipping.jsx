@@ -23,7 +23,7 @@ const Shipping = () => {
         <input
           type="text"
           name="name"
-          className="bg-white px-2 py-2 rounded-md border border-white outline-none"
+          className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
       </div>
@@ -32,7 +32,7 @@ const Shipping = () => {
         <input
           type="text"
           name="street"
-          className="bg-white px-2 py-2 rounded-md border border-white outline-none"
+          className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
       </div>
@@ -41,7 +41,7 @@ const Shipping = () => {
         <input
           type="text"
           name="country"
-          className="bg-white px-2 py-2 rounded-md border border-white outline-none"
+          className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
       </div>
@@ -51,7 +51,7 @@ const Shipping = () => {
           <input
             type="text"
             name="state"
-            className="bg-white w-full px-2 py-2 rounded-md border border-white outline-none"
+            className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => shippingDetails(e)}
           />
         </div>
@@ -60,7 +60,7 @@ const Shipping = () => {
           <input
             type="text"
             name="city"
-            className="bg-white w-full px-2 py-2 rounded-md border border-white outline-none"
+            className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => shippingDetails(e)}
           />
         </div>
@@ -70,7 +70,7 @@ const Shipping = () => {
         <input
           type="number"
           name="pincode"
-          className="bg-white px-2 py-2 rounded-md border border-white outline-none"
+          className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
       </div>

@@ -10,7 +10,7 @@ const SortButton = () => {
 
   return (
     <>
-      <div className="sort-button bg-blue-500 text-white w-fit rounded-[10px] ">
+      <div className="sort-button bg-PrimaryBlue text-white w-fit rounded-[10px] ">
         <button
           type="button"
           className="flex flex-row 
@@ -25,13 +25,13 @@ const SortButton = () => {
           className="dropdown bg-white rounded-md cursor-pointer w-fit"
           onClick={toggle}
         >
-          <li className="hover:bg-slate-300 w-32 text-center py-1">
+          <li className="hover:bg-lightestBlue w-32 text-center py-1">
             Low to High
           </li>
-          <li className="hover:bg-slate-300 w-32 text-center py-1">
+          <li className="hover:bg-lightestBlue w-32 text-center py-1">
             High to Low
           </li>
-          <li className="hover:bg-slate-300 w-32 text-center py-1">Latest</li>
+          <li className="hover:bg-lightestBlue w-32 text-center py-1">Latest</li>
         </ul>
       ) : null}
     </>

@@ -23,15 +23,15 @@ export const LeftContent = ({ data }) => {
           {wishlist ? (
             <FaHeart
               onClick={() => setWishlist(!wishlist)}
-              className="text-sky-800 bg-sky-100 rounded-lg w-9 h-9 p-2"
+              className="text-PrimaryBlue bg-lightestBlue rounded-lg w-9 h-9 p-2"
             />
           ) : (
             <FaRegHeart
               onClick={() => setWishlist(!wishlist)}
-              className="text-sky-800 bg-sky-100 rounded-lg w-9 h-9 p-2"
+              className="text-PrimaryBlue bg-lightestBlue rounded-lg w-9 h-9 p-2"
             />
           )}
-          <FaShare className="text-sky-800 font-semibold bg-sky-100 rounded-lg w-9 h-9 p-2" />
+          <FaShare className="text-PrimaryBlue font-semibold bg-lightestBlue rounded-lg w-9 h-9 p-2" />
         </div>
       </div>
       <div className="main_image rounded-lg  mt-4 xl:mx-5">
