@@ -2,13 +2,13 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { ImageSection } from "./ImageSection";
 import { SuccessMessage, ErrorMessage } from "../../components/Alert";
 import { RegisterForm } from "./RegisterForm";
+import { GithubButton } from "../../components/Github";
+import { GoogleButton } from "../../components/Google";
 
 const RegisterPage = () => {
   const [error, setError] = useState();
@@ -29,14 +29,8 @@ const RegisterPage = () => {
               <Link to={"/login"}>Login</Link>
             </span>
           </div>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-darkBlue outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
-            <FaGithub className="" />
-            <span>Register with Github</span>
-          </button>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
-            <FcGoogle className="" />
-            <span>Register with Google</span>
-          </button>
+          <GithubButton>Register with Github</GithubButton>
+          <GoogleButton>Register With Google</GoogleButton>
           <div className="text-center text-2xl font-semibold my-6 flex">
             {" "}
             <hr className="bg-black w-[28vw] max-w-[135px] h-[2px]   relative top-3 right-1" />{" "}
@@ -52,7 +46,5 @@ const RegisterPage = () => {
     </div>
   );
 };
-
-
 
 export default RegisterPage;

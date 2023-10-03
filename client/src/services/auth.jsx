@@ -22,7 +22,7 @@ const login = async (userData, setLoggedIn, setToken) => {
     const token = await data.token;
 
     localStorage.setItem("token", token);
-    setToken(token)
+    setToken(token);
     setLoggedIn(true);
 
     return { status: response.status, data: data };
