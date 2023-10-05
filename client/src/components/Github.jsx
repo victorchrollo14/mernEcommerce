@@ -18,6 +18,7 @@ const GithubButton = ({ children }) => {
           `http://localhost:3001/user/register/github?code=${code}`
         );
         const data = await response.json();
+        console.log(data);
       }
     } catch (error) {
       console.log(error);
