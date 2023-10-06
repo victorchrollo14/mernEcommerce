@@ -29,7 +29,11 @@ const RegisterPage = () => {
               <Link to={"/login"}>Login</Link>
             </span>
           </div>
-          <GithubButton>Register with Github</GithubButton>
+          <GithubButton
+            name={"Register with Github"}
+            setError={setError}
+            setSuccess={setSuccess}
+          />
           <GoogleButton>Register With Google</GoogleButton>
           <div className="text-center text-2xl font-semibold my-6 flex">
             {" "}

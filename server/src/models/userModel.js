@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const UserSchema = new Schema(
   {
@@ -13,6 +13,7 @@ const UserSchema = new Schema(
     email: {
       type: String,
       require: true,
+      default: "",
     },
     password: {
       type: String,
@@ -41,6 +42,13 @@ const UserSchema = new Schema(
   },
   { timestamps: true }
 );
+
+UserSchema.pre("save", function (next) {
+  if (this.email === null) {
+    this.email = ""; // Set the email field to an empty string
+  }
+  next();
+});
 
 const User = model("User", UserSchema);
 

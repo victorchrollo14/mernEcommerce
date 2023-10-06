@@ -11,8 +11,7 @@ const githubRegister = async (req, res) => {
         .status(400)
         .json({ error: "error occured during github authorization" });
 
-    const access_token = await getAccessToken(code);
-    console.log(access_token)
+    const access_token = await getAccessToken(req, res);
     const userData = await getGithubData(access_token);
 
     console.log(
@@ -22,14 +21,16 @@ const githubRegister = async (req, res) => {
       userData.login
     );
 
-    const user = await User.findOne({ username: userData.login });
+    const user = await User.findOne({
+      $or: [{ username: userData.login }, { email: userData.email }],
+    });
 
     console.log(user);
 
     if (user)
       return res
         .status(409)
-        .json({ error: "User already registered you can login now" });
+        .json({ message: "User already registered you can login now" });
 
     const newUser = new User({
       fullname: userData.name,
@@ -44,7 +45,7 @@ const githubRegister = async (req, res) => {
     await newUser.save();
     res.status(200).json({ message: "successfully registered" });
   } catch (err) {
-    res.status(500).json({ error: err });
+    res.status(500).json({ error: err.message });
   }
 };
 
@@ -60,9 +61,10 @@ const getGithubData = async (access_token) => {
   return data;
 };
 
-const getAccessToken = async (code) => {
+const getAccessToken = async (req, res) => {
   const CLIENT_ID = process.env.CLIENT_ID;
   const CLIENT_SECRET = process.env.CLIENT_SECRET;
+  const code = req.query.code;
 
   const params = `?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}`;
   const response = await fetch(
@@ -77,6 +79,9 @@ const getAccessToken = async (code) => {
 
   const data = await response.json();
   const access_token = data.access_token;
+  if (!access_token) {
+    throw new Error("Error occured in getting access token");
+  }
   return access_token;
 };
 
