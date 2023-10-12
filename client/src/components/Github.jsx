@@ -16,7 +16,7 @@ const GithubButton = ({ name, setError, setSuccess }) => {
     try {
       const searchParams = new URLSearchParams(window.location.search);
       const code = searchParams.get("code");
-      if (code && localStorage.getItem("accessToken") === null) {
+      if (code && localStorage.getItem("token") === null) {
         const response = await fetch(
           `http://localhost:3001/user/register/github?code=${code}`
         );
@@ -28,10 +28,11 @@ const GithubButton = ({ name, setError, setSuccess }) => {
           return;
         }
 
-        if (response.status === 200 || response.status === 409) {
+        if (response.status === 200) {
           setError(" ");
           setSuccess(data.message);
-          setTimeout(() => navigate("/login"), 3000);
+          localStorage.setItem("token", data.token);
+          setTimeout(() => navigate("/profile"), 3000);
           return;
         }
       }
@@ -47,7 +48,7 @@ const GithubButton = ({ name, setError, setSuccess }) => {
   return (
     <button
       className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-darkBlue outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl"
-      onClick={name === "Register with Github" ? redirectAuth : redirectAuth}
+      onClick={redirectAuth}
     >
       <FaGithub className="" />
       <span>{name}</span>
