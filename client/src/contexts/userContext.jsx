@@ -25,13 +25,11 @@ const UserContextProvider = (props) => {
           },
         });
         const data = await response.json();
-        console.log(data);
         setUser(data);
       } catch (error) {
         console.log(error);
       }
     };
-    console.log(token);
     if (token) {
       fetchUser();
     }

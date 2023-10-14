@@ -37,7 +37,35 @@ const addItem = async (req, res) => {
   }
 };
 
-const getCart = async (req, res) => {};
+const getCart = async (req, res) => {
+  const { userID } = req.params;
+
+  try {
+    const cart = await Cart.findOne({ userID: userID }).populate(
+      "items.productID"
+    );
+
+    if (!cart)
+      return res.status(200).json({ message: "Your Shopping Cart Is empty" });
+
+    const items = cart.items.map((item) => {
+      return {
+        product: item.productID,
+        quantity: item.quantity,
+        size: item.size,
+      };
+    });
+    const data = {
+      userID: cart.userID,
+      items: items,
+    };
+
+    res.status(200).json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
 
 const removeItem = async (req, res) => {};
 

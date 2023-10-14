@@ -1,18 +1,19 @@
 import { Routes } from "./routes";
 import { ProductContextProvider } from "./contexts/productContext";
 import { UserContextProvider } from "./contexts/userContext";
-import { CookiesProvider } from "react-cookie";
+import { CartContextProvider } from "./contexts/cartContext";
+
 import "./Styles.css";
 
 function App() {
   return (
-    <CookiesProvider>
-      <ProductContextProvider>
-        <UserContextProvider>
+    <ProductContextProvider>
+      <UserContextProvider>
+        <CartContextProvider>
           <Routes />
-        </UserContextProvider>
-      </ProductContextProvider>
-    </CookiesProvider>
+        </CartContextProvider>
+      </UserContextProvider>
+    </ProductContextProvider>
   );
 }
 
