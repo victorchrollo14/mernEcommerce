@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 
 import { userRouter } from "./src/routes/userRoute.js";
 import { productRouter } from "./src/routes/productRoute.js";
+import { cartRouter } from "./src/routes/cartRoute.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
 // routes
 app.use("/user", userRouter);
 app.use("/product", productRouter);
+app.use("/cart", cartRouter);
 
 const runServer = async () => {
   try {

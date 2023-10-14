@@ -10,27 +10,23 @@ import { useProductContext } from "../../contexts/productContext";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [featured, setFeatured] = useState();
-
   const { allCategories } = useProductContext();
+  const [featured, setFeatured] = useState();
 
   const getRandom = () => {
     const randomProducts = [];
-
     const shirts = allCategories.shirts;
     const bottoms = allCategories.bottoms;
     const knits = allCategories.knits;
     const denim = allCategories.denim;
     const footwear = allCategories.footwear;
     const accessories = allCategories.accessories;
-
     const products = [shirts, bottoms, knits, denim, accessories, footwear];
 
     for (let item of products) {
       const random = Math.floor(Math.random() * item.length);
       randomProducts.push(item[random]);
     }
-
     setFeatured(randomProducts);
   };
 

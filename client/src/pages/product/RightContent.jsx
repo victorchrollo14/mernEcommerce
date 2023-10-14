@@ -2,9 +2,13 @@ import { ExtraInfo } from "./ExtraInfo";
 import { PriceSection } from "./PriceSection";
 import { SizeSection } from "./SizeSection";
 import { AddCart } from "./AddCart";
+import { useState } from "react";
 
 export const RightContent = ({ data }) => {
-  const { description, price, ratings, sizeOptions } = data;
+  const { _id, description, price, ratings, sizeOptions } = data;
+  const [size, setSize] = useState(sizeOptions[1]);
+  const [quantity, setQuantity] = useState(1);
+  console.log(size);
 
   return (
     <div className="right_section flex flex-col gap-3 md:w-4/6 md:mt-4 pl-2 lg:w-3/5 lg:mt-2 xl:mt-4">
@@ -15,8 +19,13 @@ export const RightContent = ({ data }) => {
         </p>
       </div>
       <PriceSection price={price} ratings={ratings} />
-      <SizeSection sizeOptions={sizeOptions} />
-      <AddCart />
+      <SizeSection sizeOptions={sizeOptions} setSize={setSize} size={size} />
+      <AddCart
+        productID={_id}
+        setQuantity={setQuantity}
+        size={size}
+        quantity={quantity}
+      />
       <ExtraInfo />
     </div>
   );
