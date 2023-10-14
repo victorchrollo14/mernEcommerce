@@ -1,6 +1,8 @@
+const URL = import.meta.env.VITE_URL;
+
 const register = async (userData) => {
   try {
-    const response = await fetch("http://localhost:3001/user/register", {
+    const response = await fetch(`${URL}/user/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
@@ -13,7 +15,7 @@ const register = async (userData) => {
 
 const login = async (userData, setLoggedIn, setToken) => {
   try {
-    const response = await fetch("http://localhost:3001/user/login", {
+    const response = await fetch(`${URL}/user/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),

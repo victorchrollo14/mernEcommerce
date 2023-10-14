@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useUserContext } from "../contexts/userContext";
 
 const GithubButton = ({ name, setError, setSuccess }) => {
   const navigate = useNavigate();
+  const { setToken } = useUserContext();
 
   const redirectAuth = () => {
-    const CLIENT_ID = "ed45d2b6e0e5bffd1f82";
+    const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
+    console.log(CLIENT_ID);
     window.location.assign(
       `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}`
     );
@@ -14,13 +17,16 @@ const GithubButton = ({ name, setError, setSuccess }) => {
 
   const githubRegister = async () => {
     try {
+      const URL = import.meta.env.VITE_URL;
       const searchParams = new URLSearchParams(window.location.search);
       const code = searchParams.get("code");
+
       if (code && localStorage.getItem("token") === null) {
         const response = await fetch(
-          `http://localhost:3001/user/register/github?code=${code}`
+          `${URL}/user/register/github?code=${code}`
         );
         const data = await response.json();
+
         if (response.status === 400 || response.status === 500) {
           setSuccess(" ");
           setError(data.error);
@@ -32,6 +38,7 @@ const GithubButton = ({ name, setError, setSuccess }) => {
           setError(" ");
           setSuccess(data.message);
           localStorage.setItem("token", data.token);
+          setToken(data.token);
           setTimeout(() => navigate("/profile"), 3000);
           return;
         }

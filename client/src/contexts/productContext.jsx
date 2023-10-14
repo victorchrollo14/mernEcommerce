@@ -6,6 +6,7 @@ const ProductContextProvider = (props) => {
   const [products, setProducts] = useState("");
   const [category, setCategory] = useState();
   const [allCategories, setAllCategories] = useState();
+  const URL = import.meta.env.VITE_URL;
 
   const exmpCat = {
     shirts: [],
@@ -39,15 +40,15 @@ const ProductContextProvider = (props) => {
   const fetchImages = (data) => {
     data.map((product) => {
       const { images } = product;
-      images[0] = `http://localhost:3001/product/${images[0]}`;
-      images[1] = `http://localhost:3001/product/${images[1]}`;
+      images[0] = `${URL}/product/${images[0]}`;
+      images[1] = `${URL}/product/${images[1]}`;
     });
   };
 
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/product/getData");
+        const response = await fetch(`${URL}/product/getData`);
         const data = await response.json();
         fetchImages(data);
         filterProducts(data);

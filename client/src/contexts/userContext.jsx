@@ -12,10 +12,12 @@ const UserContextProvider = (props) => {
     return token;
   });
 
+  const URL = import.meta.env.VITE_URL;
+
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch("http://localhost:3001/user/me", {
+        const response = await fetch(`${URL}/user/me`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

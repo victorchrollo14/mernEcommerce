@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { Input, SubmitButton } from "../../components/Buttons";
 import { login } from "../../services/auth";
-import { ErrorMessage, SuccessMessage } from "../../components/Alert";
 import { useUserContext } from "../../contexts/userContext";
 import { useNavigate } from "react-router-dom";
 
-const LoginForm = () => {
+const LoginForm = ({ setError, setSuccess }) => {
   const { setLoggedIn, setToken } = useUserContext();
-  const [error, setError] = useState();
-  const [success, setSuccess] = useState();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -29,7 +26,7 @@ const LoginForm = () => {
       setError(data.error);
       return;
     }
-    
+
     if (response.status === 200) {
       setError("");
       setSuccess(data.message);
@@ -62,8 +59,6 @@ const LoginForm = () => {
         <span className="text-[#757373] cursor-pointer hover:text-green">
           Forgot password
         </span>
-        {error && <ErrorMessage error={error} />}
-        {success && <SuccessMessage success={success} />}
       </form>{" "}
     </>
   );

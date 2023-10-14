@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub, FaGoogle } from "react-icons/fa";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { ImageSection } from "./ImageSection";
 import { LoginForm } from "./LoginForm";
+import { GithubButton } from "../../components/Github";
+import { GoogleButton } from "../../components/Google";
+import { ErrorMessage, SuccessMessage } from "../../components/Alert";
 
-const Login = () => {
+const LoginPage = () => {
+  const [error, setError] = useState();
+  const [success, setSuccess] = useState();
+
   return (
     <div className="bg-lightestSlate overflow-x-hidden">
       <NavBar />
@@ -24,21 +28,21 @@ const Login = () => {
               <Link to={"/register"}>Register</Link>
             </span>
           </div>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-white bg-black outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
-            <FaGithub className="" />
-            <span>Login with Github</span>
-          </button>
-          <button className="flex my-4 gap-4 w-5/6 max-w-xs text-lg md:text-xl justify-center items-center  text-black  outline-none border-2 border-lightSlate px-2 md:w-[400px] h-16 rounded-xl">
-            <FcGoogle className="" />
-            <span>Login with Google</span>
-          </button>
+          <GithubButton
+            name={"Login with Github"}
+            setError={setError}
+            setSuccess={setSuccess}
+          />
+          <GoogleButton>Login With Google</GoogleButton>
           <div className="text-center text-2xl font-semibold my-6 flex">
             {" "}
             <hr className="bg-black w-[28vw] max-w-[135px] h-[2px]   relative top-3 right-1" />{" "}
             OR{" "}
             <hr className="bg-black w-[28vw] max-w-[135px] h-[2px]   relative top-3 left-1" />
           </div>
-          <LoginForm />
+          <LoginForm setError={setError} setSuccess={setSuccess} />
+          {error && <ErrorMessage error={error} />}
+          {success && <SuccessMessage success={success} />}
         </div>
       </div>
       <Footer />
@@ -46,4 +50,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

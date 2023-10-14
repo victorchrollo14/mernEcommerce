@@ -1,11 +1,10 @@
 import NavBar from "../../components/NavBar";
-
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import Footer from "../../components/Footer";
 import { LeftContent } from "./LeftContent";
 import { RightContent } from "./RightContent";
+import { Loading } from "../../components/Loading";
 
 import { useProductContext } from "../../contexts/productContext";
 
@@ -31,10 +30,9 @@ const ProductPage = () => {
         </div>
       ) : (
         <div className="text-5xl h-[50vh] text-center text-red">
-          404 Product Not Found!
+          <Loading />
         </div>
       )}
-
       <Footer />
     </>
   );
