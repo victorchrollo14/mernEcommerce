@@ -1,22 +1,21 @@
 import React from "react";
-import sub2 from "../product/sub2.jpeg";
-import { FaRegHeart, FaHeart, FaPlus, FaMinus } from "react-icons/fa";
+import { FaRegHeart, FaHeart, FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 
-const CartProduct = ({item}) => {
-  const { id, src, title, price } = item;
-  const [qty, setQty] = useState(1);
+const CartProduct = ({ item }) => {
+  const { title, price, size, quantity, images } = item;
+  const [qty, setQty] = useState(quantity);
   const [wishlist, setWishlist] = useState(false);
   return (
     <>
       {qty === 0 ? (
         <div></div>
       ) : (
-        <div className="cardContainer bg-lightestBlue p-4 border border-[#EDF0F8] mx-4 rounded-2xl flex flex-col md:flex-row md:justify-between" key={id}>
+        <div className="cardContainer bg-lightestBlue p-4 border border-[#EDF0F8] mx-4 rounded-2xl flex flex-col md:flex-row md:justify-between">
           <div className="details flex gap-7 mt-1">
             <div className="image w-32 h-32 rounded-2xl">
               <img
-                src={sub2}
+                src={images[1]}
                 alt=""
                 className="h-full w-full object-cover rounded-2xl"
               />
@@ -28,17 +27,9 @@ const CartProduct = ({item}) => {
               <span className="price text-PrimaryBlue font-bold text-2xl font-Poppins my-1">
                 {price}
               </span>
-              <select
-                name=""
-                id=""
-                className="size_selection mt-1 bg-white border border-white w-20 rounded-lg py-2 px-3 text-PrimaryBlue font-semibold outline-none"
-              >
-                <option value="">Small</option>
-                <option value="">Medium</option>
-                <option value="">Large</option>
-                <option value="">Extra Large</option>
-                <option value="">XXL</option>
-              </select>
+              <div className="size_selection mt-2 bg-white w-fit py-2 px-3 rounded-lg text-center text-PrimaryBlue font-semibold outline-none">
+                {size}
+              </div>
             </div>
           </div>
           <div className="lower_card flex justify-between mt-5 items-center md:flex-col md:mt-3">
@@ -57,7 +48,7 @@ const CartProduct = ({item}) => {
                 className="minus p-2 text-xl bg-white text-PrimaryBlue rounded-xl"
                 onClick={() => (qty > 1 ? setQty(qty - 1) : setQty(0))}
               >
-                <FaMinus />
+                {qty === 1 ? <FaTrash /> : <FaMinus />}
               </div>
               <span className="text-xl text-gray-400 font-Poppins w-6 text-center mx-2">
                 {qty}

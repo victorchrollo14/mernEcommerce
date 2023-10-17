@@ -1,36 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../../components/NavBar";
 import CartProduct from "./CartProduct";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
+import { useCartContext } from "../../contexts/cartContext";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const [total, setTotal] = useState(693);
+  const { cart } = useCartContext();
+  const [total, setTotal] = useState(0);
 
-  const totalBill = (price) => {
-    setTotal(total + price);
+  const totalBill = () => {
+    let sum = cart.reduce((total, item) => total + item.price, 0);
+    setTotal(sum);
   };
-  const items = [
-    {
-      id: 0,
-      src: "../ProductAssets/shirt/instock_m_q123_California_BrickPlaid_Twill_001_530x.progressive.jpg",
-      title: "The Hudson Sweater",
-      price: "$168",
-    },
-    {
-      id: 1,
-      src: "../ProductAssets/sweater/instock_m_q322_HudsonSweater-HeatherGreen_001_530x.progressive.jpg",
-      title: "The Everett Sweater",
-      price: "$178",
-    },
-    {
-      id: 2,
-      src: "../ProductAssets/sweater/instock_m_q422_Magnus_Sweater_Natural_001_530x.progressive.jpg",
-      title: "The Magnus Sweater",
-      price: "$188",
-    },
-  ];
+
+  useEffect(() => {
+    if (cart) {
+      totalBill();
+    }
+  }, [cart]);
+
   return (
     <>
       <NavBar />
@@ -42,19 +32,29 @@ const Cart = () => {
         </h1>
         <h3 className="text-md pt-1 xl:text-lg">
           Not ready to checkout?
-          <span className="pl-0.5 font-semibold text-PrimaryBlue cursor-pointer">
+          <Link
+            to={"/shop/shirts"}
+            className="pl-0.5 font-semibold text-PrimaryBlue cursor-pointer"
+          >
             Continue Shopping
-          </span>
+          </Link>
         </h3>
       </div>
 
       {/* product cards */}
       <div className="cart_section flex flex-col px-1 lg:flex-row xl:w-full">
-        <div className="cart_products my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
-          {items.map((item) => {
-            return <CartProduct item={item} key={item.id} />;
-          })}
-        </div>
+        {cart ? (
+          <div className="cart_products my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
+            {cart.map((item) => {
+              return <CartProduct item={item} key={item._id} />;
+            })}
+          </div>
+        ) : (
+          <div className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
+            {" "}
+            Your Cart is Empty
+          </div>
+        )}
 
         {/* order_details */}
         <div className="order_details flex flex-col my-7 mx-5 bg-lightestBlue rounded-lg shadow-lg py-10 px-5 md:mx-14 md:px-10 lg:mx-5 lg:grow lg:py-20 lg:px-5 xl:w-1/2 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
@@ -66,20 +66,23 @@ const Cart = () => {
             placeholder="Enter coupon code here"
             className="bg-transparent outline-none px-3 py-3 border border-black rounded-sm placeholder:text-lg my-4 text-lg md:mx-1"
           />
-          <ul className="product_list flex flex-col pb-4 border-b border-gray-400">
-            {items.map((item) => {
-              return (
-                <li className="flex justify-between" key={item.id}>
-                  <span className="product_name text-lg ml-2 font-Poppins">
-                    {item.title}
-                  </span>
-                  <span className="price mr-4 text-lg font-semibold text-PrimaryBlue font-Poppins">
-                    {item.price}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
+          {cart && (
+            <ul className="product_list flex flex-col pb-4 border-b border-gray-400">
+              {cart.map((item) => {
+                return (
+                  <li className="flex justify-between" key={item._id}>
+                    <span className="product_name text-lg ml-2 font-Poppins">
+                      {item.title}
+                    </span>
+                    <span className="price mr-4 text-lg font-semibold text-PrimaryBlue font-Poppins">
+                      {item.price}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+
           <div className="total flex justify-between my-2">
             <span className="font-bold text-xl ml-3 xl:text-2xl">Total</span>
             <span className="total_price mr-4 text-xl font-semibold font-Poppins xl:teext-2xl">

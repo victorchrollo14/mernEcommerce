@@ -32,6 +32,7 @@ const UserContextProvider = (props) => {
     };
     if (token) {
       fetchUser();
+      setLoggedIn(true);
     }
   }, [token]);
 
