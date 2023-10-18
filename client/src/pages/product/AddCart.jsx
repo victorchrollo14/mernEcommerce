@@ -26,10 +26,10 @@ export const AddCart = ({ productID, setQuantity, size, quantity }) => {
 
         const data = await response.json();
         if (response.status === 400 || 500) {
-          console.log(data.error);
+          alert(data.error);
         }
-        if(response.status === 200 || 409){
-          console.log(data.message)
+        if (response.status === 200 || 409) {
+          alert(data.message);
         }
       }
     } catch (error) {

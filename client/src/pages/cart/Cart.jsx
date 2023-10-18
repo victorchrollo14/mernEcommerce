@@ -7,7 +7,7 @@ import { useCartContext } from "../../contexts/cartContext";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { cart } = useCartContext();
+  const { cart, setCart } = useCartContext();
   const [total, setTotal] = useState(0);
 
   const totalBill = () => {
@@ -44,9 +44,16 @@ const Cart = () => {
       {/* product cards */}
       <div className="cart_section flex flex-col px-1 lg:flex-row xl:w-full">
         {cart ? (
-          <div className="cart_products my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
+          <div className="cart_products my-5 flex flex-col md:h-[80vh] md:overflow-y-auto gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
             {cart.map((item) => {
-              return <CartProduct item={item} key={item._id} />;
+              return (
+                <CartProduct
+                  item={item}
+                  cart={cart}
+                  key={item._id}
+                  setCart={setCart}
+                />
+              );
             })}
           </div>
         ) : (
@@ -57,7 +64,7 @@ const Cart = () => {
         )}
 
         {/* order_details */}
-        <div className="order_details flex flex-col my-7 mx-5 bg-lightestBlue rounded-lg shadow-lg py-10 px-5 md:mx-14 md:px-10 lg:mx-5 lg:grow lg:py-20 lg:px-5 xl:w-1/2 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
+        <div className="order_details flex flex-col h-fit my-7 mx-5 bg-lightestBlue rounded-lg shadow-lg py-10 px-5 md:mx-14 md:px-10 lg:mx-5 lg:grow lg:py-20 lg:px-5 xl:w-1/2 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
           <h1 className="text-2xl font-semibold lg:my-2 xl:text-3xl">
             Order Summary
           </h1>

@@ -2,7 +2,6 @@ import Cart from "../models/cartModel.js";
 
 const addItem = async (req, res) => {
   const { userID, productID, quantity, size } = req.body;
-  console.log(req.body);
 
   try {
     const cart = await Cart.findOne({ userID: userID });
@@ -61,8 +60,36 @@ const getCart = async (req, res) => {
   }
 };
 
-const removeItem = async (req, res) => {};
+const removeItem = async (req, res) => {
+  const { userID, cartID } = req.body;
 
-const updateItem = async (req, res) => {};
+  const cart = await Cart.findOne({ userID: userID });
+  let cartItems = cart.items;
+  cartItems = cartItems.filter((item) => item._id === cartID);
+  cart.save();
+};
+
+const updateItem = async (req, res) => {
+  const { userID } = req.params;
+  const { itemID, quantity } = req.body;
+
+  try {
+    const updatedCart = await Cart.updateOne(
+      { userID: userID, "items._id": itemID },
+      { $set: { "items.$.quantity": quantity } }
+    );
+
+    if (updatedCart.modifiedCount !== 1) {
+      res
+        .status(500)
+        .json({ message: "Error occured while updating the item" });
+    }
+
+    res.status(200).json({ message: "successfully updated Item" });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
 
 export { addItem, getCart, removeItem, updateItem };
