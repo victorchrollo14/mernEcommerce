@@ -16,19 +16,19 @@ const CheckoutPage = () => {
     <>
       <NavBar />
       <div className="status md:ml-6 xl:ml-10 xl:text-xl flex flex-wrap gap-2 items-center mx-4 mt-6">
-        <span className="text-md font-['Inter'] text-blue-500">Shipping</span>
+        <span className="text-md font-['Inter'] text-lightBlue">Shipping</span>
         <div className="break flex gap-1 text-lg pt-1">
-          <AiOutlineLine className={paymentStatus ? "text-blue-500" : "text-zinc-600"} />
-          <IoCheckmarkDoneCircleSharp className={paymentStatus ? "text-blue-500" : "text-zinc-600"} />
-          <AiOutlineLine className={paymentStatus ? "text-blue-500" : "text-zinc-600"} />
+          <AiOutlineLine className={paymentStatus ? "text-lightBlue" : "text-zinc-600"} />
+          <IoCheckmarkDoneCircleSharp className={paymentStatus ? "text-lightBlue" : "text-zinc-600"} />
+          <AiOutlineLine className={paymentStatus ? "text-lightBlue" : "text-zinc-600"} />
         </div>
-        <span className={`text-md font-['Inter'] ${paymentStatus ? "text-blue-500" : "text-zinc-600"}`}>Payment</span>
+        <span className={`text-md font-['Inter'] ${paymentStatus ? "text-lightBlue" : "text-zinc-600"}`}>Payment</span>
         <div className="break flex gap-1 text-lg pt-1">
-          <AiOutlineLine className={confirmation ? "text-blue-500" : "text-zinc-600"} />
-          <IoCheckmarkDoneCircleSharp className={confirmation ? "text-blue-500" : "text-zinc-600"} />
-          <AiOutlineLine className={confirmation ? "text-blue-500" : "text-zinc-600"} />
+          <AiOutlineLine className={confirmation ? "text-lightBlue" : "text-zinc-600"} />
+          <IoCheckmarkDoneCircleSharp className={confirmation ? "text-lightBlue" : "text-zinc-600"} />
+          <AiOutlineLine className={confirmation ? "text-lightBlue" : "text-zinc-600"} />
         </div>
-        <span className="text-md font-['Inter'] text-zinc-500">
+        <span className="text-md font-['Inter'] text-slate">
           Confirmation
         </span>
       </div>
@@ -37,7 +37,7 @@ const CheckoutPage = () => {
           <div className="form md:mx-10 md:px-10 md:py-10 xl:mx-20 mt-8 mb-6 border rounded-md font-['Inter'] border-slate-100 flex flex-col mx-5 py-8 px-4 gap-4 bg-slate-200">
             {shipping && <Shipping />}
             {shipping && (
-              <button className="py-3 mt-3 text-base text-white font-medium bg-indigo-800 rounded-md border border-indigo-900 font-['Inter']" onClick={() => {
+              <button className="py-3 mt-3 text-base text-white font-medium bg-PrimaryBlue rounded-md border border-PrimaryBlue font-['Inter']" onClick={() => {
                 setShipping(false)
                 setPayment(true)
                 setPaymentStatus(true)
@@ -47,7 +47,7 @@ const CheckoutPage = () => {
             )}
             {payment && <Payment />}
             {payment && (
-              <button className="py-3 mt-4 text-base text-white font-medium bg-indigo-800 rounded-md border border-indigo-900 font-['Inter']" onClick={() => {
+              <button className="py-3 mt-4 text-base text-white font-medium bg-PrimaryBlue rounded-md border border-PrimaryBlue font-['Inter']" onClick={() => {
                 setConfirmation(true);
                 setPayment(false);
               }}>

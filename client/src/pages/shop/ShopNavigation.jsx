@@ -29,7 +29,7 @@ export const ShopNavigation = () => {
           <ul className="collections flex flex-col gap-3 pt-2 h-fit pr-5">
             {shopNavData.map((data) => (
               <li
-                className="item-name py-2 pl-3  text-lg font-medium border-b border-black hover:bg-[#3A4980] hover:text-white"
+                className="item-name py-2 pl-3  text-lg font-medium border-b border-black hover:bg-PrimaryBlue hover:text-white"
                 key={data.name}
                 onClick={() => {
                   navigate(data.link);

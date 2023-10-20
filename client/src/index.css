@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  /* temperary it prevents scroll X -*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .image-wrapper {
   display: inline-block;
   overflow: hidden;
@@ -44,4 +50,118 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* responsive-carousel -----------------------------------------------------------------------*/
+
+.productImages__carousel {
+  width: 100%;
+  --bg: #000;
+  --text: #fff;
+}
+
+.carousel--item {
+  height: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 70%;
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.control-arrow.control-next,
+.control-arrow.control-prev {
+  width: 20%;
+  background: var(--bg) !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  transition: none !important;
+  transition: opacity 0.4s ease !important;
+}
+/* .control-arrow.control-next:hover,
+.control-arrow.control-prev:hover {
+  opacity: 1 !important;
+}
+
+.carousel .control-arrow:before, 
+.carousel.carousel-slider .control-arrow:before{
+  border: none;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.5rem 0.75rem;
+
+}
+
+.carousel .control-prev.control-arrow:before {
+  font-family: 'Courier New', Courier, monospace;
+  content: "<";
+  font-size: 2.5rem;
+}
+.carousel .control-next.control-arrow:before {
+  font-family: 'Courier New', Courier, monospace;
+  content: ">";
+  font-size: 2.5rem;
+} */
+
+.carousel {
+  max-width: 100vw !important;
+  border-radius: 17px;
+}
+
+.carousel-status {
+  text-shadow: none !important;
+  right: 50% !important;
+  top: 1rem !important;
+  transform: translateX(50%) !important;
+}
+
+.carousel .thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .control-arrow button {
+  border: none;
+  display: none;
+}
+
+.carousel .control-prev.control-arrow {
+  margin-right: 1rem;
+}
+
+.carousel .control-prev.control-arrow:nth-child(1),
+.carousel .control-next.control-arrow:nth-child(3) {
+  display: none;
+}
+
+ul.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+ul.thumbs.animated,
+ul.thumbs {
+  transform: none !important;
+}
+li.thumb {
+  display: flex;
+  align-self: center !important;
+}
+
+.thumb {
+  border-radius: 14px;
+  width: 115px !important;
+  height: 115px;
+}
+
+.thumb img {
+  border-radius: 14px;
 }

@@ -1,6 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
 import { useContext, createContext, useState, useEffect } from "react";
 
 const productContext = createContext();
@@ -9,6 +6,7 @@ const ProductContextProvider = (props) => {
   const [products, setProducts] = useState("");
   const [category, setCategory] = useState();
   const [allCategories, setAllCategories] = useState();
+  const URL = import.meta.env.VITE_URL;
 
   const exmpCat = {
     shirts: [],
@@ -42,15 +40,15 @@ const ProductContextProvider = (props) => {
   const fetchImages = (data) => {
     data.map((product) => {
       const { images } = product;
-      images[0] = `http://localhost:3001/product/${images[0]}`;
-      images[1] = `http://localhost:3001/product/${images[1]}`;
+      images[0] = `${URL}/product/${images[0]}`;
+      images[1] = `${URL}/product/${images[1]}`;
     });
   };
 
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/product/getData");
+        const response = await fetch(`${URL}/product/getData`);
         const data = await response.json();
         fetchImages(data);
         filterProducts(data);
@@ -77,7 +75,7 @@ const useProductContext = () => {
   const context = useContext(productContext);
   if (context === undefined) {
     throw new Error(
-      "useProductContext must be within a productContextProvider. Make sure the component is wrapped in productContextProvider"
+      "useProductContext must be within a ProductContextProvider. Make sure the component is wrapped in ProductContextProvider"
     );
   }
   return context;

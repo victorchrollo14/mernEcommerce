@@ -24,10 +24,10 @@ export const ProductCard = ({ item }) => {
           <span className="font-Poppins text-sm leading-none font-medium mt-2 sm:text-base sm:font-semibold ">
             {title}
           </span>
-          <span className="font-Volkhov text-xs text-[#3D4F63] sm:text-sm">
+          <span className="font-Volkhov text-xs text-slate sm:text-sm">
             {subtitle}
           </span>
-          <span className="font-Volkhov text-xs text-[#3D4F63] sm:text-sm">
+          <span className="font-Volkhov text-xs text-slate sm:text-sm">
             $ {price}
           </span>
         </figcaption>

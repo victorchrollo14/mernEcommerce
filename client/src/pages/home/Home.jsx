@@ -2,35 +2,55 @@ import NavBar from "../../components/NavBar";
 import ProductCard from "./HomeProductCard";
 import Footer from "../../components/Footer";
 import Reviews from "./Reviews";
-import img1 from "../../assets/shirts.jpg";
-import img2 from "../../assets/outwear.jpg";
-import img3 from "../../assets/bottom.webp";
-import img4 from "../../assets/sweater.webp";
-import img5 from "../../assets/accesories.webp";
-import img6 from "../../assets/footwear.webp";
 import Banner from "./Banner";
 import Brands from "./Brands";
+import { Loading } from "../../components/Loading";
+
+import { useProductContext } from "../../contexts/productContext";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-  const elements = [
-    { image: img1 },
-    { image: img2 },
-    { image: img3 },
-    { image: img4 },
-    { image: img5 },
-    { image: img6 },
-  ];
+  const { allCategories } = useProductContext();
+  const [featured, setFeatured] = useState();
+
+  const getRandom = () => {
+    const randomProducts = [];
+    const shirts = allCategories.shirts;
+    const bottoms = allCategories.bottoms;
+    const knits = allCategories.knits;
+    const denim = allCategories.denim;
+    const footwear = allCategories.footwear;
+    const accessories = allCategories.accessories;
+    const products = [shirts, bottoms, knits, denim, accessories, footwear];
+
+    for (let item of products) {
+      const random = Math.floor(Math.random() * item.length);
+      randomProducts.push(item[random]);
+    }
+    setFeatured(randomProducts);
+  };
+
+  useEffect(() => {
+    if (allCategories) {
+      getRandom();
+    }
+  }, [allCategories]);
+
   return (
     <div className="overflow-x-hidden w-full">
       <NavBar />
       <Banner />
       <Brands />
-      <div className="home flex w-screen justify-center pt-4 mt-10 bg-[#DFDFDF]">
-        <div className="home-product-cards sm:w-[90%] flex flex-wrap justify-center flex-row">
-          {elements.map((element, index) => (
-            <ProductCard key={index} image={element.image} />
-          ))}
-        </div>
+      <div className="home flex w-screen justify-center pt-4 mt-10 bg-lightestBlue">
+        {featured ? (
+          <div className="home-product-cards sm:w-[90%] flex flex-wrap justify-center flex-row">
+            {featured.map((item) => (
+              <ProductCard key={item._id} item={item} />
+            ))}
+          </div>
+        ) : (
+          <Loading />
+        )}
       </div>
       <Reviews />
       <Footer />

@@ -1,11 +1,18 @@
 import { Routes } from "./routes";
 import { ProductContextProvider } from "./contexts/productContext";
+import { UserContextProvider } from "./contexts/userContext";
+import { CartContextProvider } from "./contexts/cartContext";
+
 import "./Styles.css";
 
 function App() {
   return (
     <ProductContextProvider>
-      <Routes />
+      <UserContextProvider>
+        <CartContextProvider>
+          <Routes />
+        </CartContextProvider>
+      </UserContextProvider>
     </ProductContextProvider>
   );
 }

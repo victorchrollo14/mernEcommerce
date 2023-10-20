@@ -75,7 +75,7 @@ export const ReviewCard = ({ reviewCount }) => {
 
 const StarRating = ({ rating }) => {
   const filledStars = Array.from({ length: rating }, (_, index) => (
-    <FaStar key={index} className="text-yellow-400" />
+    <FaStar key={index} className="text-yellow" />
   ));
 
   return <div className="flex my-3 text-lg">{filledStars}</div>;

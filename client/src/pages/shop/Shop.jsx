@@ -76,7 +76,7 @@ const ShopPage = () => {
   }, [allCategories, location.pathname]);
 
   return (
-    <div className="bg-[#EDF0F8] min-h-screen overflow-x-hidden ">
+    <div className="bg-lightestBlue min-h-screen overflow-x-hidden ">
       <NavBar />
       <section className="products-section flex flex-row p-5 mb-8 ">
         <ShopNavigation />

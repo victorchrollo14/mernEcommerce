@@ -27,10 +27,10 @@ const Reviews = () => {
   return (
     <>
       <div className="review w-screen flex justify-center items-center flex-col bg-white">
-        <h1 className="mt-8 text-2xl md:text-6xl md:w-full md:mt-28 w-52 text-center text-[#484848] font-Volkhov">
+        <h1 className="mt-8 text-2xl md:text-6xl md:w-full md:mt-28 w-52 text-center text-black font-Volkhov">
           This Is What Our Customers Say
         </h1>
-        <h2 className="text-center text-lg md:text-xl md:mt-8 text-[#8A8A8A] mx-3 mt-4">
+        <h2 className="text-center text-lg md:text-xl md:mt-8 text-slate mx-3 mt-4">
           Customer Testimonials: Real Stories, Real Satisfaction"
         </h2>
         <ReviewCard reviewCount={reviewCount} />

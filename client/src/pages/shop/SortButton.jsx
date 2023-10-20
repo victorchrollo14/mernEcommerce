@@ -10,7 +10,7 @@ const SortButton = ({ selectSort }) => {
 
   return (
     <>
-      <div className="sort-button bg-blue-500 text-white w-fit rounded-[10px] ">
+      <div className="sort-button bg-PrimaryBlue text-white w-fit rounded-[10px] ">
         <button
           type="button"
           className="flex flex-row 
