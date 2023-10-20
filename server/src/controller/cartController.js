@@ -60,13 +60,27 @@ const getCart = async (req, res) => {
   }
 };
 
-const removeItem = async (req, res) => {
-  const { userID, cartID } = req.body;
+const deleteItem = async (req, res) => {
+  const { itemID } = req.body;
+  const { userID } = req.params;
 
-  const cart = await Cart.findOne({ userID: userID });
-  let cartItems = cart.items;
-  cartItems = cartItems.filter((item) => item._id === cartID);
-  cart.save();
+  try {
+    const deleteCartItem = await Cart.updateOne(
+      { userID: userID },
+      { $pull: { items: { _id: itemID } } }
+    );
+
+    if (deleteCartItem.modifiedCount !== 1) {
+      return res
+        .status(500)
+        .json({ error: "Some error occured while Deleting the item" });
+    }
+
+    res.status(200).json({ message: "Item Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 };
 
 const updateItem = async (req, res) => {
@@ -92,4 +106,4 @@ const updateItem = async (req, res) => {
   }
 };
 
-export { addItem, getCart, removeItem, updateItem };
+export { addItem, getCart, deleteItem, updateItem };
