@@ -1,18 +1,55 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import NavBar from "../../components/NavBar";
-import CartProduct from "./CartProduct";
+import { CartProduct } from "./CartProduct";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import { useCartContext } from "../../contexts/cartContext";
+import { DisplayModal } from "../../components/DisplayModal";
+import { ConfirmModal } from "../../components/ConfirmModal";
+import { useUserContext } from "../../contexts/userContext";
 
 const Cart = () => {
   const navigate = useNavigate();
+  const { user, token } = useUserContext();
   const { cart, setCart } = useCartContext();
   const [total, setTotal] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [confirmModal, setConfirmModal] = useState(false);
+  let deleteID = useRef();
 
   const totalBill = () => {
     let sum = cart.reduce((total, item) => total + item.price, 0);
     setTotal(sum);
+  };
+
+  const handleClick = () => {
+    setConfirmModal(false);
+    deleteItem(deleteID.current);
+  };
+
+  const deleteItem = async (itemID) => {
+    try {
+      const URL = import.meta.env.VITE_URL;
+      const response = await fetch(`${URL}/cart/deleteItem/${user._id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          itemID: itemID,
+        }),
+      });
+      const data = await response.json();
+      if (response.status === 200) {
+        setShowModal(true);
+        setCart(cart.filter((item) => item._id !== itemID));
+      } else if (response.status === 500) {
+        alert(data.error);
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
@@ -52,6 +89,8 @@ const Cart = () => {
                   cart={cart}
                   key={item._id}
                   setCart={setCart}
+                  setConfirmModal={setConfirmModal}
+                  deleteID={deleteID}
                 />
               );
             })}
@@ -61,6 +100,23 @@ const Cart = () => {
             {" "}
             Your Cart is Empty
           </div>
+        )}
+        {/* Modal to display message */}
+        {showModal && (
+          <DisplayModal showModal={showModal} setShowModal={setShowModal}>
+            Item successfully Deleted
+          </DisplayModal>
+        )}
+
+        {confirmModal && (
+          <ConfirmModal
+            confirmModal={confirmModal}
+            setConfirmModal={setConfirmModal}
+            confirmText={"Delete"}
+            handleClick={handleClick}
+          >
+            Are you sure you want to Remove the item from Cart
+          </ConfirmModal>
         )}
 
         {/* order_details */}

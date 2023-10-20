@@ -3,40 +3,16 @@ import { FaRegHeart, FaHeart, FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import { useUserContext } from "../../contexts/userContext";
 
-const CartProduct = ({ item, setCart, cart }) => {
+const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
   let { _id, title, price, size, quantity, images } = item;
   const { token, user } = useUserContext();
   const [wishlist, setWishlist] = useState(false);
-  const URL = import.meta.env.VITE_URL;
-
-  const deleteItem = async (itemID) => {
-    try {
-      const response = await fetch(`${URL}/cart/deleteItem/${user._id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify({
-          itemID: itemID,
-        }),
-      });
-      const data = await response.json();
-      if (response.status === 200) {
-        alert(data.message);
-        setCart(cart.filter((item) => item._id !== itemID));
-      } else if (response.status === 500) {
-        alert(data.error);
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const updateCart = async (itemID, opt) => {
     opt === "minus" ? (quantity -= 1) : (quantity += 1);
 
     try {
+      const URL = import.meta.env.VITE_URL;
       const response = await fetch(`${URL}/cart/updateItem/${user._id}`, {
         method: "PATCH",
         headers: {
@@ -107,7 +83,12 @@ const CartProduct = ({ item, setCart, cart }) => {
             <div className="couter flex gap-1 items-center mr-2 justify-around">
               <div className="minus p-2 text-xl bg-white text-PrimaryBlue rounded-xl">
                 {quantity === 1 ? (
-                  <FaTrash onClick={() => deleteItem(_id)} />
+                  <FaTrash
+                    onClick={() => {
+                      setConfirmModal(true);
+                      deleteID.current = _id;
+                    }}
+                  />
                 ) : (
                   <FaMinus onClick={() => updateCart(_id, "minus")} />
                 )}
@@ -129,4 +110,4 @@ const CartProduct = ({ item, setCart, cart }) => {
   );
 };
 
-export default CartProduct;
+export { CartProduct };
