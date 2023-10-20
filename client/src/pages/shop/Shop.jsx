@@ -36,6 +36,39 @@ const ShopPage = () => {
     location.pathname.includes("accessories") && setCategory(accessories);
   };
 
+  const ascendingPrice = () => {
+    const sortedItems = [...category];
+    sortedItems.sort((a, b) => a.price - b.price);
+    setCategory(sortedItems);
+  };
+
+  const decendingPrice = () => {
+    const sortedItems = [...category];
+    sortedItems.sort((a, b) => b.price - a.price);
+    setCategory(sortedItems);
+  };
+
+  const latest = () => {
+    const sortedItems = [...category];
+    sortedItems.sort((a, b) => new Date(b.Date) - new Date(a.Date));
+    setCategory(sortedItems);
+  };
+
+  const selectSort = (options) => {
+    switch (options) {
+      case "a":
+        ascendingPrice();
+        break;
+      case "b":
+        decendingPrice();
+        break;
+      case "c":
+        latest();
+        break;
+      default:
+    }
+  };
+
   useEffect(() => {
     if (allCategories) {
       changeProducts();
@@ -48,7 +81,7 @@ const ShopPage = () => {
       <section className="products-section flex flex-row p-5 mb-8 ">
         <ShopNavigation />
         <div className="products-container md:w-4/5 flex flex-col gap-2 md:items-end">
-          <SortButton />
+          <SortButton selectSort={selectSort} />
           {category ? (
             <ul className="products-list md:h-[80vh] md:overflow-y-auto md:pl-5 ml-0  justify-end  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3 lg:grid-cols-3 ">
               {category.map((item) => (
