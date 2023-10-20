@@ -9,7 +9,8 @@ import Footer from "../../components/Footer";
 import { SortButton } from "./SortButton";
 
 const ShopPage = () => {
-  const { category, setCategory, allCategories } = useProductContext();
+  const { category, setCategory, allCategories, setAllCategories } =
+    useProductContext();
 
   // getting current url path
   const location = useLocation();
@@ -37,20 +38,30 @@ const ShopPage = () => {
   };
 
   const ascendingPrice = () => {
-    const sortedItems = [...category];
-    sortedItems.sort((a, b) => a.price - b.price);
-    setCategory(sortedItems);
+    const sortedCategories = { ...allCategories };
+
+    for (let category in sortedCategories) {
+      sortedCategories[category].sort((a, b) => {
+        return a.price - b.price;
+      });
+    }
+    console.log(sortedCategories);
+    setAllCategories(sortedCategories);
   };
 
   const decendingPrice = () => {
-    const sortedItems = [...category];
-    sortedItems.sort((a, b) => b.price - a.price);
-    setCategory(sortedItems);
+    const sortedCategories = { ...allCategories };
+
+    for (let category in sortedCategories) {
+      sortedCategories[category].sort((a, b) => b.price - a.price);
+    }
+
+    setAllCategories(sortedCategories);
   };
 
   const latest = () => {
     const sortedItems = [...category];
-    sortedItems.sort((a, b) => new Date(b.Date) - new Date(a.Date));
+    sortedItems.sort((a, b) => a.createdAt - b.createdAt);
     setCategory(sortedItems);
   };
 

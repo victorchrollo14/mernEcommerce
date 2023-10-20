@@ -64,7 +64,14 @@ const ProductContextProvider = (props) => {
 
   return (
     <productContext.Provider
-      value={{ products, setProducts, category, setCategory, allCategories }}
+      value={{
+        products,
+        setProducts,
+        category,
+        setCategory,
+        allCategories,
+        setAllCategories,
+      }}
     >
       {props.children}
     </productContext.Provider>
