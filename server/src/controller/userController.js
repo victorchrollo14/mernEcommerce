@@ -82,19 +82,20 @@ const register = async (req, res) => {
       .status(200)
       .json({ message: "registered successfully you can login now" });
   } catch (err) {
-    res.status(501).json({ error: err });
+    res.status(500).json({ error: err });
   }
 };
 
 const getMe = async (req, res) => {
   try {
     const { id } = req.user;
+
     const user = await User.findById(id);
     res
       .status(200)
       .json({ _id: user._id, email: user.email, fullname: user.fullname });
   } catch (err) {
-    res.status(501).json({ error: err });
+    res.status(500).json({ error: err });
   }
 };
 
