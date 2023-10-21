@@ -26,21 +26,33 @@ Ecommerce App Built with the Mern Stack.
      cd mernEcommerce/server
      npm install
    ```
-   * create a .env file and add the your mongodb uri and other variables similar to .env.example
-     ```
+ * create a .env file and add the your mongodb uri and other variables similar to .env.example
+   
+    ```
      touch .env
-     ```
-   * To run the backend
-     ```
-     npm start
-     ```
+    ```
+ * To run the backend
+   
+   ```
+    npm start
+   ```
     
 5. Start frontend
 
    ```
    cd mernEcommerce/client
    npm install
-   npm run dev
+   ```
+* create a .env file and add Github client and url similar to .env.example
+     
+   ```
+   touch .env
+   ```
+   
+* To Run the frontend
+     
+   ```
+    npm run dev
    ```
 6. To insert products data into the mongodb database
     ```
