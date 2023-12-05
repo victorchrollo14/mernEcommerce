@@ -1,4 +1,4 @@
-# Black Market
+# Men's Tribe
 
 Ecommerce App Built with the Mern Stack.
 
@@ -21,42 +21,43 @@ Ecommerce App Built with the Mern Stack.
    git clone https://github.com/username/mernEcommerce.git
    ```
 3. Start Backend
-   
+
    ```
      cd mernEcommerce/server
      npm install
    ```
- * create a .env file and add the your mongodb uri and other variables similar to .env.example
-   
-    ```
-     touch .env
-    ```
- * To run the backend
-   
-   ```
-    npm start
-   ```
-    
+
+* create a .env file and add the your mongodb uri and other variables similar to .env.example
+
+  ```
+   touch .env
+  ```
+* To run the backend
+
+  ```
+   npm start
+  ```
+
 5. Start frontend
 
    ```
    cd mernEcommerce/client
    npm install
    ```
-* create a .env file and add Github client and url similar to .env.example
-     
-   ```
-   touch .env
-   ```
-   
-* To Run the frontend
-     
-   ```
-    npm run dev
-   ```
-6. To insert products data into the mongodb database
-    ```
-    cd server/src/utils/
-    node insertData.js
-    ```
 
+* create a .env file and add Github client and url similar to .env.example
+
+  ```
+  touch .env
+  ```
+* To Run the frontend
+
+  ```
+   npm run dev
+  ```
+
+6. To insert products data into the mongodb database
+   ```
+   cd server/src/utils/
+   node insertData.js
+   ```

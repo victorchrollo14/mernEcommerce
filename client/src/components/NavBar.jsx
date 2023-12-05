@@ -25,7 +25,7 @@ const NavBar = () => {
             navigate("/");
           }}
         >
-          Black Market
+          Men's Tribe
         </div>
         <div className="hidden justify-center gap-3 mt-1 items-center ml-9 md:flex xl:mt-2 xl:pl-5 xl:gap-6">
           <Link
@@ -48,8 +48,8 @@ const NavBar = () => {
           </Link>
         </div>
       </div>
-      <div className="left justify-around items-center mr-3 hidden md:flex md:gap-3 xl:gap-4 xl:mr-4">
-        <div className="inputBox relative flex rounded-lg border border-neutral-400 md:w-36 md:h-9 xl:w-56 h-10">
+      <div className="left justify-around items-center mr-3 hidden  md:flex md:gap-3 xl:gap-4 xl:mr-4">
+        <div className="inputBox relative flex rounded-lg  border border-neutral-400 md:w-36 md:h-9 xl:w-56 h-10">
           <div className="relative flex my-auto">
             <BiSearch className="text-3xl mx-2 text-neutral-400" />
             <input
@@ -106,7 +106,7 @@ const NavBar = () => {
 
       {toggle && <MobNavigation setToggle={setToggle} />}
       {search && (
-        <div className="flex absolute z-50 top-20 border-2 px-3 py-2 w-[90vw] rounded-md border-black border-opacity-70 bg-gray-200 md:hidden lg:hidden xl:hidden">
+        <div className="flex absolute z-50 top-20 border-2 px-3 py-2 w-[90vw] rounded-md border-black bg-white border-opacity-70 bg-gray-200 md:hidden lg:hidden xl:hidden">
           <BiSearch className="text-3xl text-black" />
           <input
             type="text"

@@ -66,11 +66,12 @@ export const MobNavigation = ({ setToggle }) => {
             </div>
           )}
         </div>
+
         <Link
-          to="/contact"
+          to="/cart"
           className="font-Poppins text-xl text-white py-2 pl-4 border-t border-white border-opacity-40  xl:text-xl md:text-lg"
         >
-          Contact
+          Cart
         </Link>
       </div>
     </>

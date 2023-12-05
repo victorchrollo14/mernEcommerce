@@ -8,14 +8,11 @@ function Footer() {
   return (
     <footer className="footer bg-darkBlue text-white mb-0  pt-16">
       <div className="px-5 flex flex-col w-screen md:items-center md:pt-3 md:pb-9">
-        <h1 className="text-4xl md:text-6xl font-Volkhov">Black Market</h1>
+        <h1 className="text-4xl md:text-6xl font-Volkhov">Men's Tribe</h1>
         <p className="text-[#81868C] text-left md:text-center w-64 my-3 md:text-xl md:w-96">
-          We are a Reputed Men’s Clothing Brand and we sell clothes and also
-          some{" "}
-          <a href="https://www.youtube.com/watch?v=toL2_zifwuU">
-            <span className="font-extrabold">shady</span>
-          </a>{" "}
-          stuff for low Prices
+          More than just clothes – a community where affordable style meets
+          unmatched comfort. From street-smart to casually cool, find every look
+          for every guy without breaking the bank.
         </p>
         <div className="footer-links font-medium flex w-auto my-8 ml-2 md:text-xl  justify-start gap-7">
           <div className="flex flex-col md:flex-row gap-3 md:gap-7">
@@ -57,7 +54,7 @@ function Footer() {
 
       <div className="py-5 flex justify-center items-center">
         <div className="md:text-2xl md:flex">
-          <div>COPYRIGHTS BLACKMARKET.COM.</div>
+          <div>COPYRIGHTS MEN'S-TRIBE.COM.</div>
           <p className="text-center ml-1">ALL RIGHTS RESERVED</p>
         </div>
       </div>

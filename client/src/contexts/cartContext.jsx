@@ -51,11 +51,11 @@ const CartContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (token && user) {
+    if (token && user && products) {
       console.log(token, user);
       fetchCart();
     }
-  }, [token, user]);
+  }, [token, user, products]);
   return (
     <cartContext.Provider value={{ cart, setCart }}>
       {children}

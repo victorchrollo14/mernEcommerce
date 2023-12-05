@@ -37,20 +37,19 @@ const ProductContextProvider = (props) => {
     setAllCategories(exmpCat);
   };
 
-  const fetchImages = (data) => {
-    data.map((product) => {
-      const { images } = product;
-      images[0] = `${URL}/product/${images[0]}`;
-      images[1] = `${URL}/product/${images[1]}`;
-    });
-  };
+  // const fetchImages = (data) => {
+  //   data.map((product) => {
+  //     const { images } = product;
+  //     images[0] = `${URL}/product/${images[0]}`;
+  //     images[1] = `${URL}/product/${images[1]}`;
+  //   });
+  // };
 
   useEffect(() => {
     const fetchProductData = async () => {
       try {
         const response = await fetch(`${URL}/product/getData`);
         const data = await response.json();
-        fetchImages(data);
         filterProducts(data);
 
         setProducts(data);

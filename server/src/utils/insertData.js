@@ -33,6 +33,7 @@ const connect = async () => {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("connected to mongodb");
 
+    // inserting data into db.
     insertProducts();
   } catch (err) {
     console.log(`error: ${err}`);
