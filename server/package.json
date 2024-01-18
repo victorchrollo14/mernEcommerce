@@ -26,5 +26,8 @@
     "mongoose": "^7.5.2",
     "supertest": "^6.3.3",
     "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "cloudinary": "^1.41.2"
   }
 }
