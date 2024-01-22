@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
   origin: [
-    "http://localhost:3000",
     "https://mern-ecommerce-frontend-theta.vercel.app",
     "https://mern-ecommerce-frontend-git-main-victorchrollo14.vercel.app",
   ],
