@@ -55,7 +55,7 @@ const ProductContextProvider = (props) => {
         setProducts(data);
         setCategory();
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchProductData();

@@ -14,7 +14,7 @@ const Shipping = () => {
   }
   const shippingDetails = (e) => {
     setAddress({ ...address, [e.target.name]: e.target.value })
-    console.log(address)
+    // console.log(address)
   }
   return (
     <>

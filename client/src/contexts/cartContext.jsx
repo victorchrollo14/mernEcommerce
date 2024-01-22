@@ -46,13 +46,13 @@ const CartContextProvider = ({ children }) => {
       const cartData = getCartData(data);
       setCart(cartData);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
   useEffect(() => {
     if (token && user && products) {
-      console.log(token, user);
+      // console.log(token, user);
       fetchCart();
     }
   }, [token, user, products]);

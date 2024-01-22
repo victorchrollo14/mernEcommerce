@@ -6,7 +6,7 @@ const Card = () => {
 
   const cardDetails = (e) => {
     setCard({ ...card, [e.target.name]: e.target.value })
-    console.log(card)
+    // console.log(card)
   }
 
   return (

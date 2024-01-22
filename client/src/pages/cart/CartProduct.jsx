@@ -39,7 +39,7 @@ const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
         alert(data.error);
       }
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

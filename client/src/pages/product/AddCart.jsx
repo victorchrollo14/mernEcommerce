@@ -38,7 +38,7 @@ export const AddCart = ({ productID, setQuantity, size, quantity }) => {
         }
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

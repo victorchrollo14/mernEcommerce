@@ -27,7 +27,7 @@ const UserContextProvider = (props) => {
         const data = await response.json();
         setUser(data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
     if (token) {

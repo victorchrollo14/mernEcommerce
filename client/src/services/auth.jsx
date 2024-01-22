@@ -9,7 +9,7 @@ const register = async (userData) => {
     });
     return response;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -29,7 +29,7 @@ const login = async (userData, setLoggedIn, setToken) => {
 
     return { status: response.status, data: data };
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -38,7 +38,7 @@ const logout = async () => {
     localStorage.removeItem("token");
     return true;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 

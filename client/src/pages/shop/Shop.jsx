@@ -45,7 +45,7 @@ const ShopPage = () => {
         return a.price - b.price;
       });
     }
-    console.log(sortedCategories);
+    // console.log(sortedCategories);
     setAllCategories(sortedCategories);
   };
 

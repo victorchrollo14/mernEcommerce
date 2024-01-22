@@ -48,7 +48,7 @@ const Cart = () => {
         alert(data.error);
       }
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

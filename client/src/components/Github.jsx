@@ -9,7 +9,7 @@ const GithubButton = ({ name, setError, setSuccess }) => {
 
   const redirectAuth = () => {
     const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
-    console.log(CLIENT_ID);
+    // console.log(CLIENT_ID);
     window.location.assign(
       `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}`
     );
@@ -44,7 +44,7 @@ const GithubButton = ({ name, setError, setSuccess }) => {
         }
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
