@@ -11,7 +11,7 @@ import { productRouter } from "./src/routes/productRoute.js";
 import { cartRouter } from "./src/routes/cartRoute.js";
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
   origin: corsUrls,
