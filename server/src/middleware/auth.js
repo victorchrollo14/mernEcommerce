@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import { JWT_PRIVATE_KEY } from "../../config.js";
 
 const verifyToken = async (req, res, next) => {
   try {
@@ -6,7 +7,7 @@ const verifyToken = async (req, res, next) => {
 
     if (!token) return res.status(401).send("access denied");
 
-    const verifiedUser = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
+    const verifiedUser = jwt.verify(token, JWT_PRIVATE_KEY);
     req.user = verifiedUser;
     next();
   } catch (err) {

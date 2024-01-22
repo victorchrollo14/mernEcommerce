@@ -1,12 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
+import { MONGODB_URI } from "../config.js";
 
 const testApp = express();
 testApp.use(express.json());
 
 const connectDB = async () => {
-  await mongoose.connect(process.env.MONGODB_URI);
+  await mongoose.connect(MONGODB_URI);
 };
 
 const disconnectDB = async () => {

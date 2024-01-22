@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs/promises";
+import { MONGODB_URI } from "../../config.js";
 
 import Product from "../models/productModel.js";
 
@@ -30,7 +31,7 @@ const insertProducts = async () => {
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(MONGODB_URI);
     console.log("connected to mongodb");
 
     // inserting data into db.

@@ -1,6 +1,7 @@
 import User from "../models/userModel.js";
 import "dotenv/config.js";
 import Jwt from "jsonwebtoken";
+import { CLIENT_ID, CLIENT_SECRET, JWT_PRIVATE_KEY } from "../../config.js";
 
 const getGithubData = async (access_token) => {
   const response = await fetch("https://api.github.com/user", {
@@ -14,8 +15,8 @@ const getGithubData = async (access_token) => {
 };
 
 const getAccessToken = async (req, res) => {
-  const CLIENT_ID = process.env.CLIENT_ID;
-  const CLIENT_SECRET = process.env.CLIENT_SECRET;
+  const CLIENT_ID = CLIENT_ID;
+  const CLIENT_SECRET = CLIENT_SECRET;
   const code = req.query.code;
 
   const params = `?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&code=${code}`;
@@ -67,7 +68,7 @@ const githubAuth = async (req, res) => {
     const user = await User.findOne(query);
 
     if (user) {
-      const token = Jwt.sign({ id: user._id }, process.env.JWT_PRIVATE_KEY, {
+      const token = Jwt.sign({ id: user._id }, JWT_PRIVATE_KEY, {
         expiresIn: "30d",
       });
 
@@ -88,7 +89,7 @@ const githubAuth = async (req, res) => {
 
     await newUser.save();
 
-    const token = Jwt.sign({ id: newUser._id }, process.env.JWT_PRIVATE_KEY, {
+    const token = Jwt.sign({ id: newUser._id }, JWT_PRIVATE_KEY, {
       expiresIn: "30d",
     });
 

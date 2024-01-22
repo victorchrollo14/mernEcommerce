@@ -28,11 +28,11 @@ const LoginPage = () => {
               <Link to={"/register"}>Register</Link>
             </span>
           </div>
-          <GithubButton
+          {/* <GithubButton
             name={"Login with Github"}
             setError={setError}
             setSuccess={setSuccess}
-          />
+          /> */}
           <GoogleButton>Login With Google</GoogleButton>
           <div className="text-center text-2xl font-semibold my-6 flex">
             {" "}
