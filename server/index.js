@@ -13,7 +13,11 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: [
+    "http://localhost:3000",
+    "https://mern-ecommerce-frontend-theta.vercel.app",
+    "https://mern-ecommerce-frontend-git-main-victorchrollo14.vercel.app",
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 };
@@ -40,7 +44,6 @@ app.use("/cart", cartRouter);
 
 const runServer = async () => {
   try {
-    console.log(process.env.MONGODB_URI);
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("connected to mongodb");
     app.listen(PORT, () => {
