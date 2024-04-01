@@ -23,6 +23,10 @@ const UserSchema = new Schema(
       type: String,
       require: false,
     },
+    google_auth: {
+      type: Boolean,
+      default: false,
+    },
     profile: {
       avatar: {
         data: Buffer,

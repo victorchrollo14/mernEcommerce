@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .env
+men-s-tribe-firebase-adminsdk-ezpdv-4d8c615c5c.js
 
 # Editor directories and files
 .vscode/*

@@ -21,5 +21,4 @@ if (NODE_ENV === "production") {
 }
 
 console.log(corsUrls);
-
 export { MONGODB_URI, JWT_PRIVATE_KEY, CLIENT_ID, CLIENT_SECRET, corsUrls };

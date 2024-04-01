@@ -1,3 +1,4 @@
+import { authWithGoogle } from "./firebase";
 const URL = import.meta.env.VITE_URL;
 
 const register = async (userData) => {
@@ -33,6 +34,44 @@ const login = async (userData, setLoggedIn, setToken) => {
   }
 };
 
+const handleGoogleAuth = (e) => {
+  e.preventDefault();
+
+  authWithGoogle()
+    .then((user) => {
+      let serverRoute = "google-auth";
+      let formData = {
+        access_token: user.accessToken,
+      };
+      console.log(formData)
+      fetch(`${URL}/user/register/${serverRoute}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((res) => {
+          if (res.status === 200) {
+            return res.json();
+          } else {
+            return console.log("Google auth failed");
+          }
+        })
+        .then((data) => {
+          console.log(data);
+          localStorage.setItem("token", data.access_token);
+          window.location.href = "/";
+        })
+        .catch((err) => {
+          return console.log(err);
+        });
+    })
+    .catch((err) => {
+      return console.log(err);
+    });
+};
+
 const logout = async () => {
   try {
     localStorage.removeItem("token");
@@ -42,4 +81,4 @@ const logout = async () => {
   }
 };
 
-export { register, login, logout };
+export { register, login, logout, handleGoogleAuth };
