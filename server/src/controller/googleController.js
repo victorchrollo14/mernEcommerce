@@ -13,7 +13,6 @@ export const googleAuth = async (req, res) => {
       // Here we are finding the user by email if it is exist or not
       let user = await User.findOne({ email: email })
         .then((u) => {
-          //   console.log("From: User is already Exists", u);
           return u || null;
         })
         .catch((err) => {
@@ -23,23 +22,19 @@ export const googleAuth = async (req, res) => {
       // If user is found
       if (user) {
         // If user is not registered with google -- Checking through the property in User model
-        // console.log("From: User is already Exists");
         if (!user.google_auth) {
-          // console.log("From: User is already Exists but not registered with google")
           return res.status(403).json({
             error:
               "Email is already registered with google please signup with password",
           });
         } else {
-          // console.log("From: User is already Exists --> ", user);
           return res.status(200).json(formatData(user));
         }
       } else {
+
         // If user is not found then we will create new user
         // Generating username
         // Creating the user
-        // console.log("From: User is not Exists creating new user");
-
         user = new User({
           fullname: name,
           email: email,
@@ -53,10 +48,8 @@ export const googleAuth = async (req, res) => {
             user = u;
           })
           .catch((err) => {
-            // console.log("From: Error in saving user", err.message)
             return res.status(403).json({ error: err.message });
           });
-        // console.log(user);
         console.log("FormatedData", formatData(user));
         return res.status(200).json(formatData(user));
       }

@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import admin from "firebase-admin";
-import {serviceAccountKey} from "./men-s-tribe-firebase-adminsdk-ezpdv-4d8c615c5c.js"
+import {serviceAccountKey} from "./firebase-sdk.js";
 import { MONGODB_URI, corsUrls, JWT_PRIVATE_KEY } from "./config.js";
 import { userRouter } from "./src/routes/userRoute.js";
 import { productRouter } from "./src/routes/productRoute.js";
