@@ -4,8 +4,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import admin from "firebase-admin";
+import {serviceAccountKey} from "./firebase-sdk.js";
 import { MONGODB_URI, corsUrls, JWT_PRIVATE_KEY } from "./config.js";
-
 import { userRouter } from "./src/routes/userRoute.js";
 import { productRouter } from "./src/routes/productRoute.js";
 import { cartRouter } from "./src/routes/cartRoute.js";
@@ -18,6 +19,12 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
+
+// firebase admin
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccountKey),
+});
+
 
 app.use(cors(corsOptions));
 app.use(express.json());

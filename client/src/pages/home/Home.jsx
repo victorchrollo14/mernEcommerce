@@ -35,7 +35,7 @@ const Home = () => {
       getRandom();
     }
   }, [allCategories]);
-
+  console.log(featured);  
   return (
     <div className="overflow-x-hidden w-full">
       <NavBar />
