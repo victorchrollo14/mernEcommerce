@@ -93,7 +93,8 @@ const getMe = async (req, res) => {
     const user = await User.findById(id);
     res
       .status(200)
-      .json({ _id: user._id, email: user.email, fullname: user.fullname });
+      .json({ _id: user._id, email: user.email, fullname: user.fullname, avatar: user.profile.avatar.url,
+      });
   } catch (err) {
     res.status(500).json({ error: err });
   }

@@ -39,9 +39,11 @@ const handleGoogleAuth = (e) => {
 
   authWithGoogle()
     .then((user) => {
+      const { accessToken, photoURL } = user;
       let serverRoute = "google-auth";
       let formData = {
-        access_token: user.accessToken,
+        access_token: accessToken,
+        avatar: photoURL,
       };
       console.log(formData)
       fetch(`${URL}/user/register/${serverRoute}`, {
@@ -59,7 +61,6 @@ const handleGoogleAuth = (e) => {
           }
         })
         .then((data) => {
-          console.log(data);
           localStorage.setItem("token", data.access_token);
           window.location.href = "/";
         })
