@@ -56,7 +56,7 @@ const Profile = () => {
                     type="text"
                     name="name"
                     disabled={!isEditing}
-                    value={user.fullname}
+                    value={user?.fullname}
                     className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
                     onChange={(e) => shippingDetails(e)}
                   />
@@ -67,7 +67,7 @@ const Profile = () => {
                     type="text"
                     name="name"
                     disabled={!isEditing}
-                    value={address.name}
+                    value={address?.name}
                     className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
                     onChange={(e) => shippingDetails(e)}
                   />
@@ -78,7 +78,7 @@ const Profile = () => {
                     type="text"
                     name="street"
                     disabled={!isEditing}
-                    value={address.street}
+                    value={address?.street}
                     className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
                     onChange={(e) => shippingDetails(e)}
                   />
@@ -89,7 +89,7 @@ const Profile = () => {
                     type="text"
                     name="country"
                     disabled={!isEditing}
-                    value={address.country}
+                    value={address?.country}
                     className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
                     onChange={(e) => shippingDetails(e)}
                   />
@@ -101,7 +101,7 @@ const Profile = () => {
                       type="text"
                       name="state"
                       disabled={!isEditing}
-                      value={address.state}
+                      value={address?.state}
                       className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
                       onChange={(e) => shippingDetails(e)}
                     />
@@ -112,7 +112,7 @@ const Profile = () => {
                       type="text"
                       name="city"
                       disabled={!isEditing}
-                      value={address.city}
+                      value={address?.city}
                       className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
                       onChange={(e) => shippingDetails(e)}
                     />
@@ -124,7 +124,7 @@ const Profile = () => {
                     type="number"
                     name="pincode"
                     disabled={!isEditing}
-                    value={address.pincode}
+                    value={address?.pincode}
                     className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
                     onChange={(e) => shippingDetails(e)}
                   />
@@ -138,6 +138,14 @@ const Profile = () => {
                 className="bg-PrimaryBlue rounded-lg font-semibold font-Poppins text-white mt-6 px-4 py-2  text-center"
               >
                 {isEditing ? "Save" : "Edit"}
+              </button>
+              <button
+                onClick={() => {
+                  handleSubmit();
+                }}
+                className="bg-PrimaryBlue rounded-lg font-semibold font-Poppins text-white mt-2 px-4 py-2  text-center"
+              >
+                Logout
               </button>
             </div>
             {/* <section className="profile my-5 flex flex-col min-h-[40vh] gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
@@ -165,9 +173,7 @@ const Profile = () => {
               {userWishlist?.length > 0 ? (
                 <div className="flex flex-col h-full flex-wrap  overflow-scroll overflow-y-hidden md:mx-14 md:px-10 lg:mx-5 lg:py-20 lg:px-5 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
                   {userWishlist?.map((item, index) => (
-                    <FavoriteCard
-                      item={item}
-                    />
+                    <FavoriteCard item={item} />
                   ))}
                 </div>
               ) : (
