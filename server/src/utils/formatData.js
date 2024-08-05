@@ -9,7 +9,8 @@ const formatData = (user) => {
   return {
     access_token,
     email: user.email,
-    fullname: user.username,
+    fullname: user.fullname,
+    avatar: user.profile.avatar.url,
   };
 };
 

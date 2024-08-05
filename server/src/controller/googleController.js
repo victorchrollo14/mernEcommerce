@@ -3,7 +3,7 @@ import User from "../models/userModel.js";
 import formatData from "../utils/formatData.js";
 
 export const googleAuth = async (req, res) => {
-  let { access_token } = req.body;
+  let { access_token, avatar } = req.body;
 
   getAuth()
     .verifyIdToken(access_token)
@@ -38,6 +38,11 @@ export const googleAuth = async (req, res) => {
         user = new User({
           fullname: name,
           email: email,
+          profile: {
+            avatar: {
+              url: avatar,
+            }, 
+          },
           roles: "user",
           google_auth: true,
         });

@@ -11,9 +11,11 @@ import { useUserContext } from "../contexts/userContext";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const { loggedIn } = useUserContext();
+  const { loggedIn, user } = useUserContext();
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState(false);
+  // console.log(user);
+  // console.log(user?.avatar);
 
   return (
     // <div className="sm:h-[60px] md:h-[70px] xl:h-[89px]">
@@ -65,12 +67,24 @@ const NavBar = () => {
             navigate("/cart");
           }}
         />
-        <FaUserCircle
-          className="text-[25px] place-items-center cursor-pointer xl:text-[35px]"
-          onClick={() => {
-            loggedIn ? navigate("/profile") : navigate("/register");
-          }}
-        />
+
+        {user?.avatar ? (
+          <img
+            src={user?.avatar}
+            alt="userImage"
+            className="w-8 h-8 rounded-full cursor-pointer"
+            onClick={() => {
+              navigate("/profile");
+            }}
+          />
+        ) : (
+          <FaUserCircle
+            className="text-[25px] place-items-center cursor-pointer xl:text-[35px]"
+            onClick={() => {
+              loggedIn ? navigate("/profile") : navigate("/register");
+            }}
+          />
+        )}
       </div>
 
       {/* Mobile view */}

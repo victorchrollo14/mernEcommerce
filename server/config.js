@@ -7,7 +7,7 @@ const JWT_PRIVATE_KEY = process.env.JWT_PRIVATE_KEY;
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
-console.log(MONGODB_URI, JWT_PRIVATE_KEY, CLIENT_ID, CLIENT_SECRET);
+console.log("URI", MONGODB_URI);
 
 if (NODE_ENV === "production") {
   const CLIENT_URL1 = process.env.CLIENT_URL1;

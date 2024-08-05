@@ -31,7 +31,7 @@ const insertProducts = async () => {
 
 const connect = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/blackmarket");
+    await mongoose.connect(MONGODB_URI);
     console.log("connected to mongodb");
 
     // inserting data into db.
