@@ -62,7 +62,7 @@ const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
                 {title}
               </h1>
               <span className="price text-PrimaryBlue font-bold text-2xl font-Poppins my-1">
-                {price}
+                ${price}
               </span>
               <div className="size_selection mt-2 bg-white w-fit py-2 px-3 rounded-lg text-center text-PrimaryBlue font-semibold outline-none">
                 {size}
@@ -71,7 +71,7 @@ const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
           </div>
           <div className="lower_card flex justify-between mt-5 items-center md:flex-col md:mt-3">
             <div
-              className="wishlist bg-white p-2 rounded-lg ml-1 md:ml-20"
+              className="wishlist bg-white p-2 rounded-lg ml-1 md:ml-20 cursor-pointer"
               onClick={() => setWishlist(!wishlist)}
             >
               {wishlist ? (
@@ -81,27 +81,31 @@ const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
               )}
             </div>
             <div className="couter flex gap-1 items-center mr-2 justify-around">
-              <div className="minus p-2 text-xl bg-white text-PrimaryBlue rounded-xl">
+              <button className="minus p-2 flex items-center text-xl bg-white text-PrimaryBlue cursor-pointer rounded-xl">
                 {quantity === 1 ? (
-                  <FaTrash
+                  <button
                     onClick={() => {
                       setConfirmModal(true);
                       deleteID.current = _id;
                     }}
-                  />
+                  >
+                    <FaTrash />
+                  </button>
                 ) : (
-                  <FaMinus onClick={() => updateCart(_id, "minus")} />
+                  <button onClick={() => updateCart(_id, "minus")}>
+                    <FaMinus />
+                  </button>
                 )}
-              </div>
+              </button>
               <span className="text-xl text-gray-400 font-Poppins w-6 text-center mx-2">
                 {quantity}
               </span>
-              <div
-                className="plus p-2 text-xl bg-white text-PrimaryBlue rounded-xl"
+              <button
+                className="plus p-2 text-xl bg-white text-PrimaryBlue rounded-xl cursor-pointer"
                 onClick={() => updateCart(_id, "plus")}
               >
                 <FaPlus />
-              </div>
+              </button>
             </div>
           </div>
         </div>

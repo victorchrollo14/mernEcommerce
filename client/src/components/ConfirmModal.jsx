@@ -28,7 +28,7 @@ const ConfirmModal = ({
           <div className="bg-blueSlate px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse sm:gap-4">
             <button
               type="button"
-              className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red text-base font-medium text-white hover:bg-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red sm:mt-0 sm:w-auto sm:text-sm"
+              className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-PrimaryBlue text-base font-medium text-white hover:bg-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red sm:mt-0 sm:w-auto sm:text-sm"
               onClick={handleClick}
             >
               {confirmText}

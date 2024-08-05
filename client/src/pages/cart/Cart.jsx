@@ -7,18 +7,23 @@ import { useCartContext } from "../../contexts/cartContext";
 import { DisplayModal } from "../../components/DisplayModal";
 import { ConfirmModal } from "../../components/ConfirmModal";
 import { useUserContext } from "../../contexts/userContext";
+import { useProductContext } from "../../contexts/productContext";
 
 const Cart = () => {
   const navigate = useNavigate();
   const { user, token } = useUserContext();
   const { cart, setCart } = useCartContext();
+  const { products } = useProductContext();
   const [total, setTotal] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
   let deleteID = useRef();
 
   const totalBill = () => {
-    let sum = cart.reduce((total, item) => total + item.price, 0);
+    let sum = cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
     setTotal(sum);
   };
 
@@ -58,6 +63,56 @@ const Cart = () => {
     }
   }, [cart]);
 
+  useEffect(() => {
+    if (token && user && products) {
+      // console.log(token, user);
+      fetchCart();
+    }
+  }, [token, user, products]);
+
+  const getCartData = (data) => {
+    const items = data.items.map((item) => {
+      const productData = products.find(
+        (product) => product._id === item.productID
+      );
+      let newItem = {
+        _id: item._id,
+        productID: item.productID,
+        quantity: item.quantity,
+        size: item.size,
+        title: productData.title,
+        price: productData.price,
+        images: productData.images,
+      };
+      return newItem;
+    });
+
+    return items;
+  };
+
+  const fetchCart = async () => {
+    try {
+      const URL = import.meta.env.VITE_URL;
+      const response = await fetch(`${URL}/cart/getCart/${user._id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      });
+      const data = await response.json();
+      console.log("Cart data from backend", data);
+      if (data.message) {
+        return;
+      }
+      const cartData = getCartData(data);
+      setCart(cartData);
+    } catch (error) {
+      // console.log(error);
+    }
+  };
+  console.log("Cart", cart);
+
   return (
     <>
       <NavBar />
@@ -71,7 +126,7 @@ const Cart = () => {
           Not ready to checkout?
           <Link
             to={"/shop/shirts"}
-            className="pl-0.5 font-semibold text-PrimaryBlue cursor-pointer"
+            className="pl-1.5 font-semibold text-PrimaryBlue cursor-pointer"
           >
             Continue Shopping
           </Link>
@@ -81,25 +136,31 @@ const Cart = () => {
       {/* product cards */}
       <div className="cart_section flex flex-col px-1 lg:flex-row xl:w-full">
         {cart ? (
-          <div className="cart_products my-5 flex flex-col md:h-[80vh] md:overflow-y-auto gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
-            {cart.map((item) => {
-              return (
-                <CartProduct
-                  item={item}
-                  cart={cart}
-                  key={item._id}
-                  setCart={setCart}
-                  setConfirmModal={setConfirmModal}
-                  deleteID={deleteID}
-                />
-              );
-            })}
-          </div>
+          cart.length > 0 ? (
+            <div className="cart_products my-5 flex flex-col md:h-[80vh] md:overflow-y-auto gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
+              {cart.map((item) => {
+                return (
+                  <CartProduct
+                    item={item}
+                    cart={cart}
+                    key={item._id}
+                    setCart={setCart}
+                    setConfirmModal={setConfirmModal}
+                    deleteID={deleteID}
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
+              {" "}
+              Your Cart is Empty
+            </div>
+          )
         ) : (
-          <div className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
-            {" "}
-            Your Cart is Empty
-          </div>
+          <h2 className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
+            Loading...
+          </h2>
         )}
         {/* Modal to display message */}
         {showModal && (
@@ -130,15 +191,16 @@ const Cart = () => {
             className="bg-transparent outline-none px-3 py-3 border border-black rounded-sm placeholder:text-lg my-4 text-lg md:mx-1"
           />
           {cart && (
-            <ul className="product_list flex flex-col pb-4 border-b border-gray-400">
+            <ul className="product_list flex flex-col gap-1 pb-4 border-b border-gray-400">
               {cart.map((item) => {
                 return (
                   <li className="flex justify-between" key={item._id}>
-                    <span className="product_name text-lg ml-2 font-Poppins">
-                      {item.title}
-                    </span>
+                    <div className="flex justify-center ml-2  text-lg font-Poppins items-center">
+                      <span className="product_name">{item.title}</span>
+                      <span className="ml-2">x {item.quantity}</span>
+                    </div>
                     <span className="price mr-4 text-lg font-semibold text-PrimaryBlue font-Poppins">
-                      {item.price}
+                      ${item.price}
                     </span>
                   </li>
                 );
