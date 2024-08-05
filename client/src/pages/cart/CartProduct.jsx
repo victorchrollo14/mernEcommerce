@@ -2,9 +2,11 @@ import React from "react";
 import { FaRegHeart, FaHeart, FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import { useUserContext } from "../../contexts/userContext";
+import { useNavigate } from "react-router-dom";
 
 const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
-  let { _id, title, price, size, quantity, images } = item;
+  let { _id, category, productID, title, price, size, quantity, images } = item;
+  const navigate = useNavigate();
   const { token, user } = useUserContext();
   const [wishlist, setWishlist] = useState(false);
 
@@ -58,7 +60,11 @@ const CartProduct = ({ item, setCart, cart, setConfirmModal, deleteID }) => {
               />
             </div>
             <div className="item_details flex flex-col">
-              <h1 className="text-black text-lg font-semibold font-Poppins">
+              <h1 className="text-black text-lg font-semibold cursor-pointer font-Poppins hover:underline"
+              onClick={() => {
+                navigate(`/shop/${category}/${productID}`);
+              }}
+              >
                 {title}
               </h1>
               <span className="price text-PrimaryBlue font-bold text-2xl font-Poppins my-1">

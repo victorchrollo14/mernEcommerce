@@ -75,8 +75,10 @@ const Cart = () => {
       const productData = products.find(
         (product) => product._id === item.productID
       );
+      console.log("Product Data", productData);
       let newItem = {
         _id: item._id,
+        category: productData.category,
         productID: item.productID,
         quantity: item.quantity,
         size: item.size,

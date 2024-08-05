@@ -4,15 +4,16 @@ import { useState } from "react";
 import { useUserContext } from "../contexts/userContext";
 import { useNavigate } from "react-router-dom";
 
-const FavoriteCard = ({ title, subtitle, price, image }) => {
+const FavoriteCard = ({item}) => {
+  const { title, subtitle, price, image, id, category } = item;
   const [wishlist, setWishlist] = useState(true);
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="cardContainer bg-lightestBlue p-4 border border-[#EDF0F8] rounded-2xl flex flex-col md:flex-row md:justify-between"
+      <div className="cardContainer bg-lightestBlue cursor-pointer p-4 border border-[#EDF0F8] rounded-2xl flex flex-col md:flex-row md:justify-between"
       onClick={() => {
-        navigate(``)
+        navigate(`/shop/${category}/${id}`);
       }}
       >
         <div className="details flex w-full justify-between gap-7 mt-1">

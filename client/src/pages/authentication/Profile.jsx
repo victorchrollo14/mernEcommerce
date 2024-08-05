@@ -166,11 +166,7 @@ const Profile = () => {
                 <div className="flex flex-col h-full flex-wrap  overflow-scroll overflow-y-hidden md:mx-14 md:px-10 lg:mx-5 lg:py-20 lg:px-5 xl:mr-10 xl:px-8 xl:gap-4 xl:py-12">
                   {userWishlist?.map((item, index) => (
                     <FavoriteCard
-                      key={index}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      price={item.price}
-                      image={item.image}
+                      item={item}
                     />
                   ))}
                 </div>
