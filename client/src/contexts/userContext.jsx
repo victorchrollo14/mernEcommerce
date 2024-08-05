@@ -7,6 +7,11 @@ const UserContext = createContext();
 const UserContextProvider = (props) => {
   const [user, setUser] = useState();
   const [loggedIn, setLoggedIn] = useState();
+  const [userWishlist, setUserWishlist] = useState(
+    localStorage.getItem("wishlist") !== "undefined"
+      ? JSON.parse(localStorage.getItem("wishlist"))
+      : []
+  );
   const [token, setToken] = useState(() => {
     const token = localStorage.getItem("token");
     return token;
@@ -36,9 +41,22 @@ const UserContextProvider = (props) => {
     }
   }, [token]);
 
+  useEffect(() => {
+    localStorage.setItem("wishlist", JSON.stringify(userWishlist));
+  }, [userWishlist]);
+
   return (
     <UserContext.Provider
-      value={{ user, setUser, loggedIn, setLoggedIn, token, setToken }}
+      value={{
+        user,
+        setUser,
+        loggedIn,
+        setLoggedIn,
+        token,
+        setToken,
+        userWishlist,
+        setUserWishlist,
+      }}
     >
       {props.children}
     </UserContext.Provider>

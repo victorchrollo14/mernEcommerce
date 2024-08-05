@@ -1,7 +1,36 @@
 import { HiOutlineShoppingCart } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserContext } from "../../contexts/userContext";
 
 function HomeProductCard({ item }) {
+  const navigate = useNavigate();
+  const {user, token} = useUserContext();
+  const addToCart = async () => {
+    try {
+      if (token) {
+        const URL = import.meta.env.VITE_URL;
+        const response = await fetch(`${URL}/cart/addItem`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify({
+            userID: user._id,
+            productID: productID,
+            quantity: quantity,
+            size: size,
+          }),
+        });
+
+        const data = await response.json();
+        console.log(data);
+      }
+    } catch (error) {
+      // console.log(error);
+    }
+  };
+
   return (
     <li
       className="product-card w-full min-h-[26rem] sm:w-1/2 lg:w-1/3 rounded-lg p-6 flex flex-col"
@@ -25,12 +54,17 @@ function HomeProductCard({ item }) {
             ${item.price}
           </p>
         </div>
-        <div className="product-addtocart-btn h-full flex text-2xl">
+        <button className="product-addtocart-btn h-full flex text-2xl"
+        onClick={() => {
+          addToCart();
+          navigate("/cart");
+        }}
+        >
           {" "}
           <div className="my-auto bg-PrimaryBlue text-white rounded-xl p-3">
             <HiOutlineShoppingCart />
           </div>
-        </div>
+        </button>
       </div>
     </li>
   );

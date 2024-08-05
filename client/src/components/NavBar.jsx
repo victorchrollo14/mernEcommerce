@@ -51,13 +51,13 @@ const NavBar = () => {
         </div>
       </div>
       <div className="left justify-around items-center mr-3 hidden  md:flex md:gap-3 xl:gap-4 xl:mr-4">
-        <div className="inputBox relative flex rounded-lg  border border-neutral-400 md:w-36 md:h-9 xl:w-56 h-10">
+        <div className="inputBox relative flex rounded-lg border border-neutral-400 md:w-36 md:h-9 xl:w-56 h-10">
           <div className="relative flex my-auto">
             <BiSearch className="text-3xl mx-2 text-neutral-400" />
             <input
               type="text"
               placeholder="Search"
-              className="w-full h-full font-Poppins pt-1 pr-2 outline-none bg-transparent"
+              className="w-full h-full font-Poppins pt-1 pr-2 outline-none rounded-lg bg-transparent"
             />
           </div>
         </div>
@@ -96,12 +96,23 @@ const NavBar = () => {
             setToggle(false);
           }}
         />
-        <FaUserCircle
-          className="text-[25px] place-items-center cursor-pointer relative"
-          onClick={() => {
-            loggedIn ? navigate("/profile") : navigate("/register");
-          }}
-        />
+        {user?.avatar ? (
+          <img
+            src={user?.avatar}
+            alt="userImage"
+            className="w-8 h-8 rounded-full cursor-pointer"
+            onClick={() => {
+              navigate("/profile");
+            }}
+          />
+        ) : (
+          <FaUserCircle
+            className="text-[25px] place-items-center cursor-pointer relative"
+            onClick={() => {
+              loggedIn ? navigate("/profile") : navigate("/register");
+            }}
+          />
+        )}
         {!toggle ? (
           <HiOutlineMenuAlt2
             className="text-2xl  text-black"

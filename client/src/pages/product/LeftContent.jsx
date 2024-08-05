@@ -4,9 +4,30 @@ import { FaRegHeart, FaHeart } from "react-icons/fa6";
 import { FaShare } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { useUserContext } from "../../contexts/userContext";
+
 export const LeftContent = ({ data }) => {
   const [wishlist, setWishlist] = useState(false);
+  const { userWishlist, setUserWishlist } = useUserContext();
   const { title, subtitle, images } = data;
+  console.log(data);
+
+  const addToFavorites = () => {
+    const product = {
+      id: data._id,
+      category: data.category,
+      title,
+      subtitle,
+      price: data.price,
+      image: images[0],
+    };
+    setUserWishlist([...userWishlist, product]);
+  };
+  console.log(userWishlist);
+  const removeFromFavorites = () => {
+    const newWishlist = userWishlist.filter((item) => item.title !== title);
+    setUserWishlist(newWishlist);
+  };
 
   return (
     <div className="left_section flex flex-col max-w-[600px] mt-2 w-full md:w-[60vw]">
@@ -19,15 +40,21 @@ export const LeftContent = ({ data }) => {
             {subtitle}
           </span>
         </div>
-        <div className="icons flex mr-3 gap-2">
+        <div className="icons flex mr-3 gap-2 cursor-pointer">
           {wishlist ? (
             <FaHeart
-              onClick={() => setWishlist(!wishlist)}
+              onClick={() => {
+                setWishlist(!wishlist);
+                removeFromFavorites();
+              }}
               className="text-PrimaryBlue bg-lightestBlue rounded-lg w-9 h-9 p-2"
             />
           ) : (
             <FaRegHeart
-              onClick={() => setWishlist(!wishlist)}
+              onClick={() => {
+                setWishlist(!wishlist);
+                addToFavorites();
+              }}
               className="text-PrimaryBlue bg-lightestBlue rounded-lg w-9 h-9 p-2"
             />
           )}
@@ -45,14 +72,12 @@ export const LeftContent = ({ data }) => {
         >
           {/* here you can use uuid over i */}
           {images?.map((img, i) => (
-            
-              <img
+            <img
               key={i}
-                src={img}
-                alt="product"
-                className="max-h-[auto] object-cover productImages__carousel--item"
-              />
-            
+              src={img}
+              alt="product"
+              className="max-h-[auto] object-cover productImages__carousel--item"
+            />
           ))}
         </Carousel>
       </div>
