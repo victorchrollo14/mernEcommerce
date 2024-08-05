@@ -75,8 +75,10 @@ const Cart = () => {
       const productData = products.find(
         (product) => product._id === item.productID
       );
+      console.log("Product Data", productData);
       let newItem = {
         _id: item._id,
+        category: productData.category,
         productID: item.productID,
         quantity: item.quantity,
         size: item.size,
@@ -135,32 +137,28 @@ const Cart = () => {
 
       {/* product cards */}
       <div className="cart_section flex flex-col px-1 lg:flex-row xl:w-full">
-        {cart ? (
-          cart.length > 0 ? (
-            <div className="cart_products my-5 flex flex-col md:h-[80vh] md:overflow-y-auto gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
-              {cart.map((item) => {
-                return (
-                  <CartProduct
-                    item={item}
-                    cart={cart}
-                    key={item._id}
-                    setCart={setCart}
-                    setConfirmModal={setConfirmModal}
-                    deleteID={deleteID}
-                  />
-                );
-              })}
-            </div>
-          ) : (
-            <div className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
-              {" "}
-              Your Cart is Empty
-            </div>
-          )
+        {cart && cart.length > 0 ? (
+          <div className="cart_products my-5 flex flex-col md:h-[80vh] md:overflow-y-auto gap-4 xl:w-1/2 xl:mr-16 xl:ml-3">
+            {cart.map((item) => {
+              return (
+                <CartProduct
+                  item={item}
+                  cart={cart}
+                  key={item._id}
+                  setCart={setCart}
+                  setConfirmModal={setConfirmModal}
+                  deleteID={deleteID}
+                />
+              );
+            })}
+          </div>
         ) : (
-          <h2 className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
-            Loading...
-          </h2>
+          <div className="text-black my-5 flex flex-col gap-4 xl:w-1/2 xl:mr-16 ml-8">
+            <h1 className="text-xl">
+              Your Cart is Empty :) <br />
+              Explore our collection and add items to your cart
+            </h1>
+          </div>
         )}
         {/* Modal to display message */}
         {showModal && (
@@ -211,12 +209,16 @@ const Cart = () => {
           <div className="total flex justify-between my-2">
             <span className="font-bold text-xl ml-3 xl:text-2xl">Total</span>
             <span className="total_price mr-4 text-xl font-semibold font-Poppins xl:teext-2xl">
-              ${total}
+              ${total ? total : 0}
             </span>
           </div>
           <button
             className="mt-3 px-5 py-3 border border-PrimaryBlue bg-PrimaryBlue text-xl text-white font-semibold md:mx-1"
-            onClick={() => navigate("/cart/checkout")}
+            onClick={() => {
+              if(cart.length > 0) {
+                navigate("/cart/checkout")
+              }
+            }}
           >
             Continue to Checkout
           </button>
