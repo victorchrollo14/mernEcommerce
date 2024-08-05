@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { useCheckoutContext } from "../../../contexts/checkoutContext";
 
 const Card = () => {
-  const [card, setCard] = useState({})
+  const { cardDetails, setCardDetails } = useCheckoutContext()
 
-  const cardDetails = (e) => {
-    setCard({ ...card, [e.target.name]: e.target.value })
+  const addcardDetails = (e) => {
+    setCardDetails({ ...cardDetails, [e.target.name]: e.target.value })
     // console.log(card)
   }
 
@@ -16,8 +17,9 @@ const Card = () => {
         <input
           type="text"
           name="name"
+          value={cardDetails.name}
           className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
-          onChange={(e) => cardDetails(e)}
+          onChange={(e) => addcardDetails(e)}
         />
       </div>
       <div className="cardnumber flex flex-col gap-1">
@@ -25,8 +27,9 @@ const Card = () => {
         <input
           type="text"
           name="number"
+          value={cardDetails.number}
           className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
-          onChange={(e) => cardDetails(e)}
+          onChange={(e) => addcardDetails(e)}
         />
       </div>
       <div className="monthYear flex gap-3">
@@ -35,8 +38,9 @@ const Card = () => {
           <input
             type="number"
             name="month"
+            value={cardDetails.month}
             className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
-            onChange={(e) => cardDetails(e)}
+            onChange={(e) => addcardDetails(e)}
           />
         </div>
         <div className="year flex flex-col gap-1">
@@ -44,8 +48,9 @@ const Card = () => {
           <input
             type="number"
             name="year"
+            value={cardDetails.year}
             className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
-            onChange={(e) => cardDetails(e)}
+            onChange={(e) => addcardDetails(e)}
           />
         </div>
         <div className="cvv flex flex-col gap-1">
@@ -53,8 +58,9 @@ const Card = () => {
           <input
             type="number"
             name="cvv"
+            value={cardDetails.cvv}
             className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
-            onChange={(e) => cardDetails(e)}
+            onChange={(e) => addcardDetails(e)}
           />
         </div>
       </div>

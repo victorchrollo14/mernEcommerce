@@ -4,13 +4,16 @@ import { UserContextProvider } from "./contexts/userContext";
 import { CartContextProvider } from "./contexts/cartContext";
 
 import "./Styles.css";
+import { CheckoutProvider } from "./contexts/checkoutContext";
 
 function App() {
   return (
     <ProductContextProvider>
       <UserContextProvider>
         <CartContextProvider>
-          <Routes />
+          <CheckoutProvider>
+            <Routes />
+          </CheckoutProvider>
         </CartContextProvider>
       </UserContextProvider>
     </ProductContextProvider>
