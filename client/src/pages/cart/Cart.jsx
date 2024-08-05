@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import NavBar from "../../components/NavBar";
 import { CartProduct } from "./CartProduct";
 import { Link, Navigate, useNavigate } from "react-router-dom";
@@ -8,24 +8,30 @@ import { DisplayModal } from "../../components/DisplayModal";
 import { ConfirmModal } from "../../components/ConfirmModal";
 import { useUserContext } from "../../contexts/userContext";
 import { useProductContext } from "../../contexts/productContext";
+import { useCheckoutContext } from "../../contexts/checkoutContext";
 
 const Cart = () => {
   const navigate = useNavigate();
   const { user, token } = useUserContext();
   const { cart, setCart } = useCartContext();
   const { products } = useProductContext();
-  const [total, setTotal] = useState(0);
+  const { setTotalBill } = useCheckoutContext();
   const [showModal, setShowModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
   let deleteID = useRef();
 
-  const totalBill = () => {
-    let sum = cart.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-    setTotal(sum);
-  };
+  let total = useMemo(() => {
+    if (cart) {
+      return cart.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+    }
+  }, [cart]);
+
+  useEffect(() => {
+    setTotalBill(total);
+  }, [total]);
 
   const handleClick = () => {
     setConfirmModal(false);
@@ -56,12 +62,6 @@ const Cart = () => {
       // console.log(err);
     }
   };
-
-  useEffect(() => {
-    if (cart) {
-      totalBill();
-    }
-  }, [cart]);
 
   useEffect(() => {
     if (token && user && products) {
@@ -218,7 +218,7 @@ const Cart = () => {
             className="mt-3 px-5 py-3 border border-PrimaryBlue bg-PrimaryBlue text-xl text-white font-semibold md:mx-1"
             onClick={() => navigate("/cart/checkout")}
           >
-            Continue to Shipping
+            Continue to Checkout
           </button>
         </div>
       </div>
