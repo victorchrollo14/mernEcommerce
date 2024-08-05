@@ -51,15 +51,19 @@ export const AddCart = ({ productID, setQuantity, size, quantity }) => {
       )}
       <div className="add_cart my-2 flex flex-col gap-5 mx-2 lg:mt-4">
         <div className="qty_counter flex justify-around w-28 px-3 py-3 bg-lightestSlate items-center rounded-3xl gap-2 md:ml-2 lg:w-32">
-          <FaMinus
-            className="text-PrimaryBlue text-md"
+          <button
+            className="text-PrimaryBlue text-md cursor-pointer"
             onClick={() => quantity > 1 && setQuantity(quantity - 1)}
-          />
+          >
+            <FaMinus />
+          </button>
           <span className="qty font-Poppins font-semibold">{quantity}</span>
-          <FaPlus
-            className="text-PrimaryBlue text-md"
+          <button
+            className="text-PrimaryBlue text-md cursor-pointer"
             onClick={() => setQuantity(quantity + 1)}
-          />
+          >
+            <FaPlus />
+          </button>
         </div>
         <div className="buttons flex flex-row gap-2">
           {" "}

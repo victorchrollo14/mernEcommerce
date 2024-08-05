@@ -6,13 +6,13 @@ export const SizeSection = ({ sizeOptions, setSize, size }) => {
         {sizeOptions.map((itemSize) => (
           <li
             key={itemSize}
+            onClick={() => setSize(itemSize)}
             className="radio flex items-center justify-around cursor-pointer bg-lightestSlate px-2 py-1 rounded-lg gap-1"
           >
             <input
               type="radio"
               name="small"
               id=""
-              onChange={() => setSize(itemSize)}
               checked={itemSize === size ? true : false}
             />
             <span className="text-slate checked:text-PrimaryBlue">
