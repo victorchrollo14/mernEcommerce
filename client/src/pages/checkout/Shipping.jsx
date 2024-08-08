@@ -16,7 +16,7 @@ const Shipping = () => {
         <input
           type="text"
           name="name"
-          value={address.name}
+          value={address?.name}
           className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
@@ -26,7 +26,7 @@ const Shipping = () => {
         <input
           type="text"
           name="street"
-          value={address.street}
+          value={address?.street}
           className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
@@ -36,7 +36,7 @@ const Shipping = () => {
         <input
           type="text"
           name="country"
-          value={address.country}
+          value={address?.country}
           className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />
@@ -47,7 +47,7 @@ const Shipping = () => {
           <input
             type="text"
             name="state"
-            value={address.state} 
+            value={address?.state} 
             className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => shippingDetails(e)}
           />
@@ -57,7 +57,7 @@ const Shipping = () => {
           <input
             type="text"
             name="city"
-            value={address.city}
+            value={address?.city}
             className="bg-lightestBlue w-full px-2 py-2 rounded-md border border-white outline-none"
             onChange={(e) => shippingDetails(e)}
           />
@@ -68,7 +68,7 @@ const Shipping = () => {
         <input
           type="number"
           name="pincode"
-          value={address.pincode}
+          value={address?.pincode}
           className="bg-lightestBlue px-2 py-2 rounded-md border border-white outline-none"
           onChange={(e) => shippingDetails(e)}
         />

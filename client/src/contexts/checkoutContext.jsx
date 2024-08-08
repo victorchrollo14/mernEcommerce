@@ -5,9 +5,10 @@ const CheckoutContext = createContext();
 
 // Create a provider component
 export const CheckoutProvider = ({ children }) => {
-  const [address, setAddress] = useState(
-    localStorage.getItem("address") !== "undefined"
-      ? JSON.parse(localStorage.getItem("address"))
+  const [address, setAddress] = useState(() => {
+    const address = localStorage.getItem("address");
+    return address
+      ? JSON.parse(address)
       : {
           name: "",
           street: "",
@@ -15,40 +16,44 @@ export const CheckoutProvider = ({ children }) => {
           state: "",
           city: "",
           postalCode: "",
-        }
-  );
+        };
+  });
 
-  const [paymentMethod, setPaymentMethod] = useState(
-    localStorage.getItem("paymentMethod") !== "undefined"
-      ? localStorage.getItem("paymentMethod")
-      : "card"
-  );
-  const [cardDetails, setCardDetails] = useState(
-    localStorage.getItem("cardDetails") !== "undefined"
-      ? JSON.parse(localStorage.getItem("cardDetails"))
+  const [paymentMethod, setPaymentMethod] = useState(() => {
+    const paymentMethod = localStorage.getItem("paymentMethod");
+    return paymentMethod ? paymentMethod : "card";
+  });
+  const [cardDetails, setCardDetails] = useState(() => {
+    const cardDetails = localStorage.getItem("cardDetails");
+    return cardDetails
+      ? JSON.parse(cardDetails)
       : {
           name: "",
           cardNumber: "",
           month: "",
           year: "",
           cvv: "",
-        }
-  );
+        };
+  });
 
   const [totalBill, setTotalBill] = useState(0);
 
   useEffect(() => {
-    localStorage.setItem("address", JSON.stringify(address));
-    localStorage.setItem("paymentMethod", paymentMethod);
-    localStorage.setItem("cardDetails", JSON.stringify(cardDetails));
+    if (address) {
+      localStorage.setItem("address", JSON.stringify(address));
+    }
   }, [address]);
 
   useEffect(() => {
-    localStorage.setItem("paymentMethod", paymentMethod);
+    if (paymentMethod) {
+      localStorage.setItem("paymentMethod", paymentMethod);
+    }
   }, [paymentMethod]);
 
   useEffect(() => {
-    localStorage.setItem("cardDetails", JSON.stringify(cardDetails));
+    if (cardDetails) {
+      localStorage.setItem("cardDetails", JSON.stringify(cardDetails));
+    }
   }, [cardDetails]);
 
   return (

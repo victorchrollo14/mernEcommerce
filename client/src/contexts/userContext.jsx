@@ -7,11 +7,10 @@ const UserContext = createContext();
 const UserContextProvider = (props) => {
   const [user, setUser] = useState();
   const [loggedIn, setLoggedIn] = useState();
-  const [userWishlist, setUserWishlist] = useState(
-    localStorage.getItem("wishlist") !== "undefined"
-      ? JSON.parse(localStorage.getItem("wishlist"))
-      : []
-  );
+  const [userWishlist, setUserWishlist] = useState(() => {
+    const wishlist = localStorage.getItem("wishlist");
+    return wishlist ? JSON.parse(wishlist) : [];
+  });
   const [token, setToken] = useState(() => {
     const token = localStorage.getItem("token");
     return token;
@@ -42,7 +41,9 @@ const UserContextProvider = (props) => {
   }, [token]);
 
   useEffect(() => {
-    localStorage.setItem("wishlist", JSON.stringify(userWishlist));
+    if (userWishlist) {
+      localStorage.setItem("wishlist", JSON.stringify(userWishlist));
+    }
   }, [userWishlist]);
 
   return (

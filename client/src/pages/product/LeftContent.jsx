@@ -22,6 +22,7 @@ export const LeftContent = ({ data }) => {
       image: images[0],
     };
     setUserWishlist([...userWishlist, product]);
+    localStorage.setItem("wishlist", JSON.stringify(userWishlist));
   };
   console.log(userWishlist);
   const removeFromFavorites = () => {
