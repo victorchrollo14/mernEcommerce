@@ -14,8 +14,8 @@ const NavBar = () => {
   const { loggedIn, user } = useUserContext();
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState(false);
-  // console.log(user);
-  // console.log(user?.avatar);
+  console.log(user);
+  console.log(user?.avatar);
 
   return (
     // <div className="sm:h-[60px] md:h-[70px] xl:h-[89px]">
@@ -70,7 +70,7 @@ const NavBar = () => {
 
         {user?.avatar ? (
           <img
-            src={user?.avatar}
+            src={user?.avatar.toString()}
             alt="userImage"
             className="w-8 h-8 rounded-full cursor-pointer"
             onClick={() => {
